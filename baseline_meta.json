@@ -1,0 +1,14 @@
+{
+ "cohort": "v0-bootstrap+claude",
+ "frozen_at": "2026-08-15",
+ "panel_file": "panel_day0_v2.json",
+ "probes": 142,
+ "models": [
+  "gemini-2.5-flash",
+  "gpt-4o-mini",
+  "claude-sonnet-5",
+  "perplexity-sonar"
+ ],
+ "client_cited_rate": 0.0,
+ "client_mention_rate": 0.0
+}

@@ -1,0 +1,834 @@
+{
+ "cohort": "brand-recall",
+ "runs": 2,
+ "probes": [
+  {
+   "prompt": "Was ist Zeit AI und für welche Unternehmen ist die Software gedacht?",
+   "intent": "identity",
+   "model": "gemini",
+   "run": 0,
+   "fanout_queries": [
+    "Zeit AI",
+    "Zeit AI target companies",
+    "What is Zeit AI software designed for?"
+   ],
+   "cited_domains": [
+    "fondo.com",
+    "hiretop.com",
+    "siemens.com",
+    "simplify.jobs",
+    "tracxn.com",
+    "ycombinator.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Zeit AI ist eine Software, die Unternehmen dabei unterstützt, Daten aus verschiedenen Quellen mittels natürlicher Sprache abzufragen und zu analysieren. Sie wird oft als \"ChatGPT für Unternehmenstabellen\" beschrieben und ermöglicht es auch nicht-technischen Anwendern, ad-hoc-Einblicke aus Unternehmensdatenbanken, ERP-Systemen, CRMs und sogar Excel-Dateien oder CSVs zu gewinnen. Die Plattform, deren Kernprodukt ZeitMind heißt, bereitet unstrukturierte Daten auf und wandelt Geschäftsfragen in Echtzeit-Dashboards, Berichte und Anwendungen um, die sich in natürlicher Sprache bedienen lassen. Die Gründer von Zeit AI, Marvin Christopher Bornstein und Leopold von Waldthausen, entwickelten die Lösung basierend auf ihren Erfahrungen bei Palantir, wo sie feststellten, dass Unternehmen stark auf Excel-Dateien angewiesen waren, es aber an effektiven Wegen mangelte, das darin enthaltene Wissen im großen Stil zu nutzen.\n\nDie Software von Zeit AI ist primär für Unternehmen gedacht, die mit großen und oft unstrukturierten Datenmengen kämpfen und ihren Mitarbeitern, insbesondere nicht-technischen Nutzern, einen einfacheren Zugang zu datengestützten Erkenntnissen ermöglichen möchten.\n\nInsbesondere ist die Software für folgende Unternehmen und Bereiche konzipiert:\n\n*   **Europäische Mittelstandsunternehmen**: Zeit AI positioniert sich als \"Autonomous Data Engineer für den europäischen Mittelstand\".\n*   **Abteilungen mit hohem Datenanalysebedarf**: Dazu gehören Beschaffung (Procurement), Controlling und Beratung (Consulting), wo schnelle ad-hoc-Analysen entscheidend sind.\n*   **Branchenübergreifende Anwendungen**: Zeit AI wird in verschiedenen Sektoren eingesetzt, darunter:\n    *   Fertigung\n    *   Landwirtschaft\n    *   Logistik und Luftfahrt\n    *   Transport\n    *   Lebensmittel und Getränke\n    *   Maschinenbau\n    *   Pharma und Biowissenschaften, um Prozessdaten in umsetzbare Erkenntnisse umzuwandeln und Arbeitsabläufe zu optimieren.\n*   **Unternehmen, die Wert auf Datenschutz legen**: Die Plattform gewährleistet den Schutz der Privatsphäre, da sie Kundendaten nicht teilt oder zum Training verwendet.\n*   **Unternehmen, die eine schnelle Implementierung wünschen**: Zeit AI verspricht, innerhalb weniger Wochen funktionierende KI-Anwendungen zu liefern und messbare Ergebnisse zu erzielen.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was ist Zeit AI und für welche Unternehmen ist die Software gedacht?",
+   "intent": "identity",
+   "model": "gemini",
+   "run": 1,
+   "fanout_queries": [
+    "Zeit AI",
+    "Zeit AI target companies",
+    "What is Zeit AI for?"
+   ],
+   "cited_domains": [
+    "fondo.com",
+    "hiretop.com",
+    "siemens.com",
+    "simplify.jobs",
+    "tracxn.com",
+    "ycombinator.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Zeit AI ist eine KI-gestützte Analyseplattform, die als \"ChatGPT für Unternehmenstabellen\" fungiert. Sie ermöglicht es nicht-technischen Benutzern, Daten aus verschiedenen Quellen wie Datenbanken, ERP-Systemen, CRMs, CSV-Dateien, Excel und PDFs mittels natürlicher Sprache abzufragen und zu analysieren. Die Kerntechnologie, ZeitMind, vereinheitlicht Informationen, versteht Kontexte und liefert präzise Analysen und Erkenntnisse, wodurch Datenanalyse-Workflows automatisiert werden. Die Software wandelt unstrukturierte Daten, wie z.B. Excel-Dateien, in strukturierte Datenbanken um, wodurch sie leicht zugänglich und nutzbar werden. Ein Schwerpunkt liegt auf der Bereitstellung reproduzierbarer, erklärbarer Ergebnisse und der Wahrung des Datenschutzes.\n\nDie Software von Zeit AI ist für Unternehmen konzipiert, insbesondere für den europäischen Mittelstand, die datengesteuerte Entscheidungen treffen und Schwierigkeiten beim Zugriff und der Analyse großer, unübersichtlicher Datensätze haben, die oft über verschiedene Systeme und Excel-Dateien verteilt sind. Sie richtet sich an operative Teams, darunter solche in den Bereichen Controlling, Vertrieb, Betrieb, Personalwesen, Beschaffung und Beratung.\n\nZu den spezifischen Branchen, für die Zeit AI entwickelt wurde, gehören:\n*   Fertigung\n*   Landwirtschaft\n*   Logistik\n*   Luftfahrt\n*   Biowissenschaften und Pharmazie\n*   Transport\n*   Lebensmittel und Getränke\n*   Maschinenbau\n*   Post und Logistik\n\nDas Ziel ist es, Unternehmen dabei zu unterstützen, Analysen zu automatisieren, manuelle und fehleranfällige Arbeiten in Excel zu reduzieren, schnellere und zuverlässigere Berichte und Entscheidungen zu ermöglichen. Zudem hilft es bei der Optimierung von Arbeitsabläufen, der Verringerung des manuellen Aufwands in Forschung und Entwicklung sowie in der Produktion, dem ad-hoc-Zugriff auf historische Beschaffungsdaten für Verhandlungen, der schnellen Exploration und Analyse von Datenräumen und Kundendateien für Berater sowie einer umfassenden Finanzkontrolle durch die Kombination von Daten aus Buchhaltungssystemen und Abteilungsdateien. Die Lösung zielt darauf ab, dass nicht-technische Benutzer Erkenntnisse gewinnen können, wodurch der Bedarf an externer Unterstützung oder umfangreicher manueller Arbeit reduziert wird.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was ist Zeit AI und für welche Unternehmen ist die Software gedacht?",
+   "intent": "identity",
+   "model": "chatgpt",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Zeit AI ist eine Software-Plattform, die speziell für Unternehmen entwickelt wurde, um ihre Arbeitsabläufe zu optimieren und die Produktivität zu steigern. Die Anwendung von Künstlicher Intelligenz (KI) ermöglicht es, Aufgaben zu automatisieren, datenbasierte Entscheidungen zu treffen und Prozesse effizienter zu gestalten.\n\n### Zielgruppen:\n1. **Unternehmen**: Besonders solche, die große Datenmengen verarbeiten oder komplexe Prozesse haben.\n2. **Start-ups**: Die Unterstützung bei der Automatisierung und Analyse von Daten kann helfen, schneller zu wachsen.\n3. **Unternehmen in der Technologiebranche**: Diese könnten von den KI-Funktionalitäten besonders profitieren.\n4. **Marketing- und Vertriebsabteilungen**: Die Analyse von Kundenverhalten und das Targeting von Kampagnen können durch KI erheblich verbessert werden.\n\n### Funktionen:\n- **Datenanalyse**: Ermöglicht tiefere Einblicke in Unternehmensdaten.\n- **Automatisierung von Prozessen**: Reduziert den manuellen Aufwand.\n- **Verbesserte Entscheidungsfindung**: Unterstützt Führungskräfte dabei, fundierte Entscheidungen zu treffen.\n\nFalls du spezifische Informationen über Funktionen oder Anwendungsfälle benötigst, lass es mich wissen!",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was ist Zeit AI und für welche Unternehmen ist die Software gedacht?",
+   "intent": "identity",
+   "model": "chatgpt",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [
+    "siemens.com"
+   ],
+   "answer": "Zeit AI ist ein Unternehmen mit Sitz in München, das sich auf die Entwicklung von KI-gesteuerten Geschäftsanwendungen spezialisiert hat. Ihre Hauptlösung, ZeitMind, ist eine KI-Analyseplattform, die verschiedene Datenquellen integriert, den Kontext versteht und präzise Analysen sowie Einblicke für Teams bereitstellt. Dies ermöglicht schnellere Entscheidungen, tiefere Recherchen und strukturiertes Denken, indem komplexe Daten in klare, umsetzbare Informationen umgewandelt werden. ([siemens.com](https://www.siemens.com/en-us/products/zeit-ai-zeitmind/?utm_source=openai))\n\nDie Software von Zeit AI richtet sich an Unternehmen aus verschiedenen Branchen, darunter:\n\n- Transport\n- Lebensmittel und Getränke\n- Maschinenbau\n- Pharma und Life Sciences\n- Post und Logistik\n- Luftfahrt\n- Baugewerbe\n- Landwirtschaft\n- Textilindustrie\n- Glasverarbeitung\n- Metallverarbeitung\n- Verpackungsindustrie\n- Kunststoffverarbeitung\n- Druckindustrie\n- Keramik\n- Additive Fertigung\n- Verbundwerkstoffe\n- Solarproduktion\n- Holzverarbeitung\n- Industrielle Komponenten\n- Multicarriersysteme\n- Steinverarbeitung\n\nDiese breite Branchenabdeckung zeigt, dass Zeit AI Unternehmen unterstützt, die ihre Datenanalyseprozesse automatisieren und durch KI-gesteuerte Einblicke ihre Effizienz und Entscheidungsfindung verbessern möchten. ([siemens.com](https://www.siemens.com/en-us/ecosystem/zeit-ai/?utm_source=openai)) ",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was ist Zeit AI und für welche Unternehmen ist die Software gedacht?",
+   "intent": "identity",
+   "model": "perplexity",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "**Zeit AI** ist ein deutsches KI-Softwareunternehmen, das eine Plattform namens **ZeitMind** anbietet. Die Software verbindet sich mit **ERP-, CRM-, Datenbank- und Tabellen-Daten** und verwandelt sie per **natürlicher Sprache** in Analysen, Dashboards, Berichte und Workflows, um manuelle Excel- und Reporting-Prozesse zu automatisieren.[1][2][3]\n\nDie Software ist laut den Quellen vor allem für **Unternehmen im Mittelstand und Enterprise-Umfeld** gedacht, also für Organisationen mit vielen internen Geschäftsdaten und wiederkehrenden Analyseprozessen.[2][5] Genannt werden insbesondere Teams aus **Controlling, Vertrieb, Operations und HR** sowie Anwendungsfälle in **Einkauf/Beschaffung, Logistik, Bestandsmanagement, Preisgestaltung und Finance**.[1][2][3]\n\nBesonders geeignet ist Zeit AI für Firmen, die:\n- viele Daten in **SAP, ERP, CRM oder Datenbanken** haben,[2][3][5]\n- Berichte und Analysen bisher **manuell in Excel** erstellen,[1][3]\n- schnelle, wiederholbare Antworten auf **Geschäftsfragen in natürlicher Sprache** brauchen,[2][3][8]\n- Prozesse in datenintensiven Bereichen wie **Controlling, Procurement, Consulting, Produktion oder Logistik** automatisieren wollen.[1][3][4]\n\nDie Beispiele und Partnerhinweise deuten außerdem darauf hin, dass die Lösung in **Industrie, Pharma/Life Sciences, Transport und Logistik** eingesetzt wird.[4][6]",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was ist Zeit AI und für welche Unternehmen ist die Software gedacht?",
+   "intent": "identity",
+   "model": "perplexity",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "**Zeit AI** ist ein deutsches KI-Softwareunternehmen, das eine Plattform zur **Automatisierung von Datenanalysen und Business Intelligence** anbietet. Die Kernlösung heißt **ZeitMind** und verbindet sich mit **ERP-, CRM-, HR-/HRS- und Datenbanksystemen**, um Daten in **natürlicher Sprache** abfragbar zu machen, Berichte zu automatisieren und Geschäftsprozesse zu unterstützen.[1][2][3][5]\n\nDie Software ist vor allem für **Unternehmen mit vielen operativen Daten und wiederkehrenden Auswertungen** gedacht, also für Teams in **Controlling, Vertrieb, Operations, HR, Beschaffung/Procurement und Consulting**.[2][3] Genannt werden außerdem Einsatzfelder wie **Logistik**, **Bestandsmanagement**, **Preisgestaltung**, **Forschung & Entwicklung** sowie **Produktion**.[1][4]\n\nBesonders passend ist Zeit AI laut den Quellen für Firmen, die:\n- **ERP-/CRM-/Excel-Daten** zusammenführen wollen,[1][2][3]\n- manuelle **Reporting- und Analyseprozesse** ersetzen möchten,[1][2][5]\n- schnell **ad-hoc Fragen** zu Unternehmensdaten beantworten müssen,[2][3][8]\n- in Branchen wie **Industrie, Logistik, Pharma/Life Science, Automotive, Agrar** oder ähnlichen datenintensiven Bereichen arbeiten.[4][6]\n\nWenn du möchtest, kann ich dir auch kurz erklären, **wie ZeitMind technisch funktioniert** oder **wie es sich von Power BI, Tableau oder Palantir unterscheidet**.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was ist Zeit AI und für welche Unternehmen ist die Software gedacht?",
+   "intent": "identity",
+   "model": "claude",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "## Was ist Zeit AI?\n\nZeit AI ist ein Technologieunternehmen (Zeit AI GmbH), das eine KI-gestützte Plattform zur Automatisierung von Datenanalysen und Business Intelligence anbietet.  Zeit AI bietet eine KI-gestützte Plattform zur Automatisierung von Datenanalysen und Business Intelligence. Das System verbindet sich mit ERP- und CRM-Daten, um manuelle Berichte zu ersetzen und Entscheidungsprozesse in Bereichen wie Logistik und Controlling zu optimieren. \n\nDas Herzstück der Software ist der KI-Agent **„ZeitMind\"**.  Das Herzstück der Plattform ist der AI-Agent 'ZeitMind', der sich direkt mit bestehenden Systemen wie ERPs, CRMs und Datenbanken verbindet, um manuelle Prozesse in Excel zu automatisieren und tiefe Einblicke in Unternehmensdaten zu gewähren.  Nutzer können dabei mit ihren Daten in natürlicher Sprache interagieren, ähnlich wie bei ChatGPT – nur eben für Unternehmenstabellen.  Zeit AI ist ChatGPT für enterprise tables. You can sync tables from your data bases, ERP systems, CRMs, CSVs and more. \n\nGegründet wurde das Unternehmen von zwei ehemaligen Palantir-Mitarbeitern:  Sie leiteten gemeinsam forward-deployed Teams, entwickelten Software für operative Teams unter hohem Zeitdruck und erkannten dabei, dass jede Lücke in Unternehmens-Datenstrategien mit Excel-Dateien gestopft wurde, ohne dass es einen effektiven Weg gab, dieses Wissen im großen Maßstab zu nutzen. \n\n### Wie funktioniert die Software?\n- **Datenanbindung:** Die Plattform verbindet sich direkt mit bestehenden Systemen wie ERP, CRM und Datenbanken –  ein Forward-Deployed Engineer verbindet die Systeme (ERP, CRM, SAP und mehr), bereinigt unsaubere Daten und verwandelt sie in operative Anwendungen, ohne dass IT-Ressourcen nötig sind. \n- **Natürlichsprachliche Abfragen:** Statt SQL zu schreiben, können Business-User Daten einfach in Alltagssprache abfragen.  Zeit AI lets business users query datasets using plain English instead of SQL, automatically generating visualizations and reports. \n- **Automatisierte Workflows:**  Unternehmen können ihr Geschäft mit KI-gestützten Workflows und Echtzeitdaten betreiben, zum Beispiel um automatisch Budgetüberschreitungen zu markieren und Maßnahmen für das zuständige Team auszulösen. \n\n### Für welche Unternehmen ist die Software gedacht?\n\nZeit AI richtet sich vor allem an mittelständische bis große Unternehmen, die datengetriebene Entscheidungen schneller treffen wollen, aber oft in manuellen Excel-Prozessen feststecken:\n\n1. **Forschung & Entwicklung, Life Science und Pharma:**  Zeit AI existiert, um Teams über manuelle, fehleranfällige Analysearbeit in Excel hinaus zu helfen. Man bedient Forschungs- & Entwicklungs-, Operations- und Datenteams, die schnellere, zuverlässigere Berichterstattung und Entscheidungsfindung benötigen.  Konkret  beschleunigt Zeit AI die digitale Transformation, indem Life-Science- und Pharma-Teams Riffyn-X-Prozessdaten mit ZeitMind in umsetzbare Erkenntnisse verwandeln können, wobei die KI-Plattform Analysen automatisiert, Muster erkennt und Prozessintelligenz in Echtzeit generiert. \n\n2. **Logistik, Controlling und Einkauf:** Laut Startup-Atlas werden Entscheidungsprozesse in  Bereichen wie Logistik und Controlling  optimiert. Praxisbeispiele umfassen  die Reduzierung von Über- und Fehlbeständen durch Reaktion auf Umschlagshäufigkeit, das Aufdecken unrentabler Portfolioprodukte, algorithmische Vorschläge in der Wartungsplanung sowie die Vereinheitlichung von Beschaffungsdaten aus vier verschiedenen Quellsystemen für Live-Verhandlungsunterstützung. \n\n3. **Datenanalyse-Teams und BI-Abteilungen in Unternehmen:**  Zeit AI eignet sich am besten für Datenanalysten, Business-Intelligence-Teams und Organisationen auf Unternehmensebene, die komplexe Daten mithilfe natürlicher Sprachverarbeitung in umsetzbare Erkenntnisse verwandeln wollen. Es vereinfacht die Datenanalyse und Berichterstellung.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was ist Zeit AI und für welche Unternehmen ist die Software gedacht?",
+   "intent": "identity",
+   "model": "claude",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "## Was ist Zeit AI?\n\nZeit AI ist ein 2024 gegründetes, in München ansässiges Startup (Teil des Y-Combinator-Programms), das  ein kleines, in München ansässiges Team aus Ingenieuren, Entwicklern und Operatoren ist, unterstützt von Y Combinator . Gegründet wurde es von zwei ehemaligen Palantir-Mitarbeitern:  Sie gründeten Zeit AI, nachdem sie vier Jahre lang gemeinsam bei Palantir gearbeitet hatten, wo sie forward-deployed Teams leiteten – Leopold auf der strategischen und Marvin auf der technischen Seite .\n\n**Produkt:** Das Kernprodukt heißt **ZeitMind** –  Zeit AI ist quasi \"ChatGPT für Unternehmens-Tabellen\". Man kann Tabellen aus Datenbanken, ERP-Systemen, CRMs, CSVs und mehr synchronisieren. Darüber können einfache Fragen in natürlicher Sprache genutzt werden, um Daten zu finden, zu kombinieren, Analysen oder sogar Diagramme zu erstellen. Alle Ergebnisse sind wiederholbar und erklärbar, und lassen sich per Knopfdruck exportieren .\n\nKonkret verbindet sich die Plattform  mit ERP- und CRM-Daten, um manuelle Berichte zu ersetzen und Entscheidungsprozesse in Bereichen wie Logistik und Controlling zu optimieren . Dabei wird  durch die Automatisierung von bis zu 90 % des Berichtswesens Unternehmen geholfen, hunderte Arbeitsstunden monatlich einzusparen und fundierte Entscheidungen in Echtzeit zu treffen – die Lösung findet Anwendung in Bereichen wie Controlling, Bestandsmanagement, Preisgestaltung und Beschaffung .\n\nDie Idee entstand aus einer konkreten Beobachtung bei Palantir:  Im Sommer 2024 verließen die Gründer Palantir, nachdem sie aus erster Hand gesehen hatten, dass Menschen, die tatsächlich ein Unternehmen führen – Controlling-Leiter, Operatoren, Manager – noch immer Daten manuell zwischen Systemen bewegen müssen. Das Signal liegt im ERP, im CRM und in einem Dutzend fragmentierter Tools, die nicht miteinander sprechen. Entscheidungen werden deshalb in Excel-Tabellen und aus dem Bauchgefühl heraus getroffen. In dieser Lücke verlieren Unternehmen Zeit, Geld und Vertrauen – mit heutigen Frontier-Modellen kann diese Arbeit endlich im Software-Maßstab erledigt werden .\n\n## Für welche Unternehmen ist die Software gedacht?\n\nDie Plattform richtet sich vor allem an **europäische Mittelstandsunternehmen**: Zeit AI positioniert sich als  Munich-basiertes, YC-gefördertes Unternehmen, das den \"AI Forward Deployed Engineer\" für den europäischen Mittelstand baut .\n\nZielgruppen und Anwendungsbereiche sind insbesondere:\n\n- **Unternehmen mit komplexen Datenlandschaften** (ERP/CRM-Systeme), die manuelle Excel-Prozesse ersetzen wollen\n- **Controlling- und Finanzabteilungen** – so nutzt beispielsweise  die Finanzberatung RISE, die stark auf Excel angewiesen ist, Zeit AI, um Ausgaben in ihrer Organisation zuzugreifen und zu analysieren \n- **Life-Science- und Pharma-Unternehmen**: Über eine Partnerschaft mit Siemens hilft die Software  Life-Science- und Pharma-Teams dabei, Prozessdaten in verwertbare Erkenntnisse zu verwandeln – die Plattform automatisiert Analysen, erkennt Muster und generiert Prozessintelligenz in Echtzeit, um Arbeitsabläufe zu optimieren, manuellen Aufwand zu reduzieren und schnellere, datengetriebene Entscheidungen in F&E und Produktion zu treffen \n- **Fachabteilungen ohne IT-Expertise**:  Zeit AI kombiniert fortschrittliche Algorithmen mit einer benutzerorientierten Oberfläche, sodass Fachabteilungen ohne tiefgehende IT-Kenntnisse operative Anwendungen erstellen und Ergebnisse direkt überwachen können \n\nZusammengefasst: Zeit AI eignet sich für mittelständische bis größere Unternehmen (aus Branchen wie Logistik, Controlling, Finanzen, Life Sciences/Pharma), die viele Daten in ERP-, CRM- und Excel-Systemen verwalten und diese durch natürliche Sprachabfragen automatisiert auswerten möchten, statt manuell Berichte zu erstellen.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Erfahrungen haben mittelständische Unternehmen mit Zeit AI gemacht?",
+   "intent": "proof",
+   "model": "gemini",
+   "run": 0,
+   "fanout_queries": [
+    "Erfahrungen mittelständische Unternehmen Zeit AI",
+    "Zeit AI Anwendungsfälle Mittelstand",
+    "Zeit AI Bewertungen KMU",
+    "Vorteile KI Zeitmanagement Mittelstand",
+    "Herausforderungen KI Zeitmanagement kleine und mittlere Unternehmen",
+    "Zeit AI Erfahrungen Mittelstand Deutschland",
+    "Zeit AI case studies KMU",
+    "Kundenbewertungen Zeit AI Mittelstand",
+    "Zeit AI Erfolgsgeschichten mittelständische Unternehmen",
+    "Anwendung von Zeit AI in deutschen mittelständischen Unternehmen",
+    "Zeit AI user reviews Mittelstand",
+    "Zeit AI testimonials medium-sized companies Germany",
+    "Erfahrungsberichte Zeit AI KMU",
+    "Zeit AI case studies German Mittelstand detailed outcomes",
+    "feedback from medium-sized businesses using Zeit AI"
+   ],
+   "cited_domains": [
+    "fondo.com",
+    "go-ai-smart.com",
+    "loesungsagentur.at",
+    "tracxn.com",
+    "ycombinator.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Mittelständische Unternehmen, die mit Zeit AI zusammenarbeiten, berichten von einer deutlichen Effizienzsteigerung und Kostenersparnis durch die Automatisierung ihrer Datenanalyse und Business Intelligence Prozesse. Zeit AI, mit seiner Plattform ZeitMind, richtet sich speziell an den deutschen Mittelstand, um die Abhängigkeit von manuellen Excel-basierten Berichten zu reduzieren.\n\n**Vorteile und Anwendungsbereiche:**\n\n*   **Automatisierte Datenanalyse und Reporting:** Zeit AI ermöglicht es Unternehmen, Geschäftsfragen in natürlicher Sprache zu stellen, woraufhin die KI Daten analysiert, Antworten generiert und Berichte erstellt. Dies ersetzt bis zu 90 % des manuellen Berichtswesens und kann Hunderte von Arbeitsstunden pro Monat einsparen.\n*   **Verbesserte Entscheidungsfindung:** Durch die Vereinheitlichung von Daten aus verschiedenen Quellen wie SAP, ERP-, CRM- und HR-Systemen sowie über 600 weiteren Quellsystemen, bietet ZeitMind Echtzeit-Einblicke. Dies ermöglicht fundiertere und schnellere Entscheidungen in Bereichen wie Controlling, Bestandsmanagement, Preisgestaltung und Beschaffung.\n*   **Messbare Einsparungen:** Zeit AI hebt konkrete Einsparungen hervor, wie beispielsweise 700.000 € durch KI-gestützte Lagerkontrolle oder 450.000 € durch die Erkennung von Margenrisiken in unrentablen Produktportfolios. Auch in der Disposition konnten 325.000 € eingespart und in der Einkaufsverhandlung durch verbesserte Datenbasis bis zu 24 Millionen € erzielt werden.\n*   **Einfache Integration und Nutzung:** Die Plattform ist darauf ausgelegt, dass Fachabteilungen ohne tiefgehende IT-Kenntnisse operative Anwendungen erstellen und Ergebnisse überwachen können. Die Implementierung soll innerhalb weniger Wochen messbare Ergebnisse liefern.\n*   **Datenschutz und Sicherheit:** Zeit AI legt Wert auf Datenschutz und Datensicherheit, ist DSGVO-konform und die Daten werden auf EU-Servern gehostet.\n\nEin konkretes Beispiel für die Anwendung von Zeit AI ist die Finanzberatung RISE, die die Plattform nutzt, um Ausgaben im gesamten Unternehmen zu analysieren und zu verwalten, was zuvor stark von Excel abhängig war.\n\nInsgesamt zeigt sich, dass mittelständische Unternehmen, die Zeit AI einsetzen, von einer gesteigerten Effizienz, einer besseren Datennutzung für strategische Entscheidungen und der Automatisierung zeitaufwändiger Prozesse profitieren. Die Herausforderung für viele KMU beim Einsatz von KI generell liegt oft noch im Aufbau von Kompetenzen, klaren Regeln und der Identifikation der passenden Anwendungsfälle.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Erfahrungen haben mittelständische Unternehmen mit Zeit AI gemacht?",
+   "intent": "proof",
+   "model": "gemini",
+   "run": 1,
+   "fanout_queries": [
+    "Erfahrungen mittelständische Unternehmen Zeit AI",
+    "Zeit AI mittelstand erfahrungen",
+    "AI solutions for time management in German SMEs experiences",
+    "KI für Zeitmanagement Mittelstand"
+   ],
+   "cited_domains": [
+    "businessinsider.de",
+    "digitalbusiness-magazin.de",
+    "digitalzentrum-berlin.de",
+    "fzi.de",
+    "keinsaas.com",
+    "security-storage-und-channel-germany.de",
+    "startup-atlas.de",
+    "vaudience.ai",
+    "ycombinator.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Mittelständische Unternehmen in Deutschland sammeln zunehmend Erfahrungen mit Künstlicher Intelligenz (KI), insbesondere im Bereich Zeitmanagement und Effizienzsteigerung. Ein spezifisches Unternehmen, das sich an diesen Sektor richtet, ist Zeit AI, dessen Software \"ZeitMind\" darauf abzielt, Datenanalyse und Business Intelligence zu automatisieren.\n\n**Erfahrungen mit Zeit AI:**\nZeit AI zielt darauf ab, den deutschen Mittelstand bei der Bewältigung von Herausforderungen im Umgang mit Unternehmensdaten zu unterstützen. Viele mittelständische Unternehmen kämpfen damit, Daten aus verschiedenen Systemen wie ERP, CRM und Tabellenkalkulationen zu analysieren. Die Software von Zeit AI fasst diese Daten auf einer Plattform zusammen und ermöglicht es Mitarbeitern, in natürlicher Sprache Fragen zu stellen. Die KI analysiert die Daten, generiert Antworten, erstellt Berichte und erläutert die Ergebnisse. Dies soll Unternehmen Zeit und Geld sparen, indem bis zu 90 % des Berichtswesens automatisiert werden und fundierte Entscheidungen in Echtzeit ermöglicht werden. Anwendungsbereiche umfassen Controlling, Beschaffung und Logistik. Zeit AI verspricht zudem eine schnelle Implementierung und DSGVO-Konformität.\n\n**Allgemeine Erfahrungen mittelständischer Unternehmen mit KI im Zeitmanagement:**\n*   **Hohe Akzeptanz und Nutzung:** Eine Studie aus dem April 2026 zeigt, dass 91 % der Entscheidungsträger in mittelständischen Unternehmen in Deutschland KI nutzen, davon 41 % täglich. Eine weitere Erhebung aus dem Oktober 2025 ergab, dass 40 % der KMU bereits KI einsetzen und weitere 21 % dies planen.\n*   **Erhebliche Zeitersparnis:** 94 % der KI-Nutzer in deutschen KMU berichten von einer Zeitersparnis, die im Durchschnitt 5,1 Stunden pro Woche (oder 235 Stunden jährlich) beträgt. Die primäre Motivation für die Einführung von KI ist für 42 % der Unternehmen die Zeitersparnis.\n*   **Anwendungsbereiche:** Die größte Zeitersparnis wird bei der Recherche, Analyse oder Zusammenfassung von Informationen (27 %) und beim Verfassen von E-Mails (20 %) erzielt. Die gewonnene Zeit wird hauptsächlich für kreatives Denken (32 %), strategische Planung (30 %) und die Verbesserung von Produkten oder Dienstleistungen (28 %) eingesetzt.\n*   **KI-gestütztes Zeitmanagement:** KI-basierte Tools können Kalender intelligent planen, freie Zeitfenster identifizieren und Termine automatisch so arrangieren, dass Doppelbuchungen vermieden und Aufgaben priorisiert werden. Dies hilft Unternehmen, ineffiziente Besprechungen zu reduzieren und einen unorganisierten Kalender zu vermeiden, der zu erheblichem Zeitverlust und Stress führen kann.\n*   **Herausforderungen und Optimierungspotenziale:** Trotz der weiten Verbreitung fehlt vielen Unternehmen eine klare KI-Strategie. KI wird oft für Routineaufgaben wie Texterstellung, Recherche oder Übersetzungen eingesetzt, seltener jedoch in geschäftskritischen Bereichen wie Angebotskalkulation oder Einkauf. Zudem investieren viele Unternehmen zwar in die Technologie, aber weniger in die Schulung ihrer Mitarbeiter im effektiven Umgang damit. Auch die Integration neuer KI-Tools in bestehende, oft ältere IT-Systeme stellt eine Herausforderung dar. Ein \"Learning Gap\" und fehlende Kompetenzen können dazu führen, dass KI-Projekte scheitern, oft nicht an der Technologie selbst, sondern an mangelnder Datenqualität oder organisatorischen Faktoren.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Erfahrungen haben mittelständische Unternehmen mit Zeit AI gemacht?",
+   "intent": "proof",
+   "model": "chatgpt",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [
+    "zeit-ai.com"
+   ],
+   "answer": "Mittelständische Unternehmen haben mit Zeit AI positive Erfahrungen gemacht, insbesondere in den Bereichen Datenanalyse und Prozessoptimierung. Zeit AI bietet eine KI-gestützte Plattform, die es Unternehmen ermöglicht, ihre Daten effizient zu integrieren, maßgeschneiderte Anwendungen zu erstellen und Geschäftsprozesse zu automatisieren. ([zeit-ai.com](https://www.zeit-ai.com/de?utm_source=openai))\n\nEin Beispiel ist Allgaier Agrarhandel, ein Familienunternehmen, das Zeit AI erfolgreich eingesetzt hat. Der Geschäftsführer, Karl Allgaier, bemerkte, dass Zeit AI durch enge Zusammenarbeit ihre Daten verstand und in praktische Anwendungen umsetzte, die nach wenigen Monaten täglich genutzt werden konnten. ([zeit-ai.com](https://www.zeit-ai.com/de?utm_source=openai))\n\nEin weiteres Beispiel ist Kolbenschmidt Pistons Brazil, wo Präsident Claus von Heydebreck die Effektivität von Zeit AI bei der Bereitstellung von Klarheit und Unterstützung bei präzisen Entscheidungen in kritischen Bereichen hervorhob. ([zeit-ai.com](https://www.zeit-ai.com/de?utm_source=openai))\n\nDiese Erfolgsgeschichten zeigen, dass Zeit AI mittelständischen Unternehmen dabei hilft, ihre Daten besser zu nutzen, Prozesse zu optimieren und fundierte Entscheidungen zu treffen. ",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Erfahrungen haben mittelständische Unternehmen mit Zeit AI gemacht?",
+   "intent": "proof",
+   "model": "chatgpt",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [
+    "crn.de",
+    "firmenpresse.de",
+    "kopfai.de",
+    "sectank.net"
+   ],
+   "answer": "Mittelständische Unternehmen haben zunehmend positive Erfahrungen mit dem Einsatz von Künstlicher Intelligenz (KI) gemacht. Laut einer aktuellen Studie von OpenAI nutzen bereits 85,1 % der befragten Entscheider in kleinen und mittleren Unternehmen KI im Arbeitsalltag, wobei fast die Hälfte (46,2 %) dies regelmäßig tut. Diese Entwicklung zeigt, dass KI vom Experiment zum produktiven Werkzeug geworden ist. ([firmenpresse.de](https://www.firmenpresse.de/pressinfo2246296-openai-studie-85-prozent-der-mittelstaendler-nutzen-ki-im-arbeitsalltag.html?utm_source=openai))\n\nUnternehmen, die KI einsetzen, berichten von spürbaren Effizienzgewinnen. Im Durchschnitt sparen sie 5,1 Stunden Arbeitszeit pro Woche ein, was etwa 33 Arbeitstagen pro Jahr entspricht. Besonders deutlich werden diese Einsparungen bei Recherche- und Analyseaufgaben, beim Schreiben von E-Mails und in der geschäftlichen Kommunikation sowie bei der Ideenfindung. ([sectank.net](https://sectank.net/magazin/2026/04/22/zwischen-effizienz-und-governance-neue-studie-von-openai-zeigt-wie-der-mittelstand-ki-produktiv-nutzt/?utm_source=openai))\n\nEin Beispiel für erfolgreiche KI-Implementierung im Mittelstand ist die Zusammenarbeit mit Kopf AI. Dieses Unternehmen unterstützt Betriebe mit 10 bis 50 Mitarbeitern dabei, manuelle Prozesse zu automatisieren und so Zeit und Ressourcen zu sparen. Kunden berichten von konkreten Verbesserungen, wie der Reduzierung von Stunden für Cold Outreach und Newsletter-Versand sowie der Identifikation von Bereichen, die täglich Zeit kosten. ([kopfai.de](https://www.kopfai.de/?utm_source=openai))\n\nTrotz dieser positiven Entwicklungen gibt es auch Herausforderungen. Eine Studie von Cancom und ServiceNow zeigt, dass 76 % der mittelständischen Unternehmen KI bereits produktiv nutzen, jedoch nur 26 % die Technologie vollständig in ihre Kernprozesse integriert haben. Dies deutet darauf hin, dass viele Unternehmen noch in der Pilotphase stecken und Unterstützung bei der Skalierung benötigen. ([crn.de](https://www.crn.de/news/2026/stolpersteine-und-booster-fur-ki-im-mittelstand?utm_source=openai))\n\nZusammenfassend lässt sich sagen, dass mittelständische Unternehmen zunehmend von den Vorteilen der KI profitieren, insbesondere in Bezug auf Effizienzsteigerungen und Prozessoptimierungen. Dennoch stehen sie vor der Herausforderung, KI vollständig in ihre Geschäftsprozesse zu integrieren und dabei geeignete Partner und Strategien zu finden. ",
+   "client_cited": false,
+   "client_mentioned": false
+  },
+  {
+   "prompt": "Welche Erfahrungen haben mittelständische Unternehmen mit Zeit AI gemacht?",
+   "intent": "proof",
+   "model": "perplexity",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Mittelständische Unternehmen berichten mit **Zeit AI** vor allem von **schnelleren Entscheidungen**, **deutlich weniger Reporting-Aufwand** und **messbaren Kosteneinsparungen**. Auf der Website werden konkrete Ergebnisse wie **370 zurückgewonnene Stunden pro Monat**, **90 % weniger Excel-Reporting** und Einsparungen in mehreren Anwendungsfällen genannt.[2]\n\nDie dort veröffentlichten Beispiele zeigen, welche Erfahrungen besonders hervorgehoben werden:\n\n- **Schnelle Verwertbarkeit der Daten**: Zeit AI wurde laut einem Nutzer so schnell verstanden und in praktische Anwendungen überführt, dass diese bereits nach wenigen Monaten täglich genutzt wurden.[2]\n- **Bessere Transparenz und Entscheidungsqualität**: Ein weiterer Erfahrungsbericht betont, dass Zeit AI „Klarheit“ schafft und präzise Entscheidungen in kritischen Bereichen unterstützt.[2]\n- **Spürbare wirtschaftliche Effekte**: Genannt werden u. a. Einsparungen von **€700k** durch KI-gestützte Lagerkontrolle, **€325k** in der Disposition und **€24M** durch verbesserte Verhandlungen.[2]\n\nInhaltlich passt das zu den allgemeinen Erfahrungen vieler KMUs mit KI: Sie berichten häufig von **Produktivitätsgewinnen**, besonders bei **Recherche, Analyse, Kommunikation und Prognosen**, während als Hürden vor allem **Datenschutz**, **Zeitmangel** und **Kosten** genannt werden.[1][12]\n\nWenn du möchtest, kann ich dir die Erfahrungen mit **Zeit AI** auch noch nach **Branchen** oder **konkreten Use Cases** aufschlüsseln.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Erfahrungen haben mittelständische Unternehmen mit Zeit AI gemacht?",
+   "intent": "proof",
+   "model": "perplexity",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Mittelständische Unternehmen berichten mit **Zeit AI** vor allem von **spürbaren Effizienz- und Produktivitätsgewinnen**: weniger Excel-Reporting, schnelleres einheitliches Reporting über Standorte und deutlich gewonnene Arbeitszeit für Analyse, Planung und operative Entscheidungen.[2]\n\nKonkret nennen die Fallbeispiele auf der Zeit-AI-Seite unter anderem:\n\n- **370 Stunden pro Monat** zurückgewonnene Zeit.[2]\n- **90 % weniger Excel-Reporting**.[2]\n- Einsparungen von **€700k** durch KI-gestützte Lagerkontrolle.[2]\n- **€325k** Einsparungen in der Disposition.[2]\n- **€24M** durch verbesserte Verhandlungen auf Basis einheitlicher Beschaffungsdaten.[2]\n\nAuch die Stimmen der Unternehmen deuten auf positive Erfahrungen hin: Zeit AI helfe, **Klarheit** in komplexe Daten zu bringen und Entscheidungen zu unterstützen, und werde nach schneller Zusammenarbeit bereits nach wenigen Monaten im Alltag genutzt.[2]\n\nWenn Sie möchten, kann ich die Erfahrungen **nach Branchen** oder **nach konkreten Use Cases** von Zeit AI aufschlüsseln.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Erfahrungen haben mittelständische Unternehmen mit Zeit AI gemacht?",
+   "intent": "proof",
+   "model": "claude",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Ich habe keine mir bekannten Informationen über ein spezifisches Produkt oder eine Plattform namens \"Zeit AI\", das explizit für mittelständische Unternehmen konzipiert wurde. Lassen Sie mich das recherchieren, um Ihnen genaue Informationen zu geben. Basierend auf meiner Recherche gibt es zu \"Zeit AI\" folgende Informationen:\n\n**Was ist Zeit AI?**\n\n Das deutsche KI-Startup Zeit AI wurde von Leopold von Waldthausen und Marvin Bornstein gegründet und hat sich in kürzester Zeit einen Namen gemacht.   Beide Gründer bringen wertvolle Erfahrungen aus ihrer Zeit bei Palantir mit, einem Unternehmen, das für seine Datenanalysefähigkeiten bekannt ist.   Diese Expertise nutzen sie nun, um mit Zeit AI innovative Lösungen zu entwickeln, die insbesondere in der Automobil- und Agrarindustrie Anwendung finden. \n\n**Erfahrungen von Unternehmen mit Zeit AI**\n\nSpeziell zu mittelständischen Unternehmen liegen leider kaum detaillierte Erfahrungsberichte vor. Was bekannt ist:\n\n-  Die Produkte von Zeit AI haben bereits erste große Kunden gewonnen, darunter Unternehmen aus der Automobilbranche und dem Agrarhandel – Branchen, die vor großen Herausforderungen stehen, die durch den Einsatz von Künstlicher Intelligenz effizienter bewältigt werden können. \n-  Zeit AI bietet Lösungen, die sowohl die Effizienz steigern als auch die Entscheidungsfindung verbessern. \n-  Ein bemerkenswerter Meilenstein für Zeit AI war die Aufnahme in den Y-Combinator, einen der angesehensten Startup-Inkubatoren weltweit,  was auf großes Wachstumspotenzial hindeutet.\n\n**Einordnung**\n\nDie bislang öffentlich bekannten Kunden scheinen eher größere Unternehmen aus Automobil- und Agrarbranche zu sein, nicht explizit der klassische Mittelstand. Konkrete, dokumentierte Erfahrungsberichte oder Case Studies von mittelständischen Unternehmen mit Zeit AI im engeren Sinne konnte ich in den vorliegenden Quellen nicht finden – das Startup scheint noch relativ jung zu sein und tritt vor allem im Kontext von Großkunden und Startup-Förderung (Y-Combinator) in Erscheinung.\n\nFalls Sie möchten, kann ich gezielter nachrecherchieren, z.B. zu konkreten Kundenreferenzen oder Case Studies von Zeit AI, oder allgemeiner zu Erfahrungen mittelständischer Unternehmen mit KI-Lösungen generell (dazu gäbe es deutlich mehr aktuelle Studien und Berichte).",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Erfahrungen haben mittelständische Unternehmen mit Zeit AI gemacht?",
+   "intent": "proof",
+   "model": "claude",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Ich habe keine mir bekannten Informationen über ein Produkt oder eine Dienstleistung namens \"Zeit AI\" im Kontext mittelständischer Unternehmen. Lassen Sie mich das recherchieren, um Ihnen aktuelle und verlässliche Informationen zu geben. Ich habe zu Ihrer Frage recherchiert und muss zunächst eine wichtige Unterscheidung treffen:\n\n## Was ist \"Zeit AI\"?\n\nEs gibt tatsächlich ein Startup namens **Zeit AI**. Allerdings handelt es sich dabei nicht um ein etabliertes Produkt für den Mittelstand mit dokumentierten Kundenerfahrungen, sondern um ein noch sehr junges deutsches KI-Startup.  Die Gründer bringen wertvolle Erfahrungen aus ihrer Zeit bei Palantir mit, einem Unternehmen, das für seine Datenanalysefähigkeiten bekannt ist, und nutzen diese Expertise nun, um innovative Lösungen zu entwickeln.   Ein bemerkenswerter Meilenstein für Zeit AI war die Aufnahme in den Y-Combinator, einen der angesehensten Startup-Inkubatoren weltweit. \n\nZu Kunden heißt es:  Die Produkte von Zeit AI haben bereits erste große Kunden gewonnen, darunter Unternehmen aus der Automobilbranche und dem Agrarhandel – Branchen, die vor großen Herausforderungen stehen, die durch den Einsatz von Künstlicher Intelligenz effizienter bewältigt werden können, wobei Zeit AI Lösungen bietet, die sowohl die Effizienz steigern als auch die Entscheidungsfindung verbessern. \n\n**Wichtig:** Dabei handelt es sich eher um größere Konzerne bzw. Branchenakteure als um klassische, kleinteilige Mittelstandskunden. Konkrete, detaillierte Erfahrungsberichte oder Fallstudien speziell von mittelständischen Unternehmen (typischerweise KMU mit z. B. 10–250 Mitarbeitern) zu Zeit AI konnte ich in den Suchergebnissen nicht finden – die öffentliche Berichterstattung ist noch recht knapp und beschreibt vor allem die Gründungsgeschichte und den Y-Combinator-Erfolg.\n\n## Möglicherweise Verwechslung?\n\nFalls Sie nach allgemeinen **Erfahrungen des deutschen Mittelstands mit KI** gefragt haben (nicht speziell nach dem Startup \"Zeit AI\"), zeigt sich ein anderes Bild:\n\n-  Laut dem KI-Mittelstandsindex 2026 von Salesforce und dem Deutschen Mittelstands-Bund (DMB) nutzt oder testet mittlerweile mehr als jedes zweite mittelständische Unternehmen KI-Lösungen (51,2 %) .\n- Gleichzeitig bleibt die Umsetzung oft eine Herausforderung:  Die Nutzung von AI im deutschen Mittelstand ist weit verbreitet, aber viele Firmen kommen derzeit nicht über Pilotprojekte hinaus. \n-  Die Bitkom-Studie 2026 zeigt, dass 53 % der Unternehmen fehlende Kompetenz als größtes Hindernis nennen – das Problem ist also nicht die Bereitschaft, sondern die Umsetzung. \n- Auch der Reifegrad entwickelt sich:  Viele mittelständische Unternehmen haben inzwischen erste Erfahrungen gesammelt, testen KI-gestützte Werkzeuge, und erste Prozesse werden unterstützt, wobei die Möglichkeiten moderner Anwendungen immer greifbarer werden. \n\n**Können Sie mir kurz sagen, worauf sich Ihre Frage genau bezieht?** Falls Sie das Startup \"Zeit AI\" meinen, gibt es momentan noch wenig öffentlich dokumentierte Mittelstands-Erfahrungsberichte. Falls Sie allgemein an KI-Erfahrungen im Mittelstand interessiert sind, kann ich gerne vertiefter recherchieren.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was kostet Zeit AI und wie läuft die Einführung im Unternehmen ab?",
+   "intent": "pricing",
+   "model": "gemini",
+   "run": 0,
+   "fanout_queries": [
+    "Zeit AI Kosten",
+    "Zeit AI Pricing",
+    "Zeit AI Preise",
+    "Zeit AI Einführungsprozess Unternehmen",
+    "Zeit AI Implementierung",
+    "Zeit AI Enterprise rollout"
+   ],
+   "cited_domains": [
+    "aikaptan.com",
+    "siemens.com",
+    "startup-atlas.de",
+    "ycombinator.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Zeit AI, eine Plattform für KI-gestützte Datenanalyse, bietet nach den vorliegenden Informationen keine öffentlichen Preislisten an, da die Kosten in der Regel individuell auf die jeweiligen Unternehmensanforderungen zugeschnitten sind. Das Geschäftsmodell basiert auf Software as a Service (SaaS).\n\nDie Einführung von Zeit AI in einem Unternehmen erfolgt in einem dreistufigen Implementierungsprozess und ist darauf ausgelegt, schnell messbare Ergebnisse zu liefern. Zeit AI betont, dass Unternehmen innerhalb weniger Wochen funktionierende KI-Anwendungen erhalten können.\n\nDer Einführungsprozess zeichnet sich durch folgende Aspekte aus:\n*   **Keine interne IT erforderlich:** Unternehmen können ohne eigene IT-Kapazitäten, Dateningenieure oder Analysten starten.\n*   **Forward-Deployed Engineers:** Zeit AI setzt sogenannte \"Forward-Deployed Engineers\" ein. Diese Experten verbinden die Systeme des Kunden (wie ERP, CRM, SAP und über 600 weitere Quellsysteme), bereinigen unstrukturierte Daten und erstellen operative Anwendungen. Dies erfolgt in enger Zusammenarbeit mit den Fachabteilungen wie Controlling, Vertrieb, Operations und HR.\n*   **Einfache Einrichtung:** Die Plattform verbindet sich direkt mit den bestehenden Geschäftssystemen.\n*   **Fokus auf messbaren Wert:** Das erste sechsmonatige Engagement zielt darauf ab, den Geschäftswert schnell nachzuweisen, Einsparungen zu verfolgen und den Impact zu validieren, um eine sichere Skalierung zu ermöglichen.\n*   **ZeitMind als Kernstück:** Die KI-Plattform namens ZeitMind ermöglicht es, alle Schritte der Business Intelligence mit einfacher Sprache zu steuern. Sie vereint Informationen aus verschiedenen Quellen, versteht den Kontext und liefert präzise Analysen und Erkenntnisse, um datengestützte Entscheidungen zu ermöglichen.\n*   **Schnelle Umsetzung:** Der Workflow ist auf eine nahtlose Zusammenarbeit zwischen dem Team des Kunden und den KI-Ingenieuren von Zeit AI ausgelegt, um Überraschungen zu minimieren und Ergebnisse zu maximieren.\n*   **Automatisierung von Berichten:** Das System kann bis zu 90 % des Berichtswesens automatisieren und hilft Unternehmen, hunderte von Arbeitsstunden monatlich einzusparen.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was kostet Zeit AI und wie läuft die Einführung im Unternehmen ab?",
+   "intent": "pricing",
+   "model": "gemini",
+   "run": 1,
+   "fanout_queries": [
+    "Zeit AI kosten",
+    "Zeit AI pricing",
+    "Zeit AI implementierung unternehmen",
+    "Zeit AI introduction company process"
+   ],
+   "cited_domains": [
+    "ainow.ch",
+    "startup-atlas.de",
+    "zeit-ai.com"
+   ],
+   "answer": "Zeit AI bietet eine KI-gestützte Datenanalyseplattform, deren genaue Kosten in den vorliegenden Informationen nicht explizit aufgeführt sind. Es wird jedoch erwähnt, dass KI-Kosten im Allgemeinen stark variieren können, von \"kostenlos\" bis zu sechsstelligen Beträgen im Jahresbudget, abhängig von Anbieter und Anwendungsfall. Diese Kosten setzen sich typischerweise aus Lizenz- und Plattformkosten, Implementierungs- und Integrationskosten, Schulungs- und Change-Management-Kosten sowie Kosten für laufenden Betrieb und Support zusammen.\n\nDie Einführung von Zeit AI in einem Unternehmen erfolgt in einem **dreistufigen Implementierungsprozess**. Dieser Prozess ist auf eine nahtlose Zusammenarbeit zwischen dem Kunden und den KI-Ingenieuren von Zeit AI ausgelegt, um Überraschungen zu minimieren und Ergebnisse zu maximieren. Zeit AI zielt darauf ab, in wenigen Wochen messbare Ergebnisse zu erzielen.\n\nDer Ablauf der Einführung umfasst folgende Schritte und Merkmale:\n*   **Schnelle Umsetzung mit Fachbereichen**: Ein sogenannter \"Forward-Deployed Engineer\" von Zeit AI verbindet die bestehenden Systeme des Unternehmens (wie ERP, CRM, SAP und über 600 weitere). Dabei werden unstrukturierte Daten bereinigt und operative Anwendungen erstellt, ohne dass ein hoher IT-Aufwand seitens des Kunden erforderlich ist.\n*   **Automatisierung und Integration**: Die Plattform, deren Kern der KI-Agent \"ZeitMind\" ist, verbindet sich direkt mit den vorhandenen Systemen, um manuelle Prozesse, beispielsweise in Excel, zu automatisieren und tiefe Einblicke in Unternehmensdaten zu ermöglichen. Ziel ist es, Berichte um bis zu 90 % zu automatisieren und dadurch Hunderte von Arbeitsstunden monatlich einzusparen.\n*   **Messbare Wirkung in Wochen**: Zeit AI verspricht, KI in der Praxis einzusetzen und innerhalb weniger Wochen eine messbare Wirkung zu erzielen. Dies beinhaltet die Erstellung von maßgeschneiderten Anwendungen und die automatische Steuerung von Geschäftsprozessen mit KI-gestützten Workflows und Echtzeit-Daten.\n\nDurch diesen Ansatz sollen Fachabteilungen ohne tiefgehende IT-Kenntnisse operative Anwendungen erstellen und Ergebnisse direkt überwachen können. Das System ist darauf ausgelegt, Datenmuster zu analysieren und automatisierte Handlungsanweisungen zu operationalisieren.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was kostet Zeit AI und wie läuft die Einführung im Unternehmen ab?",
+   "intent": "pricing",
+   "model": "chatgpt",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Die Kosten für Zeit AI können stark variieren, abhängig von Faktoren wie der Unternehmensgröße, den spezifischen Anforderungen und den gewählten Dienstleistungen. Typischerweise können die Kosten folgende Aspekte umfassen:\n\n1. **Lizenzgebühren**: Monatliche oder jährliche Gebühren, die für die Nutzung der Software anfallen.\n2. **Implementierungskosten**: Einmalige Kosten für die Einrichtung und Integration der AI in bestehende Systeme.\n3. **Schulung**: Kosten für Schulungsmaßnahmen für Mitarbeiter, um die AI effektiv zu nutzen.\n4. **Support und Wartung**: Regelmäßige Kosten für technischen Support und Updates.\n\n### Einführung im Unternehmen\n\n1. **Bedarfsanalyse**: Ermitteln Sie die spezifischen Anforderungen und Ziele des Unternehmens.\n2. **Auswahl der Lösung**: Wählen Sie die passende AI-Lösung aus, die Ihren Anforderungen entspricht.\n3. **Planung**: Entwickeln Sie einen Implementierungsplan, der Meilensteine und Ressourcen definiert.\n4. **Integration**: Implementieren Sie die AI-Lösung in bestehende Systeme.\n5. **Schulung**: Schulen Sie die Mitarbeiter im Umgang mit der neuen Technologie.\n6. **Testphase**: Führen Sie Tests durch, um die Funktionalität sicherzustellen und Anpassungen vorzunehmen.\n7. **Feedback und Anpassung**: Sammeln Sie Feedback von den Nutzern und optimieren Sie die Lösung nach Bedarf.\n\nEine sorgfältige Planung und schrittweise Umsetzung sind entscheidend für den Erfolg der AI-Einführung in einem Unternehmen.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was kostet Zeit AI und wie läuft die Einführung im Unternehmen ab?",
+   "intent": "pricing",
+   "model": "chatgpt",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Die Kosten für KI-Lösungen wie Zeit AI können stark variieren und hängen von mehreren Faktoren ab, darunter:\n\n1. **Art der Implementierung**: Cloud-basierte Lösungen können kostengünstiger sein als On-Premise-Installationen.\n2. **Anpassungsgrad**: Je mehr Anpassungen benötigt werden, desto höher die Kosten.\n3. **Benutzerschulung**: Schulungen für Mitarbeiter können zusätzliche Kosten verursachen.\n4. **Support und Wartung**: Laufende Kosten für technischen Support und Wartung sind ebenfalls zu berücksichtigen.\n\n### Einführung im Unternehmen\n\n1. **Bedarfsanalyse**: Identifizieren Sie, welche Probleme die KI-Lösung lösen soll.\n2. **Anbieterwahl**: Wählen Sie einen geeigneten Anbieter aus.\n3. **Planung**: Erstellen Sie einen Implementierungsplan, der Zeitrahmen, Ressourcen und Verantwortlichkeiten definiert.\n4. **Integration**: Integrieren Sie die KI-Lösung in bestehende Systeme.\n5. **Schulung**: Schulen Sie die Mitarbeiter im Umgang mit der neuen Technologie.\n6. **Testphase**: Führen Sie Tests durch, um sicherzustellen, dass alles einwandfrei funktioniert.\n7. **Rollout**: Implementieren Sie die Lösung unter vollem Betrieb.\n8. **Feedback und Anpassung**: Sammeln Sie Feedback und passen Sie die Lösung gegebenenfalls an.\n\nMöchten Sie spezifischere Informationen zu einem bestimmten Aspekt?",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was kostet Zeit AI und wie läuft die Einführung im Unternehmen ab?",
+   "intent": "pricing",
+   "model": "perplexity",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "**Zeit AI** nennt auf der Website **kein öffentliches Standard-Preismodell** für die KI-Plattform; stattdessen wird ein **kostenloser 24-Stunden-Pilot** angeboten und danach ein **erstes Sechs-Monats-Engagement** beschrieben, um den Geschäftswert nachzuweisen und die Skalierung vorzubereiten.[1][8]  \nDie **Einführung im Unternehmen** läuft laut Website in **3 Schritten** ab: erst die wichtigsten Use Cases finden, dann mit Business-Usern schnell umsetzen, anschließend den Nutzen belegen und skalieren.[1][8]\n\nSo läuft der Prozess im Detail:[8]\n- **1. Relevante Use Cases identifizieren:** Fokus auf Bereiche mit hohem Hebel, etwa ungenutzte Daten, fehlende Transparenz, manuelle Excel-Reports oder IT-Backlogs.\n- **2. Schnell mit Fachbereichen bauen:** Ein Forward-Deployed Engineer verbindet Systeme wie ERP, CRM oder SAP, bereinigt Daten und erstellt operative Anwendungen; laut Anbieter ist dafür **kein internes IT-Team nötig**.\n- **3. Wert nachweisen und skalieren:** Innerhalb von **Wochen** entstehen funktionierende KI-Anwendungen; im ersten **6-Monats-Engagement** werden Einsparungen und Impact gemessen und die Skalierung vorbereitet.[1][8]\n\nWenn du mit **„Was kostet Zeit AI“** die Preise eines **anderen ZEIT-Produkts** meinst, gibt es auf der Seite **ZEIT.IO** ein separates Preismodell mit nutzungsabhängigen Gebühren und Organisations-Abo-Preisen; das ist aber **nicht dieselbe Firma wie Zeit AI**.[2]  \nWenn du möchtest, kann ich dir als Nächstes eine **kompakte Kostenabschätzung für Zeit AI in einem typischen Unternehmen** formulieren, basierend auf dem beschriebenen Pilot- und 6-Monats-Modell.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was kostet Zeit AI und wie läuft die Einführung im Unternehmen ab?",
+   "intent": "pricing",
+   "model": "perplexity",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Zu **Zeit AI** finde ich in den vorliegenden Quellen **keine öffentliche, belastbare Preisliste**. Die Website nennt stattdessen ein **sechsmonatiges Engagement** als Einstieg, um Geschäftswert nachzuweisen und für eine spätere Skalierung mit eingebetteten KI-Fähigkeiten vorzubereiten[1].\n\nZur **Einführung im Unternehmen** sagen die Quellen, dass Zeit AI mit **Forward-Deployed Engineers** arbeitet, die Kunden dabei unterstützen, **innerhalb weniger Wochen messbare Erfolge** zu erzielen, und zwar **ohne** dass dafür zwingend interne IT- oder Data-Engineering-Ressourcen nötig sind[10]. Siemens beschreibt außerdem den Ansatz als KI-Agenten, die **wiederkehrende Analyse-Workflows automatisieren**: Daten bereinigen, Kennzahlen erstellen, Erkenntnisse generieren und Ergebnisse aufbereiten[13].\n\nPraktisch deutet das auf einen typischen Ablauf hin:\n- **Use-Case-Auswahl und Zieldefinition**: ein klarer Analyse- oder Automatisierungsfall wird festgelegt, der messbaren Nutzen verspricht[1][10].\n- **Pilotphase über mehrere Wochen**: ein erster Anwendungsfall wird umgesetzt, um schnelle Ergebnisse zu zeigen[10].\n- **Wertnachweis über 6 Monate**: Einsparungen und Impact werden verfolgt und validiert, bevor skaliert wird[1].\n- **Skalierung und Einbettung**: nach dem Proof of Value wird die KI breiter im Unternehmen integriert[1].\n\nWenn du möchtest, kann ich dir als Nächstes **eine konkrete Kostenspanne für ähnliche KI-Rollouts im Mittelstand** zusammenstellen oder den **typischen Einführungsprozess Schritt für Schritt** als Projektplan formulieren.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was kostet Zeit AI und wie läuft die Einführung im Unternehmen ab?",
+   "intent": "pricing",
+   "model": "claude",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Ich habe zu deiner Anfrage recherchiert, aber die Ergebnisse sind leider nicht eindeutig, da es offenbar mehrere unterschiedliche Produkte/Kontexte gibt, die auf \"Zeit AI\" zutreffen könnten:\n\n## Was ich gefunden habe\n\n**Zeit AI von Siemens (im Life-Science/Pharma-Bereich):** Es gibt ein Produkt namens \"Zeit AI\" bzw. \"ZeitMind\", das im Siemens-Ökosystem gelistet ist.  Zeit AI beschleunigt die digitale Transformation, indem es Life-Science- und Pharma-Teams ermöglicht, Riffyn-X-Prozessdaten mit ZeitMind in verwertbare Erkenntnisse umzuwandeln – die KI-Plattform automatisiert Analysen, erkennt Muster und generiert Prozessintelligenz in Echtzeit, um Workflows zu optimieren, manuellen Aufwand zu reduzieren und schnellere, datengetriebene Entscheidungen in F&E und Produktion zu ermöglichen.   Zeitmind ist demnach ein KI-Analysetool, das Informationen aus verschiedenen Quellen vereint, Kontext versteht und präzise Analysen und Erkenntnisse für Teams liefert. \n\nZu konkreten **Preisen** oder einem detaillierten **Einführungsprozess** (Onboarding, Implementierungsschritte im Unternehmen) für dieses spezielle Produkt liefern meine Suchergebnisse leider keine belastbaren Informationen – es gab nur eine kurze Produktbeschreibung, keine Preisliste oder Rollout-Anleitung.\n\n**Es gibt außerdem eine eigene Website \"zeit-ai.com\"**, die aber in den Suchergebnissen nur mit einem sehr kurzen, allgemeinen Hinweis auf Dateneinblicke aus Tabellendaten auftaucht – auch hier fehlen Preisangaben.\n\n## Meine Einschätzung\n\nEs könnte sein, dass du:\n1. Ein bestimmtes, möglicherweise kleineres/neueres Tool namens \"Zeit AI\" meinst, zu dem es noch wenig öffentlich zugängliche Informationen gibt, oder\n2. Ein internes Tool/eine Lösung eines bestimmten Anbieters meinst, das ich nicht eindeutig zuordnen kann.\n\n**Könntest du mir mehr Kontext geben** – zum Beispiel den Anbieter, die Branche oder einen Link/Screenshot? Dann kann ich gezielter nachrecherchieren und dir konkrete Angaben zu Preismodellen (z. B. Lizenzkosten, Abostufen) und dem typischen Einführungsprozess (Onboarding, Integration, Schulung) liefern.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Was kostet Zeit AI und wie läuft die Einführung im Unternehmen ab?",
+   "intent": "pricing",
+   "model": "claude",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Ich habe zu Ihrer Anfrage recherchiert, aber die Ergebnisse zeigen ein Problem auf: Es gibt offenbar **mehrere verschiedene Produkte/Dienste namens \"Zeit AI\"**, und meine Suche konnte keine eindeutige, umfassende Preis- und Einführungsinformation zu einem spezifischen Produkt liefern.\n\nWas ich gefunden habe:\n\n1. **Zeit AI (Siemens-Ökosystem / ZeitMind)**:  Zeit AI beschleunigt die digitale Transformation, indem es Life-Science- und Pharma-Teams ermöglicht, Riffyn-X-Prozessdaten mit ZeitMind in verwertbare Erkenntnisse umzuwandeln. Die KI-Plattform automatisiert Analysen, erkennt Muster und erzeugt Prozessintelligenz in Echtzeit.  Zu konkreten Preisen für dieses B2B-Produkt lagen in den Suchergebnissen keine Angaben vor – hier wäre eine direkte Anfrage bei Siemens/Riffyn nötig.\n\n2. **zeit-ai.com**: Eine weitere Website, die mit dem Slogan wirbt,  Einblicke aus tabellarischen Datendateien mit nur wenigen Worten  zu liefern – auch hier fehlten in den Suchergebnissen konkrete Preisangaben.\n\nDa keine der Quellen konkrete, verlässliche Angaben zu Preisstruktur (z. B. Abo-Modell, Lizenzkosten pro Nutzer, Enterprise-Pläne) oder zum genauen Ablauf eines Rollouts im Unternehmen (Onboarding, Integration, Schulung) enthielt, kann ich Ihnen dazu aktuell keine verlässliche Antwort geben.\n\n**Können Sie mir helfen, das Produkt genauer einzugrenzen?** Meinen Sie z. B.:\n- Das Siemens/Riffyn-Produkt \"Zeit AI\" bzw. \"ZeitMind\" für Life-Science/Pharma-Prozessdaten?\n- Ein anderes Tool namens \"Zeit AI\" (z. B. für Datenanalyse, HR/Zeiterfassung, oder Projektmanagement)?\n\nMit einer genaueren Bezeichnung oder dem Link zur Anbieter-Website kann ich gezielter nach Preisen und dem Einführungsprozess suchen.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Ist Zeit AI DSGVO-konform und wo werden die Daten gehostet?",
+   "intent": "compliance",
+   "model": "chatgpt",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Ich habe keine spezifischen Informationen zu \"Zeit AI\" und deren DSGVO-Konformität. Generell müssen Unternehmen, die personenbezogene Daten von EU-Bürgern verarbeiten, die Anforderungen der Datenschutz-Grundverordnung (DSGVO) erfüllen.\n\nZu den Hauptpunkten der DSGVO gehören:\n\n1. **Einwilligung**: Nutzer müssen klar zustimmen, bevor ihre Daten verarbeitet werden.\n2. **Transparenz**: Unternehmen müssen klar kommunizieren, wie und warum Daten gesammelt werden.\n3. **Datenminimierung**: Nur die notwendigen Daten sollten erhoben werden.\n4. **Speicherort**: Daten müssen in einem sicheren Umfeld gespeichert werden, das den gesetzlichen Anforderungen entspricht.\n\nFür Informationen zu spezifischen Hosting-Standorten und der Datenverarbeitung durch \"Zeit AI\" empfehle ich, die Datenschutzrichtlinie des Unternehmens zu konsultieren oder direkt beim Unternehmen nachzufragen.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Ist Zeit AI DSGVO-konform und wo werden die Daten gehostet?",
+   "intent": "compliance",
+   "model": "chatgpt",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [
+    "zeit-ai.com"
+   ],
+   "answer": "Die Zeit AI GmbH verpflichtet sich dem Schutz Ihrer personenbezogenen Daten und verarbeitet diese gemäß der Datenschutz-Grundverordnung (DSGVO). Allerdings gibt die Datenschutzerklärung keine spezifischen Informationen darüber, ob die Daten DSGVO-konform verarbeitet werden oder wo sie gehostet werden. ([zeit-ai.com](https://www.zeit-ai.com/de/privacy?utm_source=openai))\n\nFür detaillierte Auskünfte zu diesen Fragen empfiehlt es sich, direkt mit Zeit AI in Kontakt zu treten. Sie können das Unternehmen per E-Mail unter privacy@zeit.ai erreichen. ([zeit-ai.com](https://www.zeit-ai.com/de/privacy?utm_source=openai)) ",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Ist Zeit AI DSGVO-konform und wo werden die Daten gehostet?",
+   "intent": "compliance",
+   "model": "perplexity",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Ja, laut der Anbieter-Website ist **Zeit AI DSGVO-konform** und wird **in Deutschland gehostet**; außerdem steht dort, dass die Daten *nie zum Training von Modellen genutzt* werden.[1]\n\nWichtige Details aus der Datenschutzerklärung:\n- **Verantwortlich für die Verarbeitung** ist die Zeit AI GmbH in München.[2]\n- Die Daten werden **innerhalb der EU** verarbeitet oder nach **DSGVO-anerkannten Mechanismen** übertragen.[2]\n- Der Anbieter gibt an, **Daten nicht an Dritte zu verkaufen oder weiterzugeben**.[2]\n\nWenn du möchtest, kann ich dir als Nächstes noch kurz einordnen, was „DSGVO-konform“ in diesem Kontext praktisch bedeutet und welche Punkte du trotzdem vertraglich prüfen solltest, etwa AVV, TOMs und Speicherfristen.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Ist Zeit AI DSGVO-konform und wo werden die Daten gehostet?",
+   "intent": "compliance",
+   "model": "perplexity",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Ja, laut der eigenen Website positioniert sich **Zeit AI als DSGVO-konform** und gibt an, dass es **in Deutschland gehostet** wird; außerdem heißt es dort, dass die Daten *nie zum Training von Modellen genutzt* werden.[1]\n\nZusätzlich nennt die Datenschutzerklärung von Zeit AI, dass Daten **innerhalb der EU** verarbeitet werden oder nach **DSGVO-anerkannten Mechanismen** übertragen werden, und als Ansprechpartner eine deutsche Adresse in München sowie eine Datenschutz-E-Mail.[2]\n\nWichtig ist: Das sind **Anbieterangaben**. Ob der Einsatz bei dir tatsächlich DSGVO-konform ist, hängt in der Praxis auch davon ab, **welche Daten du verarbeitest**, ob ein **Auftragsverarbeitungsvertrag (AVV)** vorliegt und ob deine **Rechtsgrundlage**, Informationspflichten und ggf. eine **Datenschutz-Folgenabschätzung** passen.[4][5][7][16]",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Ist Zeit AI DSGVO-konform und wo werden die Daten gehostet?",
+   "intent": "compliance",
+   "model": "claude",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Die Suchergebnisse beziehen sich nicht auf ein konkretes Produkt namens \"Zeit AI\", sondern allgemein auf DSGVO-konformes KI-Hosting verschiedener Anbieter in Deutschland/EU. Es gibt offenbar kein eindeutig identifizierbares, bekanntes Produkt/Unternehmen mit dem Namen \"Zeit AI\", zu dem ich verlässliche, spezifische Informationen zu Datenschutz-Konformität und Serverstandorten finden konnte.\n\nUm dir eine präzise Antwort geben zu können, wäre es hilfreich, wenn du mir mehr Kontext gibst:\n\n- Meinst du ein bestimmtes Tool/Startup namens \"Zeit AI\" (z. B. einen Zeitmanagement-Assistenten, ein KI-Schreibtool oder etwas von der Wochenzeitung \"Die ZEIT\")?\n- Hast du einen Link oder weißt du, wer der Anbieter/Betreiber ist?\n\nFalls du von einem KI-Angebot der Wochenzeitung \"Die ZEIT\" sprichst (z. B. einem Assistenz- oder Recherchetool), sag mir das gerne – dann suche ich gezielt danach. Allgemein gilt für DSGVO-Konformität von KI-Diensten:\n\n- **Serverstandort**: Entscheidend ist, ob die Daten in der EU (idealerweise Deutschland) verarbeitet werden, da dies Übermittlungen in Drittländer (z. B. USA) mit den dortigen rechtlichen Risiken (Cloud Act, FISA 702) vermeidet.\n- **Auftragsverarbeitungsvertrag (AVV)**: Nach Art. 28 DSGVO muss ein AVV mit dem Anbieter abgeschlossen werden, wenn personenbezogene Daten verarbeitet werden.\n- **Keine Nutzung der Eingaben fürs Modelltraining**: Seriöse DSGVO-konforme Anbieter verarbeiten Nutzereingaben nur zur Beantwortung und verwerfen sie danach, ohne sie ins Training einfließen zu lassen.\n\nWenn du mir sagst, um welches konkrete \"Zeit AI\"-Produkt es geht, recherchiere ich gerne gezielt nach dessen Datenschutzerklärung und Hosting-Standort.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Ist Zeit AI DSGVO-konform und wo werden die Daten gehostet?",
+   "intent": "compliance",
+   "model": "claude",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Meine Suche hat keine spezifischen Informationen zu einem konkreten Produkt namens „Zeit AI\" gefunden – die Ergebnisse beziehen sich stattdessen auf allgemeine Anbieter von DSGVO-konformem KI-Hosting (z. B. Mittwald AI Hosting, verschiedene Blogbeiträge zum Thema).\n\nEs gibt mehrere Möglichkeiten, was du mit „Zeit AI\" meinen könntest:\n\n1. **Ein KI-Tool/Chatbot der ZEIT (Verlagsgruppe)** – z. B. ein internes oder öffentliches KI-Angebot der Wochenzeitung DIE ZEIT\n2. **Ein anderes Produkt/Startup namens „Zeit AI\"**\n3. Ein Tippfehler oder eine Verwechslung mit einem anderen Dienst\n\nDamit ich dir eine präzise und verlässliche Antwort zu DSGVO-Konformität und Hosting-Standort geben kann, wäre es hilfreich, wenn du mir mehr Kontext geben könntest:\n\n- Handelt es sich um ein Tool der Zeitschrift/des Verlags **DIE ZEIT**?\n- Ist es ein Zeiterfassungs- oder Produktivitäts-Tool mit KI-Funktion?\n- Hast du einen Link oder weißt du, von welchem Anbieter/Unternehmen dieses Tool stammt?\n\nMit diesen Infos kann ich gezielt nachrecherchieren und dir verlässliche Angaben zu Datenschutz und Serverstandort liefern.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Zeit AI oder Veezoo für KI-Datenanalyse im Mittelstand, was ist besser?",
+   "intent": "head to head",
+   "model": "chatgpt",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Die Entscheidung zwischen Zeit AI und Veezoo für KI-Datenanalyse im Mittelstand hängt von verschiedenen Faktoren ab. Hier sind einige Punkte, die Sie berücksichtigen sollten:\n\n### Zeit AI\n- **Zielgruppe**: Oft auf spezifische Branchen und Anwendungsfälle fokussiert.\n- **Funktionen**: Bietet möglicherweise spezialisierte Lösungen für Datenanalysen und KI-Modelle.\n- **Benutzerfreundlichkeit**: Möglicherweise einfacher für Nutzer ohne tiefgehende technische Kenntnisse.\n\n### Veezoo\n- **Zielgruppe**: Eher für Unternehmen, die eine flexible und benutzerfreundliche BI-Plattform suchen.\n- **Funktionen**: Starke Visualisierungswerkzeuge und interaktive Dashboards.\n- **Integration**: Gute Integrationsmöglichkeiten mit bestehenden Systemen.\n\n### Faktoren zur Entscheidung\n1. **Spezifische Anforderungen**: Welche Funktionen sind für Ihr Unternehmen am wichtigsten? (z.B. Visualisierung, Vorhersagemodelle)\n2. **Benutzerfreundlichkeit**: Wer wird das Tool nutzen? Technikaffine Nutzer oder weniger erfahrene Mitarbeiter?\n3. **Support und Schulungen**: Welche Art von Support bieten die Anbieter? Gibt es Schulungsmöglichkeiten?\n4. **Kosten**: Vergleichen Sie die Preisstrukturen und sehen Sie, welches Angebot besser zu Ihrem Budget passt.\n\nEs wäre ratsam, Demos oder Testversionen beider Tools zu nutzen, um herauszufinden, welches besser zu Ihren spezifischen Bedürfnissen passt.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Zeit AI oder Veezoo für KI-Datenanalyse im Mittelstand, was ist besser?",
+   "intent": "head to head",
+   "model": "chatgpt",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Die Wahl zwischen Zeit AI und Veezoo für KI-Datenanalyse im Mittelstand hängt von verschiedenen Faktoren ab. Hier sind einige Punkte, die dir bei der Entscheidung helfen könnten:\n\n### Zeit AI\n- **Benutzerfreundlichkeit**: Zeit AI legt oft Wert auf eine intuitive Benutzeroberfläche, was die Nutzung für nicht-technische Benutzer erleichtert.\n- **Integration**: Gute Integration mit bestehenden Datenquellen und Systemen kann ein Vorteil sein.\n- **Fokus**: Möglicherweise liegt der Fokus stärker auf bestimmten Branchen oder Anwendungen.\n\n### Veezoo\n- **Automatisierung**: Veezoo bietet häufig starke Automatisierungsfunktionen, die die Datenanalyse beschleunigen können.\n- **Interaktive Analysen**: Die Plattform ermöglicht oft interaktive Abfragen und visuelle Analysen, was die Einsichten erleichtert.\n- **Support**: Veezoo hat möglicherweise einen guten Kundenservice und Support, was besonders für kleine und mittelständische Unternehmen wichtig ist.\n\n### Weitere Überlegungen\n- **Budget**: Prüfe die Kosten der beiden Lösungen und vergleiche sie mit deinem Budget.\n- **Skalierbarkeit**: Überlege, welche Lösung besser skalierbar ist, um mit deinem Unternehmen zu wachsen.\n- **Anpassungsfähigkeit**: Wenn spezielle Anpassungen nötig sind, vergleiche, welche Plattform flexibler ist.\n\n### Fazit\nEs wäre sinnvoll, beide Plattformen auszuprobieren und die spezifischen Bedürfnisse deines Unternehmens zu berücksichtigen. Ein Pilotprojekt oder eine Demo kann helfen, die passende Lösung zu finden.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Zeit AI oder Veezoo für KI-Datenanalyse im Mittelstand, was ist besser?",
+   "intent": "head to head",
+   "model": "perplexity",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Für **KI-Datenanalyse im Mittelstand** ist **Veezoo** meist die bessere Wahl, wenn Sie bereits ein sauberes, *gouverniertes* Datenmodell in einem Data Warehouse/SQL-Setup haben und vor allem **wiederkehrende Reports, Alerts und verlässliche KPI-Überwachung** brauchen.[2][5][10] **Zeit AI** ist stärker, wenn Sie **schnell aus heterogenen Unternehmensquellen** wie ERP, CRM, HRS, Excel/CSV und auch unstrukturierten Daten **ad-hoc Fragen in natürlicher Sprache** beantworten wollen.[1][3][4][6]\n\n**Kurz gesagt:**\n- **Veezoo** = besser für *controlled analytics*, regelmäßige Business-Reviews, Alerts und Governance.[2][5][10]\n- **Zeit AI** = besser für schnellen Einstieg in **Ad-hoc-Analyse** aus vielen Quellsystemen und für nicht-technische Nutzer, die Fragen direkt in natürlicher Sprache stellen wollen.[1][3][9]\n\n**Warum Veezoo im Mittelstand oft vorne liegt:**\n- Veezoo positioniert sich als **agentic analytics engine** für vertrauenswürdige, governte Analytik mit Dashboards, Alerts und Anomalieerkennung.[2][10]\n- Es ist laut eigener Beschreibung für **SQL-Datenbanken und Cloud Data Warehouses** wie Snowflake, BigQuery, Databricks, Redshift, PostgreSQL und SQL Server ausgelegt.[5]\n- Das ist besonders sinnvoll, wenn Ihr Mittelstand bereits eine BI- oder DWH-Struktur hat und Fachbereiche stabile Kennzahlen nutzen sollen.[2][5]\n\n**Wann Zeit AI besser passt:**\n- Zeit AI verbindet laut eigener Darstellung **SAP, ERP, CRM, HRS und über 600 Quellsysteme** und bereitet auch **unstrukturierte Daten** auf.[1]\n- Die Plattform ist auf **natürliche Sprache** und schnelle, explorative Analysen ausgelegt, inklusive Live-Dashboards und Export.[1][3]\n- Das ist attraktiv, wenn die Datenlandschaft im Mittelstand noch fragmentiert ist und Sie schnell Mehrwert aus vielen Quellen ziehen wollen.[1][6]\n\n**Praktische Entscheidungshilfe:**\n\n| Kriterium | **Zeit AI** | **Veezoo** |\n|---|---|---|\n| Datenquellen | Sehr stark bei vielen Unternehmenssystemen und unstrukturierten Quellen[1][4] | Stark bei SQL/DWH-Umgebungen[5] |\n| Hauptnutzen | Ad-hoc Fragen, Exploration, schnelle Live-Analysen[1][3] | Governed Reporting, Alerts, regelmäßige KPI-Überwachung[2][10] |\n| Governance/Verlässlichkeit | Ergebnisse sollen repeatable und explainable sein[3] | Governance ist klarer Kern der Positionierung[2][5] |\n| Setup im Mittelstand | Gut bei heterogener Datenlandschaft[1][6] | Gut bei vorhandener BI-/Warehouse-Reife[2][5] |\n\n**Meine Empfehlung:**\n- **Wenn Sie vor allem „Fragen stellen und sofort Antworten bekommen“ wollen:** **Zeit AI**.[1][3]\n- **Wenn Sie vor allem „verbindliche Kennzahlen, Alerts und wiederholbare Business-Reviews“ wollen:** **Veezoo**.[2][10]\n- **Wenn Ihr Mittelstand bereits ein Data Warehouse und saubere KPI-Definitionen hat:** eher **Veezoo**.[5]\n- **Wenn Ihre Daten noch in vielen Systemen verstreut sind:** eher **Zeit AI**.[1][4]\n\nWenn Sie möchten, kann ich Ihnen als Nächstes eine **konkrete Entscheidungsmatrix für Ihren Fall** bauen, z. B. nach **Datenquellen, Nutzerzahl, EU-Hosting, SAP-Integration und Budget**.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Zeit AI oder Veezoo für KI-Datenanalyse im Mittelstand, was ist besser?",
+   "intent": "head to head",
+   "model": "perplexity",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Für den **Mittelstand mit vielen heterogenen Datenquellen** wirkt **Zeit AI** in den vorliegenden Informationen tendenziell **stärker auf Datenintegration und Ad-hoc-Analyse** ausgerichtet, während **Veezoo** klarer auf **Governance, wiederkehrendes Reporting und Alerts** zielt.[1][2][6][8] Welche Lösung „besser“ ist, hängt daher vor allem davon ab, ob Sie eher **explorative Datenanalyse** oder **standardisierte BI-Distribution** brauchen.[1][2]\n\n**Kurzempfehlung:**\n- **Zeit AI**, wenn Sie Daten aus **SAP/ERP/CRM/HRS, Excel und weiteren Quellsystemen** zusammenführen und Fachanwender per natürlicher Sprache Fragen an Live-Dashboards und Analysen stellen lassen wollen.[1][4][10]\n- **Veezoo**, wenn Sie bereits **gouvernierte Daten** haben und vor allem **automatisierte Dashboards, wiederkehrende Business Reviews, Alerts und Anomalieerkennung** in Teams wie Email, Slack oder Microsoft Teams brauchen.[2][8]\n\n**Unterschiede im Profil:**\n\n| Kriterium | Zeit AI | Veezoo |\n|---|---|---|\n| Hauptfokus | Natürliche Sprache für Enterprise-Datenanalyse und Live-Dashboards[1][6][10] | Governed AI Reporting, Dashboards, Alerts, Anomalien[2][8] |\n| Datenquellen | Viele operative Systeme, Tabellen, CSV, externe Quellen[1][4][10] | Governed Data als Basis[2][8] |\n| Typischer Nutzen | Ad-hoc-Analysen, Fragen an Daten, schnelle Exploration[1][10] | Standardisierte Berichte, regelmäßige Reviews, Push-Infos[2][8] |\n| Zielbild | „Von Daten zu Insights“ in kurzer Zeit[6][10] | „Trust-first“ Reporting und proaktive Insights[2][8] |\n\n**Praktische Einordnung für den Mittelstand:**\n- Wenn Ihr Problem lautet: *„Unsere Daten liegen verteilt in ERP, CRM und Excel, und Fachbereiche wollen ohne SQL Fragen stellen“*, ist **Zeit AI** näher an diesem Bedarf.[1][4][10]\n- Wenn Ihr Problem lautet: *„Wir haben bereits ein sauberes Datenmodell und wollen Reporting automatisieren und in den Arbeitsalltag pushen“*, ist **Veezoo** die passendere Wahl.[2][8]\n- Allgemeine Mittelstands-Studien betonen, dass bei KI-Analytics besonders **Integration, Bedienbarkeit, Datenschutz/Compliance, Transparenz und Gesamtkosten** entscheidend sind.[16][17]\n\nWenn Sie möchten, kann ich Ihnen als Nächstes eine **klare Kaufempfehlung nach Ihrem Szenario** geben, z. B. für **SAP-lastigen Mittelstand**, **Excel-lastige Firmen** oder **Unternehmen mit Power BI/Databricks-Stack**.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Zeit AI oder Veezoo für KI-Datenanalyse im Mittelstand, was ist besser?",
+   "intent": "head to head",
+   "model": "claude",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Meine Suche hat leider keine konkreten Ergebnisse zu einem Produkt namens \"Zeit AI\" für KI-Datenanalyse ergeben – möglicherweise handelt es sich hierbei um ein weniger bekanntes, sehr neues oder falsch benanntes Tool. Zu Veezoo dagegen gibt es gute Informationen. Ich beantworte die Frage daher auf Basis dessen, was ich zu Veezoo gefunden habe, und weise auf die Unsicherheit bezüglich \"Zeit AI\" hin.\n\n## Veezoo im Überblick\n\nVeezoo ist eine Self-Service-Analytics-Lösung, mit der Nutzer über natürlichsprachliche Anfragen Erkenntnisse aus Daten gewinnen können –  ähnlich wie ChatGPT, aber als eigene Chat-Oberfläche für die Organisation, wobei Nutzer durch die Kraft der KI Trends und Zusammenhänge in ihren Daten visualisieren und aufdecken können, die sonst verborgen oder schwer zu erkennen wären .\n\n**Stärken von Veezoo:**\n\n1. **Kein Coding nötig**:  Nutzer können einfach Fragen stellen oder aus intelligent vorgeschlagenen Anfragen wählen – Veezoo verwandelt traditionelle Drag-and-Drop-Analytics in eine nahtlose, gesprächsbasierte Erfahrung, ohne dass Programmierkenntnisse nötig sind. \n\n2. **Zuverlässigkeit statt Halluzinationen**: Ein zentraler Vorteil ist, dass  Veezoo KI-Halluzinationen durch deterministische Ergebnisgenerierung eliminiert – die KI arbeitet ausschließlich mit vordefinierten Business-Konzepten innerhalb des Knowledge Graph . Zudem gilt:  KPIs werden einmal im Knowledge Graph definiert und für jeden Nutzer immer gleich angewendet – die gleiche Frage liefert immer das gleiche Ergebnis, ohne Modell-Drift oder Annäherungen, sondern Präzision. \n\n3. **Transparenz und Auditierbarkeit**:  Die KI schreibt SQL nie direkt – alle Geschäftslogik wird deterministisch ohne KI-Beteiligung angewendet. Die KI arbeitet nur mit vordefinierten Knowledge-Graph-Konzepten, sodass man sie nicht dazu bringen kann, auf Rohtabellen oder unautorisierte Daten zuzugreifen. Jedes Ergebnis ist nachvollziehbar, auditierbar und erklärbar für Compliance-Anforderungen. \n\n4. **Governance & Sicherheit**:  Es findet keine Datenaufnahme oder KI-Training statt; das Tool ist SOC 2- und DSGVO-konform.  Außerdem bietet es  robuste Datengovernance mit rollenbasierter und zeilenbasierter Sicherheit. \n\n5. **Branchenerfahrung**:  Branchen wie Einzelhandel, Versicherung, Luftfahrt und Fertigung nutzen Veezoo, um ihre Datenkultur zu transformieren, Entscheidungsfindung zu verbessern und die operative Effizienz zu steigern. \n\n## Für den Mittelstand relevant\n\nGerade für mittelständische Unternehmen ohne große Data-Science-Teams ist der Ansatz von Veezoo interessant, weil er auf **Governance und Nachvollziehbarkeit** statt auf \"Blackbox-KI\" setzt – ein Punkt, der bei sensiblen Geschäftsentscheidungen (Reporting, Controlling, KPI-Tracking) entscheidend sein kann, da Fehlentscheidungen durch halluzinierte Zahlen vermieden werden.\n\n## Mein Rat\n\nDa ich zu \"Zeit AI\" keine verlässlichen, spezifischen Informationen finden konnte, kann ich hierzu keinen fundierten Vergleich liefern. Um dir eine seriöse Einschätzung zu geben, wäre es hilfreich, wenn du mir mehr Kontext gibst:\n- Ist \"Zeit AI\" möglicherweise ein anderer Name/Schreibweise (z. B. \"ZeitAI\", ein Startup, ein internes Tool)?\n- Um welchen Anwendungsfall geht es genau (Reporting, Forecasting, Ad-hoc-Analysen, Dashboards)?\n\nFalls du magst, kann ich gezielt nachrecherchieren, sobald du mir mehr Details zu \"Zeit AI\" nennst (z. B. Website, Hersteller oder Schreibweise), damit ich einen fairen Vergleich beider Tools erstellen kann.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Zeit AI oder Veezoo für KI-Datenanalyse im Mittelstand, was ist besser?",
+   "intent": "head to head",
+   "model": "claude",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Ich habe zu Zeit AI schon gute Infos, aber zu Veezoo fehlen mir spezifische Details. Lass mich das noch nachholen. Kein Problem, ich fasse zusammen, was ich zu beiden Anbietern finden konnte, und gebe dir eine ehrliche Einordnung basierend darauf – für Veezoo greife ich zusätzlich auf mein Grundwissen zurück, da die Suche für diesen Begriff aktuell nicht mehr verfügbar war.\n\n## Zeit AI\n\n Zeit AI bietet eine KI-gestützte Plattform zur Automatisierung von Datenanalysen und Business Intelligence, die sich mit ERP- und CRM-Daten verbindet, um manuelle Berichte zu ersetzen und Entscheidungsprozesse in Bereichen wie Logistik und Controlling zu optimieren.  Kernstück ist der  AI-Agent 'ZeitMind', der sich direkt mit bestehenden Systemen wie ERPs, CRMs und Datenbanken verbindet, um manuelle Prozesse in Excel zu automatisieren und tiefe Einblicke in Unternehmensdaten zu gewähren .\n\nBesonderheiten:\n-  Unterstützt vom Accelerator Y Combinator setzt das Unternehmen auf schnelle Implementierung; „Forward-Deployed Engineers\" unterstützen Kunden dabei, innerhalb weniger Wochen messbare Erfolge zu erzielen, ohne dass interne IT-Ressourcen oder Data Engineers benötigt werden. \n-  Standorte in Deutschland und den USA, mit Fokus auf sichere und skalierbare Infrastruktur sowie Datensicherheit und Datenschutz nach höchsten Standards. \n-  Durch kontinuierliche Überwachung der Ergebnisse können Unternehmen den tatsächlichen finanziellen Impact der KI-Anwendungen live verfolgen. \n\nZeit AI positioniert sich also stark als **\"Managed-Service\"-Lösung**: Statt dass du selbst viel konfigurierst, übernimmt ein Team die Implementierung und bindet die KI eng an bestehende ERP/CRM-Systeme an – interessant für Mittelständler ohne eigene Data-Engineering-Kapazitäten.\n\n## Veezoo\n\nZu Veezoo konnte ich in dieser Runde leider keine aktuellen Suchergebnisse abrufen. Aus meinem allgemeinen Wissen: Veezoo ist ein Schweizer Anbieter, der auf **Natural-Language-BI** spezialisiert ist – Nutzer stellen Fragen in normaler Sprache (\"Wie war der Umsatz in Q2 in Norddeutschland?\") und bekommen automatisch Dashboards/Antworten, ohne SQL oder BI-Tool-Kenntnisse. Es richtet sich eher an Unternehmen, die eine **Self-Service-Analytics-Oberfläche** für Fachabteilungen wollen, oft ergänzend zu bestehenden BI-Stacks (Power BI, Tableau etc.).\n\n## Einordnung: Was passt besser für den Mittelstand?\n\nDa die Tools unterschiedliche Philosophien verfolgen, hängt die Wahl stark vom Bedarf ab:\n\n**Zeit AI könnte besser passen, wenn:**\n- ihr **keine eigene IT/Data-Engineering-Abteilung** habt und eine \"Rundum-sorglos\"-Implementierung wollt\n- der Fokus auf **Prozessautomatisierung** liegt (z. B. wiederkehrende Reports, Logistik/Controlling-Analysen direkt aus ERP-Daten)\n- ihr schnelle, messbare Ergebnisse ohne großen internen Aufwand erwartet\n\n**Veezoo könnte besser passen, wenn:**\n- ihr bereits ein Data-Warehouse/BI-System habt und primär den **Zugang für Fachanwender per Sprache** vereinfachen wollt\n- Self-Service-Analyse für viele Mitarbeitende (nicht nur Controlling) im Vordergrund steht\n- ihr eine Ergänzung zu bestehenden Dashboards sucht statt eine komplette Ersetzung der Reporting-Prozesse\n\n**Praktischer Tipp:** Da beide Anbieter relativ spezialisierte, jüngere Lösungen sind, würde ich dir empfehlen, bei beiden eine konkrete Demo mit euren eigenen Daten (z. B. einem Testdatensatz aus ERP/CRM) anzufragen und zu prüfen:\n1. Wie gut integriert sich das Tool in eure bestehenden Systeme (SAP, Microsoft Dynamics, HubSpot etc.)?\n2. Wie viel internen Aufwand (Setup, Wartung, Data Governance) erfordert der Betrieb dauerhaft?\n3. Wie transparent sind Preismodelle (nutzungsbasiert vs. Lizenz pro Nutzer)?\n4. Gibt es Referenzkunden aus eurer Branche/Größenordnung?\n\nFalls du magst, kann ich gezielt nach aktuellen Kundenstimmen, Preisen oder Vergleichstests zu einem der beiden Anbieter suchen – sag einfach Bescheid, wonach genau du suchst.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Alternativen zu Zeit AI gibt es im deutschsprachigen Raum?",
+   "intent": "alternatives",
+   "model": "chatgpt",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Im deutschsprachigen Raum gibt es mehrere Alternativen zu Zeit AI, die sich auf Nachrichten, Journalismus und Informationsdienste spezialisiert haben. Hier sind einige Optionen:\n\n1. **SPIEGEL AI**: Der SPIEGEL bietet ebenfalls KI-gestützte Analysen und Personalisierungen von Inhalten.\n\n2. **FAZ.NET**: Die Frankfurter Allgemeine Zeitung nutzt auch KI, um Inhalte zu optimieren und personalisierte Nachrichten zu liefern.\n\n3. **t3n**: Diese Plattform fokussiert sich auf digitale Wirtschaft und Technologien und nutzt KI-Tools zur Analyse von Trends.\n\n4. **Die Süddeutsche Zeitung (SZ)**: SZ verwendet KI, um Inhalte zu erstellen und personalisierte Nachrichten anzubieten.\n\n5. **Handelsblatt**: Fokussiert sich auf Wirtschafts- und Finanznachrichten und nutzt KI zur Datenanalyse und zur Erstellung von Berichten.\n\n6. **NewsGuard**: Diese Plattform bewertet Nachrichtenquellen und kann ebenfalls als KI-gesteuertes Tool zur Informationsüberprüfung betrachtet werden.\n\nDiese Alternativen bieten verschiedene Ansätze und Tools, um Nachrichten und Inhalte zu konsumieren und zu personalisieren.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Alternativen zu Zeit AI gibt es im deutschsprachigen Raum?",
+   "intent": "alternatives",
+   "model": "chatgpt",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Im deutschsprachigen Raum gibt es mehrere Alternativen zu Zeit AI, die sich auf Nachrichten, Medien und journalistische Inhalte konzentrieren. Hier sind einige Beispiele:\n\n1. **Der Spiegel**: Eine der bekanntesten Nachrichtenplattformen in Deutschland mit einer Vielzahl von Themen, einschließlich Politik, Wirtschaft und Kultur.\n\n2. **Die Welt**: Bietet umfassende Berichterstattung und Analysen zu nationalen und internationalen Themen.\n\n3. **Frankfurter Allgemeine Zeitung (FAZ)**: Eine renommierte Tageszeitung mit tiefgehenden Artikeln und Kommentaren.\n\n4. **Süddeutsche Zeitung (SZ)**: Deckt aktuelle Nachrichten, Kultur und Gesellschaft ab, oft mit einem kritischen Blick.\n\n5. **taz (die tageszeitung)**: Bekannt für ihren alternativen und linken Ansatz in der Berichterstattung.\n\n6. **Heise Online**: Fokussiert sich auf Technologie, Wissenschaft und IT-Themen.\n\n7. **Netzpolitik.org**: Thematisiert digitale Freiheit, Datenschutz und Netzpolitik und ist eine wichtige Stimme in diesem Bereich.\n\nDiese Plattformen bieten qualitativ hochwertige journalistische Inhalte und können je nach Interessensgebiet eine gute Alternative darstellen.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Alternativen zu Zeit AI gibt es im deutschsprachigen Raum?",
+   "intent": "alternatives",
+   "model": "perplexity",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Wenn du mit **„Zeit AI“** die **deutsche KI-Datenanalyse-Plattform Zeit AI / ZeitMind** meinst, gibt es im deutschsprachigen Raum vor allem **europäische bzw. deutschsprachige KI-Tools**, die ähnliche Anforderungen abdecken können, etwa **DSGVO-konforme Sprach-KI, Analyse-Tools, Meeting-Transkription und Zeiterfassung**.[11][18][19]\n\n- **Mistral AI / Le Chat**: europäische KI mit Fokus auf Datenschutz, Mehrsprachigkeit und Unternehmensnutzung.[7][18]\n- **Neuroflash**: starke Option für **deutsche Texte** und Marketing-Inhalte; wird als **DSGVO-konform** mit Servern in Deutschland beschrieben.[7][19][14]\n- **Mosaic/Proton Lumo**: privacy-first KI-Assistent aus Europa, geeignet wenn **Datenschutz** zentral ist.[18]\n- **Tucan.ai**: deutschsprachige Alternative für **Meeting- und Audio-Workflows**, mit Hosting in Deutschland und Unterstützung für mehrere Sprachen.[8]\n- **meetergo Log**: Alternative für **automatisches Mitschreiben** und DSGVO-fokussierte Meeting-Dokumentation.[20]\n- **Clockify**: häufig genannte Alternative im Bereich **Zeiterfassung**; kostenlos nutzbar und verbreitet im deutschsprachigen Markt.[2][5]\n- **Clockodo**: cloudbasierte **Zeiterfassungssoftware** für Unternehmen und Teams.[5]\n- **mite**: webbasiertes **Zeiterfassungstool**.[5]\n- **Time.NET / Zeit.NET-Alternativen**: im DACH-Raum bekannte Option rund um Team-Zeiterfassung.[9][15]\n\nWenn du statt der KI-Datenanalyse eigentlich **Zeitmanagement- oder KI-Planungs-Tools** meinst, sind im DACH-Raum besonders relevant:\n\n- **Morgen**: KI-Planungsassistent mit Kalender- und Aufgabenpriorisierung.[4]\n- **Reclaim**: automatische Termin- und Aufgabenplanung, besonders stark mit Google Calendar.[4][10]\n- **Motion**: automatisches Scheduling für volle Kalender.[4][10]\n- **Sunsama** / **Trevor AI** / **Akiflow**: eher für manuelles, geführtes Daily Planning mit Time-Blocking.[4]\n\nWenn du möchtest, kann ich dir daraus auch eine **Shortlist für deinen konkreten Use Case** machen, zum Beispiel:\n- **für deutsche Texte**\n- **für DSGVO-konforme KI**\n- **für Meeting-Transkription**\n- **für Zeiterfassung**\n- **für Kalender- und Aufgabenplanung**",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Alternativen zu Zeit AI gibt es im deutschsprachigen Raum?",
+   "intent": "alternatives",
+   "model": "perplexity",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Im deutschsprachigen Raum sind die naheliegendsten Alternativen zu **Zeit AI** vor allem **Morgen**, **Neuroflash**, **Mistral AI (Le Chat)** und **Proton Lumo**; welche davon passt, hängt davon ab, ob du eher einen **KI-Planungsassistenten**, **Text-/Content-KI** oder eine **DSGVO-orientierte Chat-KI** suchst.[4][8][18][19]\n\n- **Morgen**: stark für **KI-Planung**, Kalender- und Aufgabenmanagement, mit Fokus auf einheitliche Kalender, intelligente Priorisierung und von KI erzeugte Tagespläne.[4]\n- **Neuroflash**: besonders relevant für **deutsche Texte** und als **DSGVO-konforme** KI-Plattform mit Servern in Deutschland.[8][14][19]\n- **Mistral AI (Le Chat)**: europäische KI-Alternative mit Fokus auf **Datenschutz**, **Mehrsprachigkeit** und Unternehmens-/API-Nutzung.[8]\n- **Proton Lumo**: privacy-fokussierter KI-Assistent aus dem europäischen Umfeld, interessant, wenn **Privatsphäre** im Vordergrund steht.[18]\n- **Perplexity**: geeignet für **Recherche** und **quellenbasierte Antworten**, wenn du eher einen Recherche-Assistenten als ein Planungstool suchst.[8][14][16]\n- **Claude** und **Microsoft Copilot**: sinnvolle Alternativen für allgemeine KI-Nutzung, insbesondere wenn du längere Kontexte oder Integration in Office-Umgebungen brauchst.[8][16]\n\nWenn du mit „Zeit AI“ eigentlich ein **Planungs- oder Kalendertool** meinst, sind laut aktuellen Vergleichsartikeln besonders **Morgen**, **Motion**, **Reclaim**, **Sunsama**, **Trevor AI**, **Akiflow**, **Clockwise**, **Amie** und **Dola** die üblichen Alternativen.[4][11][6]\n\nWenn du magst, kann ich dir als Nächstes eine **kurze Empfehlung nach Anwendungsfall** machen, z. B.:\n- **beste deutsche KI**\n- **beste DSGVO-konforme Alternative**\n- **beste Alternative für Teams**\n- **beste Alternative für Kalender/Planung**",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Alternativen zu Zeit AI gibt es im deutschsprachigen Raum?",
+   "intent": "alternatives",
+   "model": "claude",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Meine Suche hat leider nicht ergeben, was genau mit \"Zeit AI\" gemeint ist – die Suchergebnisse beziehen sich hauptsächlich auf allgemeine ChatGPT-Alternativen und nicht auf ein spezifisches Produkt namens \"Zeit AI\". Es gibt keinen eindeutigen Treffer zu einem KI-Tool, das offiziell \"Zeit AI\" heißt (z. B. von der Zeitung *Die Zeit*).\n\nKönntest du kurz präzisieren, was du mit \"Zeit AI\" meinst? Zum Beispiel:\n\n1. **Ein KI-Tool/Chatbot der Zeitschrift/Zeitung \"Die Zeit\"** – falls es sich um ein redaktionelles KI-Produkt des Zeit Verlags handelt.\n2. **Ein Zeiterfassungs-Tool mit KI-Funktion** (\"Zeit\" im Sinne von Arbeitszeit) – z. B. eine Zeiterfassungssoftware.\n3. **Ein allgemeines KI-Chat-Tool** (wie ChatGPT), das evtl. \"Zeit AI\" heißt oder mit diesem Namen verwechselt wird.\n\nFalls du eine allgemeine Übersicht zu deutschsprachigen KI-Chatbot-Alternativen suchst, kann ich dir gerne dazu Informationen liefern – etwa zu Anbietern wie **Neuroflash** (deutsche KI-Plattform, spezialisiert auf deutschsprachige Texte und Marketing-Inhalte) oder europäischen Modellen wie **Mistral AI** (Frankreich, Open Source) und **Aleph Alpha** (deutsches Unternehmen mit Fokus auf Nachvollziehbarkeit).\n\nSag mir gerne, in welche Richtung genau deine Frage geht, dann kann ich gezielter recherchieren!",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Alternativen zu Zeit AI gibt es im deutschsprachigen Raum?",
+   "intent": "alternatives",
+   "model": "claude",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Die Suchergebnisse liefern leider keine klaren Treffer zu einem Produkt namens \"Zeit AI\". Damit ich Ihnen wirklich passende Alternativen im deutschsprachigen Raum nennen kann, wäre es hilfreich, wenn Sie kurz präzisieren, was genau Sie mit \"Zeit AI\" meinen. Zum Beispiel könnte es sich handeln um:\n\n1. **Einen KI-Assistenten/Chatbot** von ZEIT ONLINE (dem Medienhaus *Die Zeit*) – etwa ein Tool zur Nachrichten-Zusammenfassung oder Recherche.\n2. **Ein Zeiterfassungs-Tool mit KI-Funktion** (z. B. für Arbeitszeit, Projekt- oder Meetingzeiterfassung).\n3. **Eine App zur Zeitplanung/Produktivität** mit KI-Unterstützung (Kalender, To-do-Listen etc.).\n\nKönnen Sie kurz sagen, in welchem Kontext Sie \"Zeit AI\" gefunden oder genutzt haben (z. B. als App, Webseite, Browser-Erweiterung)? Dann kann ich gezielt nach passenden deutschsprachigen Alternativen suchen – zum Beispiel gäbe es im Bereich KI-gestützter Meeting- und Zeiterfassung deutsche datenschutzfreundliche Lösungen wie **Tucan.ai**, das im Gegensatz zu manchen US-Tools  als optimale Alternative für Nutzer aus dem deutschen Sprachraum gilt, da die Daten ausschließlich in Deutschland gehostet werden .\n\nMit einer genaueren Angabe kann ich Ihnen eine treffsicherere Liste an Alternativen zusammenstellen.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Wer steckt hinter Zeit AI und wie ist das Unternehmen finanziert?",
+   "intent": "company",
+   "model": "chatgpt",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [
+    "cbinsights.com",
+    "startupintros.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Zeit AI wurde 2024 von Leopold von Waldthausen und Marvin Bornstein gegründet. Beide haben zuvor bei Palantir gearbeitet und dort umfangreiche Erfahrungen in der Zusammenarbeit mit großen Industrieunternehmen gesammelt. Leopold leitete das Geschäft mit Bestandskunden in Deutschland, Österreich und der Schweiz, während Marvin für die ersten Instanzen der späteren Artificial Intelligence Platform (AIP) bei Palantir verantwortlich war. Gemeinsam haben sie Projekte realisiert, die zu neuem Umsatz in Höhe von mehr als 50 Millionen Euro führten. ([zeit-ai.com](https://www.zeit-ai.com/de/about-us?utm_source=openai))\n\nIm September 2024 sicherte sich Zeit AI eine Seed-Finanzierungsrunde in Höhe von 500.000 US-Dollar, angeführt von Y Combinator. ([startupintros.com](https://startupintros.com/news/2024-09-01-zeit-ai-seed?utm_source=openai)) Zusätzlich beteiligten sich weitere Investoren wie ACE & Company, SBS Seed Fund und Transpose Platform an der Finanzierung. ([cbinsights.com](https://www.cbinsights.com/company/zeit-ai/financials?utm_source=openai)) ",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Wer steckt hinter Zeit AI und wie ist das Unternehmen finanziert?",
+   "intent": "company",
+   "model": "chatgpt",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [
+    "cbinsights.com",
+    "startupintros.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Zeit AI wurde 2024 von Leopold von Waldthausen und Marvin Bornstein gegründet. Beide haben zuvor bei Palantir gearbeitet, wo sie umfangreiche Erfahrungen in der Zusammenarbeit mit großen Industrieunternehmen gesammelt haben. Leopold leitete das Geschäft mit Bestandskunden in Deutschland, Österreich und der Schweiz, während Marvin für die ersten Instanzen der späteren Artificial Intelligence Platform (AIP) bei Palantir verantwortlich war. Gemeinsam haben sie Projekte realisiert, die zu neuem Umsatz in Höhe von mehr als 50 Millionen Euro führten. ([zeit-ai.com](https://www.zeit-ai.com/de/about-us?utm_source=openai))\n\nIm September 2024 sicherte sich Zeit AI eine Seed-Finanzierung in Höhe von 500.000 US-Dollar, angeführt von Y Combinator. ([startupintros.com](https://startupintros.com/news/2024-09-01-zeit-ai-seed?utm_source=openai)) Zusätzlich beteiligten sich weitere Investoren an der Finanzierung. ([cbinsights.com](https://www.cbinsights.com/company/zeit-ai/financials?utm_source=openai)) ",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Wer steckt hinter Zeit AI und wie ist das Unternehmen finanziert?",
+   "intent": "company",
+   "model": "perplexity",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Zeit AI wurde von **Leopold von Waldthausen** und **Marvin Bornstein** gegründet, die beide zuvor bei **Palantir** gearbeitet haben; laut Y Combinator gründeten sie das Unternehmen 2024 nach vier Jahren gemeinsamer Arbeit dort.[1][2][3]\n\nZur Finanzierung: Zeit AI ist **von Y Combinator unterstützt** und wurde in den **S24-Batch** aufgenommen.[2][3][18][20] Außerdem nennt das Unternehmen selbst, dass es von **„top investors and industry leaders“** unterstützt wird, und in einer YC-Stellenanzeige heißt es, Zeit AI habe **2,7 Mio.** aufgenommen.[9][18][20]  \n\nEin paar Details dazu, wie das einzuordnen ist:\n- **Y Combinator** ist ein Accelerator, also nicht nur ein Mentorprogramm, sondern auch eine frühe Finanzierungs- und Wachstumsplattform für Startups.[2][4][11]\n- Die Gründer sagen, sie hätten bei Palantir bereits große Daten- und KI-Projekte geleitet, und daraus sei Zeit AI entstanden.[2][3]\n- Laut eigener Unternehmensseite wuchs Zeit AI nach dem YC-Beitritt schnell und kam innerhalb von 12 Monaten von null auf **€1 Mio. ARR**; in einer anderen YC-Angabe ist von **high 6-figure ARR** die Rede.[3][9]\n\nWenn du möchtest, kann ich dir auch noch kurz aufdröseln, **ob Zeit AI eher als deutsches oder US-Unternehmen aufgestellt ist** und welche **Rechtsform** dahintersteht.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Wer steckt hinter Zeit AI und wie ist das Unternehmen finanziert?",
+   "intent": "company",
+   "model": "perplexity",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "Zeit AI wurde von **Leopold von Waldthausen** und **Marvin Bornstein** gegründet; beide arbeiteten zuvor mehrere Jahre bei **Palantir** und starteten das Unternehmen 2024.[1][2][3] Leopold von Waldthausen ist laut Zeit AI der **CEO**, Marvin Bornstein ist ebenfalls als Geschäftsführer genannt.[6][10][14]\n\nZur **Finanzierung**: Zeit AI ist laut mehreren Quellen durch **Y Combinator** unterstützt bzw. im **S24-Batch** von Y Combinator aufgenommen worden.[2][3][4][11][18][20] Außerdem nennt die Y-Combinator-Stellenanzeige, dass das Unternehmen **2,7 Mio.** aufgenommen habe; die genaue Währung ist in der Anzeige nicht ausdrücklich präzisiert, gemeint sind aber nach Kontext offenbar 2,7 Millionen an Finanzierungskapital.[9] Zeit AI selbst beschreibt sich zudem als von „**top investors and industry leaders**“ unterstützt, nennt auf der öffentlich zugänglichen Seite aber keine vollständige Investorenliste.[18][20]\n\nKurz gesagt: **Hinter Zeit AI stehen zwei Ex-Palantir-Manager, und finanziert wird das Startup vor allem über Y Combinator sowie offenbar weitere externe Investoren.**",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Wer steckt hinter Zeit AI und wie ist das Unternehmen finanziert?",
+   "intent": "company",
+   "model": "claude",
+   "run": 0,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "## Zeit AI – Gründer und Hintergrund\n\nHinter Zeit AI stehen zwei Mitgründer:  Zeit AI wurde 2024 von Marvin Christopher Bornstein und Leopold von Waldthausen gegründet . Leopold von Waldthausen fungiert dabei als CEO des Unternehmens, während Marvin Bornstein als Co-Founder agiert.\n\nBeide Gründer bringen einschlägige Erfahrung aus der Datenanalyse-Branche mit:  Zusammen verfügen Marvin und Leopold über mehr als 15 Jahre kombinierte Erfahrung in Data Engineering und Analytics. Während ihrer vier gemeinsamen Jahre bei Palantir leiteten sie wirkungsstarke Projekte, bauten eine KI-Regel-Engine und generierten über 50 Millionen Euro an neuem Projektumsatz.  Leopold von Waldthausen selbst beschreibt seinen Werdegang so:  Er verbrachte 3,5 Jahre bei Palantir, wo er zuletzt alle etablierten Kunden in Deutschland, Österreich und der Schweiz leitete. Zuvor studierte er Informatik in Oxford, veröffentlichte Forschung zu Process Mining und Kryptographie und brach ein MBA-Studium in Yale ab.  Das Unternehmen wird entsprechend auch als  von ehemaligen Palantir-Ingenieuren gegründet  beschrieben.\n\n## Was macht das Unternehmen?\n\n Zeit AI ist ein spezialisiertes Technologieunternehmen, das künstliche Intelligenz nutzt, um komplexe Datenanalysen in greifbare Geschäftsergebnisse zu verwandeln. Das Herzstück der Plattform ist der AI-Agent \"ZeitMind\", der sich direkt mit bestehenden Systemen wie ERPs, CRMs und Datenbanken verbindet, um manuelle Prozesse in Excel zu automatisieren.  Dabei kann das Tool laut Unternehmensangaben  durch die Automatisierung von bis zu 90 % des Berichtswesens Unternehmen dabei helfen, hunderte Arbeitsstunden monatlich einzusparen und fundierte Entscheidungen in Echtzeit zu treffen .\n\n## Finanzierung\n\nBei der Finanzierung gibt es leicht unterschiedliche Angaben je nach Quelle:\n\n- **Y Combinator als Accelerator**:  Zeit AI wird vom renommierten Accelerator Y Combinator unterstützt und setzt auf eine schnelle Implementierung sowie enge Zusammenarbeit mit den Anwendern. \n\n- **Investoren laut PitchBook**:  ACE Ventures (Genf), Companion-M, Stern Stewart Ventures, Oxford Saïd Business School und Y Combinator haben in Zeit AI investiert.  Insgesamt hat das Unternehmen laut dieser Quelle  $546.000 eingesammelt .\n\n- **Ähnliche Zahlen bei Tracxn**:  Zeit AI hat insgesamt 500.000 US-Dollar Funding von Y Combinator über eine Finanzierungsrunde von 3 Investoren erhalten , wobei es sich dabei um  eine Seed-Runde aus dem Jahr 2024 mit einem beteiligten Investor  handelte.\n\n- **Andere Einschätzung (Latka)**: Eine andere Quelle zeichnet ein abweichendes Bild und gibt an, dass  Zeit AI seit der Gründung 2024 auf 440.000 US-Dollar Umsatz gewachsen sei, ohne Venture Capital oder externe Finanzierung aufzunehmen – als selbstfinanziertes NLP-Software-SaaS-Unternehmen ganz ohne externe Investitionen. \n\n**Fazit:** Die genaue Finanzierungshöhe wird in den Quellen leicht unterschiedlich beziffert (zwischen ca. 500.000 US-Dollar Seed-Funding und der Darstellung als komplett bootstrapped), aber übereinstimmend wird Y Combinator als zentraler Unterstützer/Investor genannt, ergänzt um weitere Investoren wie ACE Ventures, Companion-M und Stern Stewart Ventures. Das Unternehmen ist mit Standorten in Deutschland (Gersfeld) und den USA vertreten und beschäftigt je nach Quelle zwischen 4 und 10 Mitarbeitende.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Wer steckt hinter Zeit AI und wie ist das Unternehmen finanziert?",
+   "intent": "company",
+   "model": "claude",
+   "run": 1,
+   "fanout_queries": [],
+   "cited_domains": [],
+   "answer": "## Zeit AI – Wer steckt dahinter?\n\n**Gründer:** Zeit AI wurde  2024 in Gersfeld, Deutschland, von Leopold Von Waldthausen und Marvin Bornstein gegründet . Leopold Von Waldthausen fungiert dabei als  CEO von Zeit AI .\n\nZum Hintergrund des Gründers: Er  verbrachte 3,5 Jahre bei Palantir, wo er zuletzt alle etablierten Kunden in Deutschland, Österreich und der Schweiz leitete. Davor studierte er Informatik in Oxford, veröffentlichte Forschung zu Process Mining und Kryptographie und brach ein MBA-Programm in Yale ab . Das Unternehmen wird entsprechend auch als von  ehemaligen Palantir-Ingenieuren gegründet  beschrieben.\n\n**Was macht das Unternehmen?**\nZeit AI bietet  eine KI-gestützte Plattform zur Automatisierung von Datenanalysen und Business Intelligence, die sich mit ERP- und CRM-Daten verbindet, um manuelle Berichte zu ersetzen und Entscheidungsprozesse zu optimieren . Kern der Plattform ist der Agent  \"ZeitMind\", der sich direkt mit bestehenden Systemen wie ERPs, CRMs und Datenbanken verbindet, um manuelle Prozesse in Excel zu automatisieren . Das Unternehmen selbst beschreibt es griffig als  \"ChatGPT für Unternehmenstabellen\" .\n\n**Standorte und Größe:**\nDas Unternehmen hat  Standorte in Deutschland und den USA  und beschäftigt je nach Quelle zwischen  7  und  10 Mitarbeitern (Stand Mai 2026) .\n\n## Finanzierung\n\nZeit AI ist ein **Seed-Stage-Unternehmen** mit bislang überschaubarem Kapitaleinsatz:\n\n- Laut Tracxn hat das Unternehmen  $500K Funding von Y Combinator erhalten , wobei  insgesamt $500K über eine Runde von 3 Investoren  eingesammelt wurden.\n- PitchBook beziffert die Gesamtfinanzierung etwas höher:  Zeit AI hat $546K aufgenommen; investiert haben ACE Ventures (Genf), Companion-M, Stern Stewart Ventures, Oxford Saïd Business School und Y Combinator .\n- Zeit AI ist Teil des bekannten **Y-Combinator-Accelerators** (Batch S24) – auf der Startup-Atlas-Seite wird betont, dass das Unternehmen  vom renommierten Accelerator Y Combinator unterstützt wird und auf schnelle Implementierung mit \"Forward-Deployed Engineers\" setzt, die Kunden innerhalb weniger Wochen zu messbaren Erfolgen verhelfen .\n\nZusammengefasst: Zeit AI ist ein junges, von Y Combinator gefördertes deutsches KI-Startup im Bereich Business-Intelligence-Automatisierung, gegründet von einem Ex-Palantir-Mitarbeiter, das bislang eine kleine Seed-Finanzierung im niedrigen sechsstelligen Dollar-Bereich von mehreren spezialisierten Frühphasen-Investoren erhalten hat.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Ist Zeit AI DSGVO-konform und wo werden die Daten gehostet?",
+   "intent": "compliance",
+   "model": "gemini",
+   "run": 0,
+   "fanout_queries": [
+    "Zeit AI DSGVO-konform",
+    "Zeit AI Datenspeicherung Ort",
+    "Zeit Online AI Datenschutz"
+   ],
+   "cited_domains": [
+    "zeit-ai.com"
+   ],
+   "answer": "Zeit AI GmbH ist DSGVO-konform. Das Unternehmen mit Sitz in München, Deutschland, hat sich dem Schutz personenbezogener Daten verpflichtet und gibt in seiner Datenschutzerklärung an, Daten gemäß der Datenschutz-Grundverordnung (DSGVO) zu verarbeiten. Zeit AI GmbH ist selbst für die Datenverarbeitung verantwortlich und kann für datenschutzbezogene Anfragen kontaktiert werden.\n\nDie Daten von Zeit AI werden in Deutschland gehostet. Dies wird explizit mit dem Hinweis auf DSGVO-Konformität und der Zusicherung, dass die Daten niemals zum Trainieren von Modellen verwendet werden, angegeben.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Ist Zeit AI DSGVO-konform und wo werden die Daten gehostet?",
+   "intent": "compliance",
+   "model": "gemini",
+   "run": 1,
+   "fanout_queries": [
+    "Zeit AI DSGVO-Konformität",
+    "Zeit AI Datenhosting"
+   ],
+   "cited_domains": [
+    "zeit-ai.com"
+   ],
+   "answer": "Zeit AI GmbH ist DSGVO-konform. Das Unternehmen mit Sitz in München, Deutschland, hat sich dem Schutz personenbezogener Daten gemäß der Datenschutz-Grundverordnung (DSGVO) verpflichtet.\n\nDie Daten werden innerhalb der EU oder unter Einhaltung von DSGVO-konformen Mechanismen verarbeitet. Die Zeit AI GmbH fungiert als Datenverantwortlicher und verarbeitet bei Website-Besuchen unter anderem gekürzte IP-Adressen, Datum und Uhrzeit des Zugriffs sowie Browsertyp und Betriebssystem aus technischen und Sicherheitsgründen. Diese Daten werden sieben Tage lang gespeichert. Für Website-Analysen wird PostHog verwendet, welches anonymisierte Nutzerverhaltensdaten sammelt. Die Website selbst wird von Webflow gehostet, das minimale technische Daten zur Bereitstellung von Inhalten verarbeitet. Bei Kontaktaufnahme per E-Mail oder Formular werden Name, E-Mail-Adresse und Nachrichteninhalte verarbeitet und sechs Monate lang gespeichert, sofern keine gesetzliche Aufbewahrungspflicht besteht.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Zeit AI oder Veezoo für KI-Datenanalyse im Mittelstand, was ist besser?",
+   "intent": "head to head",
+   "model": "gemini",
+   "run": 0,
+   "fanout_queries": [
+    "Zeit AI vs Veezoo for SMB data analysis",
+    "Zeit AI for Mittelstand",
+    "Veezoo for Mittelstand",
+    "Zeit AI features for SMB",
+    "Veezoo features for SMB",
+    "AI-driven data analysis tools for SMB"
+   ],
+   "cited_domains": [
+    "cigen.io",
+    "eurotoolkit.eu",
+    "fondo.com",
+    "hiretop.com",
+    "prnewswire.com",
+    "scoopanalytics.com",
+    "smebusinessnews.co.uk",
+    "spotsaas.com",
+    "veezoo.com",
+    "venturelab.swiss",
+    "ycombinator.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Für mittelständische Unternehmen, die KI-gesteuerte Datenanalyse einführen möchten, bieten sowohl Zeit AI als auch Veezoo überzeugende Lösungen, die darauf abzielen, nicht-technischen Nutzern den Zugang zu Daten zu erleichtern. Die \"bessere\" Wahl hängt stark von den spezifischen Anforderungen, der bestehenden Datenlandschaft und den Präferenzen des Unternehmens ab.\n\nHier ist ein Vergleich der beiden Optionen:\n\n### Zeit AI\nZeit AI positioniert sich als \"Autonomer Dateningenieur für den europäischen Mittelstand\". Es wurde von ehemaligen Palantir-Ingenieuren in München gegründet und ist darauf ausgelegt, Datenanalyse zu automatisieren und messbare Geschäftsergebnisse zu liefern.\n\n**Stärken von Zeit AI für den Mittelstand:**\n*   **Breite Datenintegration:** Zeit AI kann sich mit einer Vielzahl von Unternehmenssystemen verbinden, darunter SAP, ERP, CRM, HRS und über 600 weitere Datenquellen. Dies ist besonders vorteilhaft für den Mittelstand, der oft Daten in fragmentierten Systemen und auch in unstrukturierten Formaten wie Excel-Dateien oder PDFs vorliegen hat.\n*   **Umgang mit unordentlichen Daten:** Das System ist darauf ausgelegt, unstrukturierte Daten aufzubereiten und in strukturierte Datenbanken umzuwandeln, die dann mittels natürlicher Sprache abgefragt werden können.\n*   **Schnelle Implementierung und Unterstützung:** Zeit AI verspricht, innerhalb weniger Wochen messbare Ergebnisse zu liefern und erfordert keine interne IT-Kapazität, Dateningenieure oder Analysten für die Einrichtung. \"Forward-Deployed Engineers\" unterstützen die Implementierung vor Ort.\n*   **Anwendungsbereiche:** Es wird für Bereiche wie Beschaffung, Beratung und Controlling eingesetzt, um Ad-hoc-Analysen zu ermöglichen und tiefe Einblicke zu gewinnen.\n*   **Erklärbare und wiederholbare Ergebnisse:** Die generierten Analysen sind wiederholbar und nachvollziehbar.\n\n### Veezoo\nVeezoo ist ein Schweizer Start-up, das seit 2016 im Bereich der KI-gestützten Datenanalyse tätig ist und 2024 als Gartner Cool Vendor im Bereich KI-Modelle und Natural Language Technologies ausgezeichnet wurde. Es zielt darauf ab, jedem Geschäftsbenutzer zu ermöglichen, datengestützte Entscheidungen zu treffen.\n\n**Stärken von Veezoo für den Mittelstand:**\n*   **Intuitive Sprachanalyse:** Veezoo ermöglicht es Benutzern, Fragen in natürlicher Sprache zu stellen und sofort pixelgenaue Diagramme und Dashboards zu erhalten. Es unterstützt konversationelle Folgefragen und Drill-downs.\n*   **Vertrauenswürdige Einblicke durch Knowledge Graph:** Ein zentrales Merkmal ist der \"Knowledge Graph\", der als semantische und Governance-Schicht dient. Dies stellt sicher, dass Definitionen konsistent sind, Geschäftslogik durchgesetzt wird und das System keine \"Halluzinationen\" bei KPIs oder Geschäftslogik erzeugt. Dies ist entscheidend für die Datensicherheit und -integrität.\n*   **Keine Datenaufnahme oder KI-Training:** Veezoo fungiert als Abfrageschicht und verbindet sich direkt mit bestehenden Daten-Warehouses (wie Snowflake, Google BigQuery, AWS Redshift, PostgreSQL, MySQL und andere) und unterstützt auch CSV-/Excel-Uploads. Daten werden nicht kopiert oder für das KI-Training verwendet, was Bedenken hinsichtlich Datenschutz und -sicherheit minimieren kann.\n*   **Proaktives Monitoring:** Das System kann Metriken überwachen und Benutzer benachrichtigen, wenn Abweichungen auftreten.\n*   **Transparenz:** Veezoo bietet transparente Erklärungen für die gelieferten Antworten.\n*   **Zielgruppe:** Explizit für Geschäftsteams und KMU konzipiert, die schnelle, aussagekräftige Geschäftseinblicke aus Cloud-Datenbanken benötigen, ohne auf einen Datenwissenschaftler angewiesen zu sein.\n*   **Preisgestaltung:** Veezoo bietet eine transparente Preisgestaltung, beginnend bei 29 $ pro Benutzer und Monat (Stand Mai 2026), und verfügt über eine kostenlose Testphase.\n\n### Fazit und Empfehlung\nBeide Tools sind gut geeignet, um den Mittelstand bei der KI-Datenanalyse zu unterstützen, da sie den Schwerpunkt auf die Benutzerfreundlichkeit für nicht-technische Mitarbeiter und die Automatisierung legen.\n\n*   **Wählen Sie Zeit AI, wenn:**\n    *   Ihr Unternehmen eine sehr heterogene und möglicherweise unstrukturierte Datenlandschaft hat (z. B. viele Excel-Dateien, PDFs und verschiedene ERP-/CRM-Systeme), die in eine kohärente Analyseplattform integriert werden müssen.\n    *   Sie eine umfassende, hands-on Unterstützung bei der Implementierung und schnellen Wertschöpfung wünschen, ohne interne IT-Ressourcen stark zu belasten.\n    *   Sie ein Tool suchen, das explizit auf den \"europäischen Mittelstand\" zugeschnitten ist und eine \"Autonome Dateningenieur\"-Philosophie verfolgt.\n\n*   **Wählen Sie Veezoo, wenn:**\n    *   Sie bereits eine klarere Datenstruktur haben, eventuell in einem Cloud-Data-Warehouse, und eine Lösung suchen, die direkt darauf aufbaut, ohne Daten zu kopieren.\n    *   Die Gewährleistung von Datengovernance, Konsistenz der Definitionen und die Vermeidung von \"Halluzinationen\" oberste Priorität haben, da Veezoo hier mit seinem \"Knowledge Graph\" einen starken Fokus setzt.\n    *   Ihre Mitarbeiter ein hohes Maß an Selbstbedienungsanalyse durch natürliche Sprache wünschen, mit proaktiven Einblicken und Monitoring.\n    *   Sie eine transparente Preisstruktur pro Benutzer bevorzugen und das Tool in Ihrer Organisation schnell einführen möchten.\n\nOhne detaillierte Kenntnis Ihrer spezifischen Datenquellen, des Umfangs Ihrer Daten, der technischen Fähigkeiten Ihres Teams und Ihrer Budgetrestriktionen ist eine eindeutige Empfehlung schwierig. Eine kostenlose Testphase oder eine Demo beider Anbieter könnte Ihnen helfen, die am besten geeignete Lösung für Ihr Unternehmen zu finden.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Zeit AI oder Veezoo für KI-Datenanalyse im Mittelstand, was ist besser?",
+   "intent": "head to head",
+   "model": "gemini",
+   "run": 1,
+   "fanout_queries": [
+    "Zeit AI vs Veezoo",
+    "Zeit AI for Mittelstand",
+    "Veezoo for Mittelstand",
+    "Zeit AI data analysis features",
+    "Veezoo data analysis features",
+    "AI data analysis for SMBs Germany"
+   ],
+   "cited_domains": [
+    "aithority.com",
+    "eurotoolkit.eu",
+    "fondo.com",
+    "hiretop.com",
+    "kfw.de",
+    "nexuswelt.com",
+    "siemens.com",
+    "veezoo.com",
+    "venturelab.swiss",
+    "ycombinator.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Für die KI-Datenanalyse im Mittelstand bieten sowohl Zeit AI als auch Veezoo überzeugende Ansätze, die nicht-technischen Nutzern den Zugang zu Unternehmensdaten erleichtern sollen. Die \"bessere\" Wahl hängt stark von den spezifischen Anforderungen, der bestehenden Dateninfrastruktur und den Prioritäten eines mittelständischen Unternehmens ab.\n\n**Veezoo** zeichnet sich durch seinen Fokus auf \"Agentic Analytics, engineered for trust\" aus und richtet sich sowohl an Business- als auch an Datenteams. Zu den Hauptmerkmalen gehören:\n*   **Natürliche Sprachanalyse:** Nutzer können Fragen in natürlicher Sprache stellen und erhalten Antworten in Form von Diagrammen und Dashboards.\n*   **Knowledge Graph:** Eine zentrale Komponente ist der Knowledge Graph, der Geschäfts-konzepte und -beziehungen definiert. Dies soll Halluzinationen minimieren und die Einhaltung von Geschäftslogik und Berechtigungen gewährleisten, was für die Daten-governance und das Vertrauen in die Ergebnisse entscheidend ist.\n*   **Breite Datenkonnektivität:** Veezoo verbindet sich direkt mit einer Vielzahl von Data Warehouses, darunter Snowflake, Google BigQuery, Databricks, AWS Redshift, PostgreSQL, MySQL und SAP HANA. Auch CSV/Excel-Uploads werden unterstützt. Es agiert als Abfrageschicht und speichert oder kopiert keine Daten.\n*   **Mehrsprachigkeit:** Die Plattform unterstützt Anfragen in Deutsch, Englisch, Italienisch und Französisch, was für den deutschen Mittelstand von Vorteil ist.\n*   **Reife und Anerkennung:** Veezoo wurde 2016 gegründet, ist als \"2024 Gartner Cool Vendor\" anerkannt und wird bereits von Fortune Global 500 Unternehmen wie AXA und Bayer genutzt.\n\n**Zeit AI** positioniert sich als \"ChatGPT für Unternehmenstabellen\" und ermöglicht nicht-technischen Nutzern, Ad-hoc-Einblicke aus tabellarischen Daten mittels natürlicher Sprache zu gewinnen. Zu den Kernfunktionen gehören:\n*   **Umgang mit \"unordentlichen\" Daten:** Zeit AI wurde entwickelt, um auch mit unstrukturierten Daten umzugehen und Excel-Dateien zu transformieren und abzufragen. Dies ist besonders relevant für KMU, die häufig Daten in verschiedenen Dateiformaten vorliegen haben.\n*   **Einfache Datenintegration:** Daten können direkt aus Datenbanken, ERP-Systemen, CRMs sowie über CSV- und sogar PDF-Uploads synchronisiert werden. Eine strukturierte Cloud-Datenbank wird dabei sofort generiert und ist zur Exploration bereit.\n*   **Automatisierte Workflows:** Die Plattform bietet KI-Agenten, die wiederkehrende Analyse-Workflows automatisieren, wie Datenvorbereitung, Metrikberechnung und Reporting. Dies kann den manuellen Aufwand erheblich reduzieren.\n*   **Wiederholbare und erklärbare Ergebnisse:** Alle Analysen sind wiederholbar, erklärbar und können einfach exportiert werden.\n*   **Fokus auf den deutschen Markt:** Zeit AI wurde von ehemaligen Palantir-Ingenieuren in München gegründet und ist durch Y Combinator finanziert. Dies könnte eine bessere Anpassung an die lokalen Marktbedürfnisse und einen direkteren Support bedeuten.\n\n**Empfehlung für den Mittelstand:**\n\nDie Entscheidung zwischen Zeit AI und Veezoo hängt von den spezifischen Umständen ab:\n\n*   **Wählen Sie Zeit AI, wenn:** Ihr Unternehmen hauptsächlich mit Daten in verschiedenen, möglicherweise \"unordentlichen\" Dateiformaten (Excel, CSV, PDF) arbeitet und eine unkomplizierte Lösung benötigt, um nicht-technischen Benutzern schnelle Einblicke zu ermöglichen und wiederkehrende Berichte zu automatisieren. Wenn Sie keine komplexe Data-Warehouse-Infrastruktur haben oder aufbauen möchten, könnte Zeit AI mit seinen direkten Datei-Upload-Möglichkeiten und dem starken Fokus auf die Automatisierung von Analysen eine sehr gute und zugängliche Option sein.\n*   **Wählen Sie Veezoo, wenn:** Ihr Unternehmen bereits eine strukturierte Datenumgebung mit Data Warehouses nutzt und großen Wert auf Vertrauen, strikte Daten-governance und konsistente Definitionen in der KI-gesteuerten Analyse legt. Der Knowledge Graph von Veezoo und sein Ansatz zur Vermeidung von Halluzinationen sind hier ein signifikanter Vorteil, insbesondere angesichts der strengen deutschen Datenschutzbestimmungen (DSGVO). Die breite Konnektivität zu verschiedenen Datenquellen und die Reife der Lösung sind ebenfalls Pluspunkte.\n\nBeide Lösungen tragen dazu bei, dass nicht-technische Nutzer im Mittelstand Daten zugänglicher machen und analysieren können, was angesichts der zunehmenden KI-Einführung in deutschen KMU (20 % zwischen 2022 und 2024, Tendenz steigend) von entscheidender Bedeutung ist.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Alternativen zu Zeit AI gibt es im deutschsprachigen Raum?",
+   "intent": "alternatives",
+   "model": "gemini",
+   "run": 0,
+   "fanout_queries": [
+    "Zeit AI",
+    "Die Zeit AI",
+    "AI tools for content creation Germany",
+    "AI text generation German speaking market",
+    "AI solutions DACH region"
+   ],
+   "cited_domains": [
+    "cedille.ai",
+    "data-unplugged.de",
+    "feedbax.ai",
+    "fondo.com",
+    "futureaisolutions.de",
+    "seedbox.ai",
+    "siemens.com",
+    "thatworksmedia.com",
+    "ycombinator.com",
+    "ziya.de"
+   ],
+   "answer": "Im deutschsprachigen Raum gibt es eine Reihe von Alternativen zu Zeit AI, die sich auf verschiedene Aspekte der KI-gestützten Datenanalyse, Prozessautomatisierung und Sprachverarbeitung konzentrieren. Zeit AI selbst bietet eine KI-Analysesoftware an, die Informationen aus verschiedenen Quellen zusammenführt, um präzise Analysen und Einblicke für schnellere Entscheidungen, tiefere Forschung und strukturiertes Denken zu liefern. Es wird auch als \"ChatGPT für Unternehmenstabellen\" beschrieben, das es nicht-technischen Benutzern ermöglicht, Unternehmensdaten mittels natürlicher Sprache abzufragen und Excel-Dateien in strukturierte Datenbanken umzuwandeln.\n\nNachfolgend sind einige Alternativen und relevante Akteure im deutschsprachigen Raum aufgeführt:\n\n**KI-Plattformen und Datenanalyse:**\n\n*   **Mindverse (Berlin)**: Eine All-in-One GenAI-Plattform, die für Wissensarbeit, interne KI-Assistenten, Inhaltsproduktion und Prozessautomatisierung eingesetzt wird. Mindverse könnte eine umfassende Alternative für Unternehmen sein, die breitere generative KI-Funktionen suchen.\n*   **deepset / Haystack (Berlin)**: Spezialisiert auf LLM-Agenten, Dokumenten-Workflows, interne Chatbots und Wissensmanagement. Diese Lösungen sind besonders relevant für Unternehmen, die ähnliche Funktionen wie die Abfrage von Unternehmensdaten durch natürliche Sprache benötigen.\n\n**KI-Beratung und individuelle Lösungen:**\n\n*   **Ziya GmbH**: Eine KI-Agentur für die DACH-Region, die innovative KI-Lösungen für Unternehmen anbietet und sich auf Effizienz durch Automatisierung, Prozessautomatisierung und intelligentes Dokumentenmanagement konzentriert.\n*   **Future AI Solutions GmbH**: Bietet KI-Beratung und -Implementierung in Deutschland an, mit Fokus auf skalierbare KI-Lösungen und Expertise in Voice AI.\n*   **ConSol AI**: Spezialisiert auf souveräne KI-Beratung und hilft Unternehmen, moderne KI sinnvoll einzusetzen, ohne sensible Daten in US-Clouds zu riskieren. Sie entwickeln praktische KI-Lösungen basierend auf offenen Technologien und souveräner Infrastruktur.\n*   **pep.digital GmbH**: Bietet kundenspezifische Softwareentwicklung und KI-Beratung für maßgeschneiderte Digitalisierungsprojekte an.\n\n**Sprach- und Textverarbeitung:**\n\n*   **DeepL**: Deutschlands erfolgreichstes KI-Unternehmen im Bereich Übersetzungsdienste. DeepL bietet fortschrittliche Sprachverarbeitungsfunktionen und hat kürzlich \"Voice-to-Voice\"-Echtzeitübersetzungen eingeführt. Obwohl der Fokus auf Übersetzung liegt, zeigt dies die Stärke im Bereich der KI-gestützten Sprachverarbeitung.\n*   **Cedille.ai**: Hat ein großes deutsches Sprachmodell für Textgenerierung, Zusammenfassung, Klassifizierung, Übersetzungen und Chatbots veröffentlicht. Dies ist eine wichtige Ressource für deutsche Textverarbeitung und Inhaltsgenerierung.\n\nDer deutsche KI-Markt zeichnet sich generell durch ein wachsendes Ökosystem aus Start-ups und Unternehmensplattformen aus, die spezialisierte Tools für Text-, Bild- und Workflow-Automatisierung anbieten. Deutsche Anbieter legen oft Wert auf Datensouveränität, DSGVO-Konformität und die Entwicklung von Modellen, die eng mit der Industrie und dem Mittelstand verbunden sind. Es gibt auch eine Präferenz für quelloffene Large Language Models (LLMs), die eine lokale und private Hosting-Möglichkeit für proprietäre Daten bieten.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Welche Alternativen zu Zeit AI gibt es im deutschsprachigen Raum?",
+   "intent": "alternatives",
+   "model": "gemini",
+   "run": 1,
+   "fanout_queries": [
+    "Zeit AI Alternativen deutschsprachiger Raum",
+    "KI Tools für Redaktionen deutschland",
+    "Generative KI für Text deutsch",
+    "Content Creation Tools KI deutschsprachig",
+    "Content Marketing KI deutsch",
+    "Journalismus KI deutsch"
+   ],
+   "cited_domains": [
+    "canva.com",
+    "deutschlandfunk.de",
+    "djv.de",
+    "filestage.io",
+    "goethe.de",
+    "hootsuite.com",
+    "shortgenius.com",
+    "youtube.com"
+   ],
+   "answer": "Im deutschsprachigen Raum gibt es eine Reihe von Alternativen zu Zeit AI, die Redaktionen und Content-Erstellern bei verschiedenen Aufgaben unterstützen können. Diese Tools reichen von spezialisierten Anwendungen für den Journalismus bis hin zu allgemeineren generativen KI-Modellen für die Texterstellung und Content-Produktion.\n\n**KI-Tools speziell für Journalismus und Redaktionen:**\n\n*   **Perplexity Pro:** Dieses Tool wird für die schnelle Erstellung von zitierfähigen Dossiers empfohlen. Mit der Funktion \"Deep Research\" kann es mehrstufig recherchieren und strukturierte Zusammenfassungen mit Quellenangaben liefern. Es eignet sich für schnelle Briefings und die Vertiefung spezifischer Aspekte mit gezielten Follow-ups.\n*   **Google NotebookLM:** Eine unterschätzte Funktion dieses Tools ist die Audio-Funktion, die Strategiepapiere oder Beiträge in ein Executive-Briefing umwandeln und vorlesen kann. Es hilft, Inhalte strukturiert zu verdichten und dient als aktive Vorbereitung für Meetings.\n*   **Wolf-Schneider-KI (WSKI):** Dieses Redigier-Tool basiert auf künstlicher Intelligenz und den Schreibregeln von Wolf Schneider, was es zu einer nützlichen Unterstützung für besseres Schreiben im deutschen Journalismus macht.\n*   **Sonix:** Eine umfassende KI-gestützte Plattform, die speziell für Medienschaffende und Inhaltsersteller entwickelt wurde. Sie bietet fortschrittliche Funktionen für Transkription, Übersetzung und Untertitelung von Audio- und Videoinhalten.\n*   **Otter.ai:** Dieses Tool bietet Echtzeit-Transkription von Meetings und ist ein Kollaborationstool, das im modernen Journalismus für Schnelligkeit, Genauigkeit und Effizienz bei der Erstellung und Recherche von Inhalten geschätzt wird.\n*   **Google Journalist Studio Pinpoint:** Eine Plattform, die speziell für Journalisten zur Recherche und Faktenüberprüfung entwickelt wurde.\n*   **Trint:** Bietet Audio- und Videotranskriptionen mit kollaborativen Bearbeitungsfunktionen.\n*   **Reality Defender:** Ein KI-generiertes Werkzeug, das sich mit der Erkennung von KI-generierten Inhalten befasst.\n\n**Generative KI-Tools und Content Creation Plattformen (auch für den deutschsprachigen Raum relevant):**\n\n*   **Neuroflash:** Gilt als eine der besten Alternativen zu ChatGPT für deutsche Texte, da es eine deutsche Benutzeroberfläche und Support bietet und den europäischen Datenschutzstandards verpflichtet ist. Neuroflash nutzt verschiedene KI-Modelle wie GPT-5.5, GPT-5.4, GPT-4.1, Gemini, Claude und das eigene Modell Nano Banana. Es bietet über 100 Textvorlagen, eine Brand-Voice-Funktion und einen KI-Bildgenerator.\n*   **ChatGPT:** Als NLP-Chatbot (Natural Language Processing) kann ChatGPT menschenähnliche Unterhaltungen verstehen und führen. Es ist ein führendes KI-Tool für schriftliche Inhalte wie Social-Media-Beiträge und Blogartikel und kann Rechercheprozesse beschleunigen, indem es schnelle Informationen mit Zusammenfassungen, Erklärungen und Stichpunkten liefert.\n*   **Canva Business:** Ein All-in-One-Tool zur KI-Content-Erstellung, mit dem Teams hochwertige visuelle Inhalte in verschiedenen Formaten und für diverse Plattformen schnell und einfach entwerfen können.\n*   **Motion:** Ein Executive-AI-Assistent mit Aufgabenverwaltungsfunktionen, der den Tag automatisch plant, indem er einen personalisierten Zeitplan basierend auf Dringlichkeit, Deadlines und Fokuszeit generiert.\n*   **MagicSchool.ai:** Entwickelt speziell KI-Tools für Lehrkräfte, um Zeit bei der Unterrichtsvorbereitung, der Erstellung von Rubriken, Aufgaben, Text-Überarbeitung und Differenzierung zu sparen.\n*   **Mindgrasp.ai:** Hilft, Informationen schnell aufzunehmen, indem es dichte Inhalte wie Videos, Dokumente oder Texte in Zusammenfassungen, Notizen, Lernkarten und Quizze umwandelt.\n*   **IBM watsonx Orchestrate und Microsoft:** Werden als Top-Alternativen zu Zeit AI im Bereich Natural Language Processing (NLP) Plattformen genannt.\n\nViele dieser Tools können Routineaufgaben im Journalismus und der Content-Erstellung automatisieren, wertvolle Zeit sparen und neue Möglichkeiten für die journalistische Arbeit eröffnen, beispielsweise durch die Erstellung von Dossiers in Minuten oder die visuelle Aufbereitung von Inhalten. Der Einsatz von KI im Journalismus hat das Potenzial, die Arbeitsabläufe in Medienhäusern grundlegend zu verändern.",
+   "client_cited": false,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Wer steckt hinter Zeit AI und wie ist das Unternehmen finanziert?",
+   "intent": "company",
+   "model": "gemini",
+   "run": 0,
+   "fanout_queries": [
+    "Zeit AI Gründer",
+    "Zeit AI Finanzierung",
+    "Wer steckt hinter Zeit AI",
+    "Zeit AI Investoren"
+   ],
+   "cited_domains": [
+    "businessinsider.de",
+    "northdata.de",
+    "startupintros.com",
+    "tracxn.com",
+    "ycombinator.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Zeit AI wurde 2024 von Marvin Christopher Bornstein und Leopold von Waldthausen gegründet. Beide Gründer arbeiteten zuvor vier Jahre lang bei Palantir, wo Leopold von Waldthausen strategische Teams und Marvin Bornstein technische Teams leitete. Leopold von Waldthausen ist Co-Founder und CEO des Unternehmens, während Marvin Bornstein als Co-Founder und CTO fungiert. Das Team von Zeit AI besteht aus Ingenieuren, Entwicklern und Operatoren und hat seinen Hauptsitz in München.\n\nDie Finanzierung von Zeit AI erfolgte bisher über eine Seed-Runde, die im September 2024 bekannt gegeben wurde und bei der insgesamt 500.000 US-Dollar eingesammelt wurden. Der Hauptinvestor ist Y Combinator. Laut eigenen Angaben aus dem September 2025 erzielt das Startup bereits einen sechsstelligen Jahresumsatz (ARR) und ist profitabel, mit dem Ziel, im Jahr 2025 einen Millionenumsatz zu erreichen. Das eingetragene Stammkapital der Zeit AI GmbH beträgt 25.000 Euro.",
+   "client_cited": true,
+   "client_mentioned": true
+  },
+  {
+   "prompt": "Wer steckt hinter Zeit AI und wie ist das Unternehmen finanziert?",
+   "intent": "company",
+   "model": "gemini",
+   "run": 1,
+   "fanout_queries": [
+    "Zeit AI Gründer",
+    "Zeit AI Finanzierung",
+    "Zeit AI Investoren",
+    "Who founded Zeit AI",
+    "How is Zeit AI financed"
+   ],
+   "cited_domains": [
+    "businessinsider.de",
+    "fondo.com",
+    "startupintros.com",
+    "tracxn.com",
+    "ycombinator.com",
+    "zeit-ai.com"
+   ],
+   "answer": "Zeit AI wurde 2024 von Marvin Christopher Bornstein und Leopold von Waldthausen gegründet. Beide Gründer arbeiteten vor der Gründung von Zeit AI vier Jahre lang gemeinsam bei Palantir, wobei Leopold von Waldthausen im strategischen Bereich und Marvin Bornstein im technischen Bereich tätig war. Leopold von Waldthausen fungiert als Co-Founder & CEO, während Marvin Bornstein die Rolle des Co-Founder & CTO innehat. Das Team von Zeit AI ist klein, in München ansässig und besteht aus Ingenieuren, Entwicklern und Operatoren.\n\nDas Unternehmen hat eine Seed-Finanzierungsrunde im Jahr 2024 abgeschlossen und dabei insgesamt 500.000 US-Dollar erhalten. Zu den Investoren zählen Y Combinator, Oxford Seed Fund und Sequoia Scout. Zeit AI hat nach eigenen Angaben bereits einen sechsstelligen jährlichen wiederkehrenden Umsatz (ARR) erzielt und arbeitet profitabel, mit dem Ziel, in diesem Jahr den ersten Millionenumsatz zu erreichen.",
+   "client_cited": true,
+   "client_mentioned": true
+  }
+ ]
+}

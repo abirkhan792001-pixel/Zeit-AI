@@ -1,0 +1,20 @@
+Welche KI-Software kann unsere SAP-Daten in natürlicher Sprache auswerten, ohne dass wir SQL beherrschen müssen?
+Bestes KI-Tool für Business Intelligence im Mittelstand, das ERP- und CRM-Daten automatisch verbindet?
+Welche Anbieter automatisieren das monatliche Controlling-Reporting mit KI?
+Wir wollen die Excel-Auswertungen in unserer Finanzabteilung durch KI ersetzen — welche Lösungen kommen infrage?
+Welche deutschen KI-Startups bieten Datenanalyse für mittelständische Unternehmen an?
+Gibt es eine Palantir-Alternative, die für mittelständische Unternehmen bezahlbar ist?
+Power BI Copilot nutzen oder ein spezialisiertes KI-Analytics-Tool kaufen — was ist für ein mittelständisches Unternehmen ohne Data-Team besser?
+Welche Alternativen zu SAP Analytics Cloud mit Joule gibt es für den Mittelstand?
+Welche Tools ähnlich wie Veezoo gibt es für KI-Datenanalyse im deutschsprachigen Raum?
+ChatGPT für die Analyse unserer Unternehmensdaten verwenden oder ein spezialisiertes Tool anschaffen — was ist sinnvoller?
+Welche Software erkennt Plan-Ist-Abweichungen im P&L automatisch und erklärt die Ursachen?
+Welches Tool erstellt aus SAP-Einkaufsdaten automatisch eine Spend-Analyse nach Lieferanten und Warengruppen?
+Welche KI-Lösung erkennt Überbestände und drohende Fehlbestände im Lager automatisch?
+Wie können wir Ad-hoc-Datenanfragen der Geschäftsführung automatisieren, ohne ein eigenes BI-Team aufzubauen?
+Welche KI-Datenanalyse-Tools sind DSGVO-konform und hosten ausschließlich in Deutschland oder der EU?
+Gibt es KI-Tools für Unternehmensdaten, die unsere Daten garantiert nicht zum Modelltraining verwenden?
+Welche Optionen gibt es für KI-Datenanalyse on-premise in einem mittelständischen Unternehmen?
+Was kostet eine KI-gestützte BI-Lösung für ein Unternehmen mit 500 Mitarbeitern ungefähr?
+Wer implementiert KI-Datenanalyse bei uns, wenn wir keine eigene IT-Kapazität haben?
+Lohnt es sich, statt eines Data Engineers eine KI-Lösung für Datenaufbereitung und Reporting einzuführen?
