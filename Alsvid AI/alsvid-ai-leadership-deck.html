@@ -1,0 +1,660 @@
+<title>Alsvid AI Leadership Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+/* ─────────────────────────────────────────────────────────────────────────
+   BRAND LAYER — replace these six values with the Zeit AI template tokens.
+   Nothing else in this stylesheet needs to change to re-skin the deck.
+   ───────────────────────────────────────────────────────────────────────── */
+:root{
+  --brand:          #1B5FA8;   /* Zeit AI primary */
+  --brand-ink:      #123F70;   /* darker step, for text on light */
+  --face-display:   "Barlow Semi Condensed", "Arial Narrow", sans-serif;
+  --face-body:      "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --face-data:      "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+  --logo-text:      "Zeit AI";  /* swap the .logo block for the real SVG */
+}
+
+/* ── Light palette (complete; dark blocks below redefine tokens only) ───── */
+:root{
+  --ground:   #F1F3F5;
+  --surface:  #FCFCFB;
+  --sunken:   #E9ECEF;
+  --ink:      #13181D;
+  --ink-2:    #4B5560;
+  --ink-3:    #79838F;
+  --rule:     #DCE0E4;
+  --rule-2:   #C3C9D0;
+  --cat-a:    #B07A20;   /* S0 · today's plan — validated */
+  --cat-b:    #1B5FA8;   /* S5 · recommendation — validated */
+  --pos:      #1C6B4E;
+  --neg:      #A83B26;
+  --shadow:   0 1px 2px rgb(19 24 29 / .06), 0 8px 24px rgb(19 24 29 / .05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:  #0D1014;
+    --surface: #161A1F;
+    --sunken:  #1E242A;
+    --ink:     #E9EDF1;
+    --ink-2:   #A6B1BC;
+    --ink-3:   #727D89;
+    --rule:    #252B32;
+    --rule-2:  #39414A;
+    --brand:   #5A93D2;
+    --brand-ink:#8FB8E4;
+    --cat-a:   #BE852A;
+    --cat-b:   #5A93D2;
+    --pos:     #4E9E7C;
+    --neg:     #D2705A;
+    --shadow:  0 1px 2px rgb(0 0 0 / .4), 0 8px 24px rgb(0 0 0 / .3);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:  #0D1014; --surface: #161A1F; --sunken:  #1E242A;
+  --ink:     #E9EDF1; --ink-2:   #A6B1BC; --ink-3:   #727D89;
+  --rule:    #252B32; --rule-2:  #39414A;
+  --brand:   #5A93D2; --brand-ink:#8FB8E4;
+  --cat-a:   #BE852A; --cat-b:   #5A93D2;
+  --pos:     #4E9E7C; --neg:     #D2705A;
+  --shadow:  0 1px 2px rgb(0 0 0 / .4), 0 8px 24px rgb(0 0 0 / .3);
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--face-body); font-size:16px; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{ outline:2px solid var(--brand); outline-offset:3px; }
+
+/* ── Slide frame ────────────────────────────────────────────────────────── */
+.deck{ scroll-snap-type:y mandatory; height:100vh; overflow-y:auto; }
+.slide{
+  scroll-snap-align:center; height:100vh;
+  display:grid; place-items:center; padding:2vmin;
+}
+.canvas{
+  container-type:inline-size;
+  width:min(100%, calc((100vh - 4vmin) * 16 / 9));
+  aspect-ratio:16/9; background:var(--surface);
+  border:1px solid var(--rule); border-radius:2px; box-shadow:var(--shadow);
+  display:flex; flex-direction:column; overflow:hidden;
+}
+
+/* ── Header / footer rails, on every slide ──────────────────────────────── */
+.rail{
+  flex:0 0 auto; display:flex; align-items:center; justify-content:space-between;
+  gap:2cqw; padding:2.6cqw 3.4cqw 0;
+}
+.rail.foot{ padding:0 3.4cqw 2.4cqw; }
+.logo{
+  display:inline-flex; align-items:baseline; gap:.5cqw;
+  font-family:var(--face-display); font-weight:700; font-size:1.9cqw;
+  letter-spacing:.01em; color:var(--ink); text-decoration:none;
+}
+.logo .mark{
+  width:1.75cqw; height:1.75cqw; border-radius:50%;
+  background:var(--brand); display:inline-block; align-self:center;
+}
+.eyebrow{
+  font-family:var(--face-data); font-size:1.05cqw; font-weight:500;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3);
+}
+.pagenum{
+  font-family:var(--face-data); font-size:1.05cqw; color:var(--ink-3);
+  font-variant-numeric:tabular-nums;
+}
+.hairline{ height:1px; background:var(--rule); margin:1.6cqw 3.4cqw 0; flex:0 0 auto; }
+
+/* ── Slide body ─────────────────────────────────────────────────────────── */
+.body{ flex:1 1 auto; min-height:0; padding:2.6cqw 3.4cqw 1.6cqw; display:flex; flex-direction:column; gap:1.7cqw; }
+h1,h2,h3{ margin:0; font-family:var(--face-display); font-weight:600; text-wrap:balance; }
+h1{ font-size:5.6cqw; line-height:1.02; letter-spacing:-.01em; }
+h2{ font-size:3.5cqw; line-height:1.06; letter-spacing:-.005em; }
+h3{ font-size:1.65cqw; line-height:1.2; }
+p{ margin:0; font-size:1.35cqw; line-height:1.45; color:var(--ink-2); max-width:60ch; }
+.lede{ font-size:1.65cqw; color:var(--ink-2); max-width:62ch; }
+strong{ color:var(--ink); font-weight:600; }
+.num{ font-family:var(--face-data); font-variant-numeric:tabular-nums; }
+
+/* ── Components ─────────────────────────────────────────────────────────── */
+.cols{ display:grid; gap:2.2cqw; flex:1 1 auto; min-height:0; }
+.cols > *{ min-height:0; }
+.c-2{ grid-template-columns:1fr 1fr; }
+.c-53{ grid-template-columns:5fr 3fr; }
+.c-35{ grid-template-columns:3fr 5fr; }
+
+.tile{
+  background:var(--sunken); border:1px solid var(--rule);
+  border-radius:2px; padding:1.6cqw 1.8cqw; display:flex; flex-direction:column; gap:.5cqw;
+}
+.tile .k{ font-family:var(--face-data); font-size:1cqw; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); }
+.tile .v{ font-family:var(--face-display); font-size:4.4cqw; line-height:1; font-weight:600; font-variant-numeric:tabular-nums; }
+.tile .s{ font-size:1.15cqw; color:var(--ink-3); }
+
+.compare{ width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; }
+.compare th, .compare td{ text-align:right; padding:1.05cqw .8cqw; border-bottom:1px solid var(--rule); }
+.compare th:first-child, .compare td:first-child{ text-align:left; }
+.compare thead th{
+  font-family:var(--face-data); font-size:1.02cqw; font-weight:500; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3); border-bottom:1px solid var(--rule-2);
+}
+.compare td{ font-size:1.55cqw; }
+.compare .figure{ font-family:var(--face-data); font-size:2.1cqw; font-weight:500; }
+.compare .a{ color:var(--cat-a); }
+.compare .b{ color:var(--cat-b); }
+.compare tbody tr:last-child td{ border-bottom:none; }
+
+.swatch{ display:inline-block; width:.85cqw; height:.85cqw; border-radius:1px; margin-right:.55cqw; }
+
+.asks{
+  display:flex; gap:1.4cqw; align-items:stretch;
+  border-top:2px solid var(--brand); padding-top:1.3cqw; margin-top:auto;
+}
+.ask{ flex:1; display:flex; flex-direction:column; gap:.3cqw; }
+.ask .n{ font-family:var(--face-data); font-size:1cqw; color:var(--brand-ink); letter-spacing:.1em; }
+.ask .t{ font-size:1.3cqw; color:var(--ink); font-weight:500; line-height:1.3; }
+
+.lanes{ display:flex; flex-direction:column; gap:.7cqw; flex:1 1 auto; min-height:0; }
+.lane{
+  display:grid; grid-template-columns:6.5cqw 1fr 1.1fr; gap:1.6cqw; align-items:center;
+  background:var(--sunken); border-left:3px solid var(--brand);
+  border-radius:0 2px 2px 0; padding:.95cqw 1.4cqw;
+}
+.lane.gated{ border-left-color:var(--rule-2); }
+.lane .code{ font-family:var(--face-display); font-weight:700; font-size:2cqw; color:var(--brand); }
+.lane.gated .code{ color:var(--ink-3); }
+.lane .what{ font-size:1.4cqw; color:var(--ink); font-weight:500; line-height:1.25; }
+.lane .why{ font-size:1.18cqw; color:var(--ink-2); line-height:1.35; }
+.tag{
+  font-family:var(--face-data); font-size:.92cqw; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ink-3); border:1px solid var(--rule-2); border-radius:1px; padding:.12cqw .5cqw; margin-left:.6cqw;
+  white-space:nowrap;
+}
+
+.gates{ width:100%; border-collapse:collapse; font-size:1.24cqw; }
+.gates th, .gates td{ text-align:left; padding:.85cqw .9cqw; border-bottom:1px solid var(--rule); vertical-align:top; }
+.gates thead th{
+  font-family:var(--face-data); font-size:.98cqw; font-weight:500; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3); border-bottom:1px solid var(--rule-2);
+}
+.gates .when{ font-family:var(--face-data); color:var(--brand-ink); font-weight:500; white-space:nowrap; }
+.gates .scale{ color:var(--ink); }
+.gates .kill{ color:var(--ink-2); }
+
+.signal{ display:flex; flex-direction:column; gap:.85cqw; background:var(--sunken); border:1px solid var(--rule); border-radius:2px; padding:1.35cqw 1.6cqw; }
+.gapbar{ display:flex; align-items:flex-end; gap:1.6cqw; }
+.gapbar .stack{ display:flex; flex-direction:column; align-items:center; gap:.55cqw; }
+.gapbar .col{ width:3.4cqw; background:var(--brand); border-radius:2px 2px 0 0; }
+.gapbar .col.muted{ background:var(--ink-3); }
+.gapbar .lab{ font-family:var(--face-data); font-size:1.5cqw; font-weight:600; color:var(--ink); }
+.gapbar .sub{ font-family:var(--face-data); font-size:.95cqw; color:var(--ink-3); text-transform:uppercase; letter-spacing:.08em; }
+
+.dots{ display:grid; grid-template-columns:repeat(24, 1fr); gap:.42cqw; }
+.dots i{ aspect-ratio:1; border-radius:50%; background:var(--rule-2); display:block; }
+.dots i.on{ background:var(--brand); }
+
+.cohort{ display:flex; flex-direction:column; gap:.7cqw; }
+.co{ display:grid; grid-template-columns:7cqw 1fr; gap:1.1cqw; align-items:baseline; padding-bottom:.6cqw; border-bottom:1px solid var(--rule); }
+.co:last-child{ border-bottom:none; }
+.co .d{ font-family:var(--face-data); font-size:1.05cqw; color:var(--ink-3); }
+.co .n{ font-size:1.22cqw; color:var(--ink); line-height:1.35; }
+.co .n span{ color:var(--ink-2); }
+
+.bridge{
+  margin-top:auto; border-top:1px solid var(--rule-2); padding-top:1cqw;
+  font-size:1.28cqw; line-height:1.4; color:var(--ink); max-width:none;
+}
+
+.note{ font-size:1.1cqw; color:var(--ink-3); max-width:70ch; }
+.note-b{ border-left:2px solid var(--cat-a); padding-left:.9cqw; }
+
+.cover{ justify-content:center; gap:2.4cqw; }
+.cover h1{ font-size:7cqw; max-width:20ch; }
+.cover .meta{ display:flex; gap:1.6cqw; font-family:var(--face-data); font-size:1.15cqw; color:var(--ink-3); letter-spacing:.06em; text-transform:uppercase; }
+
+.chart-wrap{ flex:1 1 auto; min-height:0; display:flex; flex-direction:column; gap:.9cqw; }
+svg.chart{ width:100%; height:100%; overflow:visible; }
+.legend{ display:flex; gap:1.6cqw; font-size:1.15cqw; color:var(--ink-2); }
+.legend .item{ display:inline-flex; align-items:center; }
+
+.appendix .canvas{ border-style:dashed; }
+.apx{ font-family:var(--face-data); font-size:1.05cqw; letter-spacing:.12em; text-transform:uppercase; color:var(--cat-a); }
+
+@media print{
+  .deck{ height:auto; overflow:visible; }
+  .slide{ height:auto; page-break-after:always; padding:0; }
+  .canvas{ box-shadow:none; border-radius:0; width:100%; }
+}
+@media (prefers-reduced-motion:reduce){ *{ scroll-behavior:auto !important; } }
+</style>
+
+<main class="deck" id="deck">
+
+<!-- ══ COVER ══════════════════════════════════════════════════════════ -->
+<section class="slide"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="eyebrow">Internal · Leadership review</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body cover">
+    <span class="eyebrow" style="color:var(--brand-ink)">Alsvid AI · European freight forwarding</span>
+    <h1>The beachhead won't pay for itself.</h1>
+    <p class="lede">What we recommend, why the research says so, and what we need approved to start.</p>
+    <div class="meta"><span>Q3 2026</span><span>·</span><span>7 slides</span><span>·</span><span>Decision required</span></div>
+  </div>
+  <div class="rail foot"><span class="eyebrow">Alsvid AI</span><span class="pagenum">Cover</span></div>
+</div></section>
+
+<!-- ══ 1 · THE FINDING AND THE ASK ════════════════════════════════════ -->
+<section class="slide"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="eyebrow">The finding</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>Today's plan tops out below break-even.<br>The combined plan clears it by 80%.</h2>
+    <div class="cols c-53">
+      <table class="compare">
+        <thead><tr>
+          <th>Year 3</th>
+          <th><span class="swatch" style="background:var(--cat-a)"></span>S0 · today's plan</th>
+          <th><span class="swatch" style="background:var(--cat-b)"></span>S5 · recommendation</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>ARR</td><td class="figure a">€1.56m</td><td class="figure b">€5.26m</td></tr>
+          <tr><td>EBITDA</td><td class="figure a">−€0.89m</td><td class="figure b">+€1.52m</td></tr>
+          <tr><td>Cash</td><td class="figure a">burning</td><td class="figure b">+€3.43m</td></tr>
+        </tbody>
+      </table>
+      <div class="tile">
+        <span class="k">Break-even ARR</span>
+        <span class="v">€2.92m</span>
+        <span class="s">S0 reaches 53% of it. S5 reaches 180%.</span>
+      </div>
+    </div>
+    <div class="asks">
+      <div class="ask"><span class="n">ASK 01</span><span class="t">€66.5k of 90-day spend</span></div>
+      <div class="ask"><span class="n">ASK 02</span><span class="t">Two hiring reqs</span></div>
+      <div class="ask"><span class="n">ASK 03</span><span class="t">Approval to publish pricing</span></div>
+    </div>
+  </div>
+  <div class="rail foot"><span class="eyebrow">Everything after this is proof, not build-up</span><span class="pagenum">01 / 07</span></div>
+</div></section>
+
+<!-- ══ 2 · WHY THE CEILING IS LOW ═════════════════════════════════════ -->
+<section class="slide"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="eyebrow">Why · the constraint</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>The constraint is who we sell to — not the product.</h2>
+    <div class="cols c-2">
+      <div class="signal">
+        <h3>The work is worth €3.4bn a year.</h3>
+        <div class="gapbar">
+          <div class="stack" style="height:9cqw; justify-content:flex-end">
+            <span class="lab">€117m</span>
+            <div class="col muted" style="height:.21cqw"></div>
+            <span class="sub">Reachable today</span>
+          </div>
+          <div class="stack" style="height:9cqw; justify-content:flex-end">
+            <span class="lab">€3.4bn</span>
+            <div class="col" style="height:6.1cqw"></div>
+            <span class="sub">Manual labour value</span>
+          </div>
+        </div>
+        <p>Today's ICP and pricing reach <strong>3.4% of the value</strong> of the work being done by hand. A <strong>29× gap</strong> — measured as labour displaced, not as a TAM estimate.</p>
+      </div>
+      <div class="signal">
+        <h3>And winning the beachhead outright still lands on zero.</h3>
+        <div class="dots" id="dotgrid" aria-hidden="true"></div>
+        <p>Break-even needs <strong>~30% of the 213 beachhead companies</strong> — roughly <strong>64 accounts</strong>. Three of every ten companies in DACH and Benelux, to arrive at exactly break-even.</p>
+      </div>
+    </div>
+    <p class="note">The same finding at two zoom levels — and neither zoom is fixed by a better product.</p>
+  </div>
+  <div class="rail foot"><span class="eyebrow">213 beachhead companies · 1,479 full ICP</span><span class="pagenum">02 / 07</span></div>
+</div></section>
+
+<!-- ══ 3 · ONLY THE COMBINATION CLEARS THE LINE ═══════════════════════ -->
+<section class="slide"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="eyebrow">Why · the model</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>No single lever reaches break-even. Only the combination does.</h2>
+    <div class="cols c-53" style="align-items:stretch">
+      <div class="chart-wrap">
+        <span class="eyebrow">Year 3 ARR</span>
+        <svg class="chart" viewBox="0 0 520 250" role="img"
+             aria-label="Year 3 ARR: S0 today's plan €1.56m, S5 recommendation €5.26m, against a break-even line at €2.92m.">
+          <line x1="60" y1="215" x2="510" y2="215" stroke="var(--rule-2)" stroke-width="1"/>
+          <line x1="60" y1="109" x2="510" y2="109" stroke="var(--ink-2)" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <text x="60" y="101" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--ink-2)">Break-even €2.92m</text>
+          <rect x="120" y="158" width="96" height="57" rx="4" fill="var(--cat-a)"/>
+          <text x="168" y="150" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="19" font-weight="500" fill="var(--cat-a)">€1.56m</text>
+          <text x="168" y="234" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="var(--ink-2)">S0 · today's plan</text>
+          <rect x="330" y="24" width="96" height="191" rx="4" fill="var(--cat-b)"/>
+          <text x="378" y="16" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="19" font-weight="500" fill="var(--cat-b)">€5.26m</text>
+          <text x="378" y="234" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="var(--ink-2)">S5 · all four levers</text>
+        </svg>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:1cqw; min-height:0">
+        <div class="tile"><span class="k">S0 · Year 3 EBITDA</span><span class="v" style="color:var(--cat-a); font-size:3.4cqw">−€0.89m</span></div>
+        <div class="tile"><span class="k">S5 · Year 3 EBITDA</span><span class="v" style="color:var(--cat-b); font-size:3.4cqw">+€1.52m</span></div>
+        <p class="note note-b"><strong>S1–S4 each fail alone.</strong> Every single-lever scenario lands between these two bars and below the line. Full six-scenario table in appendix.</p>
+      </div>
+    </div>
+    <p class="note">Stress-tested: S5 stays EBITDA-positive under <strong>every single shock</strong> modelled — price, demand, churn, capacity. Only all four at once pushes it negative, to −€270k.</p>
+  </div>
+  <div class="rail foot"><span class="eyebrow">Six scenarios modelled · five fail</span><span class="pagenum">03 / 07</span></div>
+</div></section>
+
+<!-- ══ 4 · WHY NOW ════════════════════════════════════════════════════ -->
+<section class="slide"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="eyebrow">Why · the window</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>The buyers haven't committed yet — and the sellers just showed up.</h2>
+    <div class="cols c-2">
+      <div class="signal">
+        <h3>Budget exists. Conviction doesn't. Yet.</h3>
+        <div class="gapbar" style="gap:2.4cqw">
+          <div class="stack" style="height:8cqw; justify-content:flex-end">
+            <span class="lab">89%</span>
+            <div class="col" style="height:5.4cqw"></div>
+            <span class="sub">Will invest</span>
+          </div>
+          <div class="stack" style="height:8cqw; justify-content:flex-end">
+            <span class="lab">19%</span>
+            <div class="col muted" style="height:1.15cqw"></div>
+            <span class="sub">Critically important</span>
+          </div>
+        </div>
+        <p>Executives who say gen AI will be in their automation investment, against those calling it critically important. <strong>Budget-holders who have not yet chosen.</strong></p>
+        <p class="note">IBM's own vendor deck, aimed at Fortune 500 supply-chain officers — a seller's evidence, not neutral research.</p>
+      </div>
+      <div class="signal">
+        <h3>Capital arrived in this exact category last quarter.</h3>
+        <div class="cohort">
+          <div class="co"><span class="d">30 JUL 26</span><span class="n">Willidrop — Munich <span>· agent OS for vehicle logistics, out of stealth, round closed</span></span></div>
+          <div class="co"><span class="d">SAME QTR</span><span class="n">SpaceFlow <span>· runtime for supply-chain agents</span></span></div>
+          <div class="co"><span class="d">SAME QTR</span><span class="n">Lighthouz AI <span>· AP/AR for freight brokers</span></span></div>
+          <div class="co"><span class="d">SAME QTR</span><span class="n">Derya · Haladir · Peer · FleetWorks · Lanesurf <span>· logistics ops and road freight agents</span></span></div>
+        </div>
+        <p>Seven funded teams, one thesis. <strong>Nobody has won it — and the field doubled in a quarter.</strong></p>
+      </div>
+    </div>
+    <p class="bridge">The lane nobody has taken is the one we are already built for: <strong>CargoWise and Timocom integrations shipped, no partner channel on top of them</strong> — and just 2 of 27 vendors publish pricing at all.</p>
+  </div>
+  <div class="rail foot"><span class="eyebrow">Demand uncommitted · supply arriving</span><span class="pagenum">04 / 07</span></div>
+</div></section>
+
+<!-- ══ 5 · THE FOUR LEVERS ════════════════════════════════════════════ -->
+<section class="slide"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="eyebrow">How · the levers</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>Four levers, each on a different constraint — so they add up.</h2>
+    <div class="lanes">
+      <div class="lane">
+        <span class="code">S1</span>
+        <span class="what">Partner channel<span class="tag">Start now</span></span>
+        <span class="why">Distribution through the CargoWise and Timocom integrations we have already built — reach beyond the 213 without adding direct sales headcount.</span>
+      </div>
+      <div class="lane">
+        <span class="code">S2</span>
+        <span class="what">Pricing and ACV<span class="tag">Start now</span></span>
+        <span class="why">Publish pricing, expand ACV against automation rate. More revenue per account, and we set the DACH price anchor before anyone else does.</span>
+      </div>
+      <div class="lane">
+        <span class="code">S4</span>
+        <span class="what">Road freight, via Timocom<span class="tag">Pilot</span></span>
+        <span class="why">A new mode on an integration we already run — a second market of comparable size to the beachhead, tested before it is funded.</span>
+      </div>
+      <div class="lane gated">
+        <span class="code">S3</span>
+        <span class="what">Self-serve tail<span class="tag">Gated to Q+4</span></span>
+        <span class="why">Low-touch entry for the long tail of the 1,479-company ICP — volume the forward-deployed model cannot physically serve.</span>
+      </div>
+    </div>
+    <p class="note">Reach, price, market, capacity — four distinct constraints. Dropping one does not cost a quarter of the result; it removes a constraint nothing else covers.</p>
+  </div>
+  <div class="rail foot"><span class="eyebrow">MECE by construction</span><span class="pagenum">05 / 07</span></div>
+</div></section>
+
+<!-- ══ 6 · 90 DAYS, BUDGET, CAPACITY ══════════════════════════════════ -->
+<section class="slide"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="eyebrow">How · cost and capacity</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>€66.5k and 90 days to find out which levers are real.</h2>
+    <div class="cols c-2">
+      <div style="display:flex; flex-direction:column; gap:1.1cqw">
+        <div class="tile">
+          <span class="k">90-day programme spend</span>
+          <span class="v">€66.5k</span>
+          <span class="s">≈ 2% of runway. The decision is not "spend €3m on growth" — it is "spend 2% to learn."</span>
+        </div>
+        <div class="tile">
+          <span class="k">Hard capacity guardrail</span>
+          <span class="v" style="font-size:3.2cqw">1 FDE ≈ 10 accounts</span>
+          <span class="s">Direct growth is capped by hiring speed. This is exactly why S1 and S3 are necessary rather than optional.</span>
+        </div>
+      </div>
+      <div class="signal">
+        <h3>Two reqs — not four.</h3>
+        <div class="cohort">
+          <div class="co"><span class="d">REQ 01</span><span class="n">Partner / Alliances Manager <span>· owns S1. Industry norm is 5–7 regional partners per manager, so one book covers the CargoWise and Timocom ecosystems. DACH benchmark €55–75k base.</span></span></div>
+          <div class="co"><span class="d">REQ 02</span><span class="n">Forward-Deployed Engineer <span>· carries new accounts against the 1:10 rule. ~70% of AI software companies now run this function. Munich benchmark €85–100k base.</span></span></div>
+          <div class="co"><span class="d">GATED</span><span class="n">Second FDE <span>· triggered by live account count crossing the ratio, not by the calendar. Not requested today.</span></span></div>
+        </div>
+        <p class="note">≈€140–175k combined base, before employer contributions. S3 self-serve engineering is not a req until its Q+4 gate opens.</p>
+      </div>
+    </div>
+  </div>
+  <div class="rail foot"><span class="eyebrow">Roll-up view · week-by-week plan and RACI in appendix</span><span class="pagenum">06 / 07</span></div>
+</div></section>
+
+<!-- ══ 7 · GATES AND THE ASK ══════════════════════════════════════════ -->
+<section class="slide"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="eyebrow">How · control</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>Every lever has a date where we scale it or kill it.</h2>
+    <table class="gates">
+      <thead><tr><th>Lever</th><th>Gate</th><th>Scale if</th><th>Kill if</th></tr></thead>
+      <tbody>
+        <tr><td>S1 · Partner channel</td><td class="when">Q+2</td><td class="scale">≥2 partners signed and ≥5 partner-sourced qualified opportunities</td><td class="kill">No partner signed</td></tr>
+        <tr><td>S2 · Pricing</td><td class="when">Q+2</td><td class="scale">Pricing published and ≥3 deals closed at list, none below the discount floor</td><td class="kill">Win rate down more than 10 points</td></tr>
+        <tr><td>S4 · Road freight</td><td class="when">Q+3</td><td class="scale">≥3 road accounts live and in weekly use</td><td class="kill">Fewer than 1 live</td></tr>
+        <tr><td>S3 · Self-serve</td><td class="when">Q+4</td><td class="scale">≥25 signups with ≥20% reaching a first answer</td><td class="kill">Fewer than 10 signups</td></tr>
+      </tbody>
+    </table>
+    <p class="note"><strong>Anything between the two:</strong> the lever continues at current spend and is re-gated one quarter later. No new budget without clearing the scale bar.</p>
+    <div class="asks">
+      <div class="ask"><span class="n">ASK 01 · BUDGET</span><span class="t">Sign off €66.5k of 90-day spend across the four workstreams</span></div>
+      <div class="ask"><span class="n">ASK 02 · HIRING</span><span class="t">Approve two reqs — Partner Manager and Forward-Deployed Engineer</span></div>
+      <div class="ask"><span class="n">ASK 03 · PRICING</span><span class="t">Approve publishing pricing, accepting it sets the DACH anchor</span></div>
+    </div>
+  </div>
+  <div class="rail foot"><span class="eyebrow">First gate: Q+2</span><span class="pagenum">07 / 07</span></div>
+</div></section>
+
+<!-- ══ CLOSE ══════════════════════════════════════════════════════════ -->
+<section class="slide"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="eyebrow">Decision</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body cover" style="gap:2cqw">
+    <h1 style="font-size:5.2cqw; max-width:24ch">Three approvals today.<br>First evidence at Q+2.</h1>
+    <div class="asks" style="margin-top:0">
+      <div class="ask"><span class="n">01</span><span class="t">€66.5k · 90 days</span></div>
+      <div class="ask"><span class="n">02</span><span class="t">Two hiring reqs</span></div>
+      <div class="ask"><span class="n">03</span><span class="t">Publish pricing</span></div>
+    </div>
+  </div>
+  <div class="rail foot"><span class="eyebrow">Alsvid AI · Zeit AI internal</span><span class="pagenum">Close</span></div>
+</div></section>
+
+<!-- ══ APPENDIX ═══════════════════════════════════════════════════════ -->
+<section class="slide appendix"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="apx">Appendix A · Scenarios</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>Six scenarios, Year 3</h2>
+    <table class="gates">
+      <thead><tr><th>Scenario</th><th>Description</th><th>Y3 ARR</th><th>Y3 EBITDA</th></tr></thead>
+      <tbody>
+        <tr><td>S0</td><td class="kill">Beachhead only — today's plan</td><td class="when">€1.56m</td><td class="when">−€0.89m</td></tr>
+        <tr><td>S1</td><td class="kill">Partner channel only</td><td class="when">— to fill</td><td class="when">— to fill</td></tr>
+        <tr><td>S2</td><td class="kill">Pricing / ACV expansion only</td><td class="when">— to fill</td><td class="when">— to fill</td></tr>
+        <tr><td>S3</td><td class="kill">Self-serve tail only</td><td class="when">— to fill</td><td class="when">— to fill</td></tr>
+        <tr><td>S4</td><td class="kill">Road freight only</td><td class="when">— to fill</td><td class="when">— to fill</td></tr>
+        <tr><td>S5</td><td class="scale"><strong>All four combined — recommended</strong></td><td class="when"><strong>€5.26m</strong></td><td class="when"><strong>+€1.52m</strong></td></tr>
+      </tbody>
+    </table>
+    <p class="note note-b">S1–S4 figures come from the MECE strategy model and are not yet loaded into this deck. Slide 3 deliberately shows only S0, S5 and the break-even line — the takeaway is that one option crosses it, and four extra bars dilute that rather than strengthen it.</p>
+  </div>
+  <div class="rail foot"><span class="eyebrow">Break-even ARR €2.92m</span><span class="pagenum">A1</span></div>
+</div></section>
+
+<section class="slide appendix"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="apx">Appendix B · Stress tests</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>What breaks S5</h2>
+    <div class="cols c-2">
+      <div class="signal">
+        <h3>Single shocks</h3>
+        <p>S5 remains EBITDA-positive under each of the four shock types applied on its own: <strong>price compression, demand shortfall, elevated churn, and capacity constraint</strong>.</p>
+        <p class="note">The margin absorbs any one of them without changing the recommendation.</p>
+      </div>
+      <div class="signal">
+        <h3>Combined shock</h3>
+        <div class="tile" style="background:transparent; border:none; padding:0">
+          <span class="k">All four simultaneously</span>
+          <span class="v" style="color:var(--cat-a)">−€270k</span>
+          <span class="s">Survivable, and still €620k better than S0's steady-state burn.</span>
+        </div>
+      </div>
+    </div>
+    <p class="note">Full 6×6 stress matrix available on request — summarised here because the shape of the answer, not the cell values, is what changes the decision.</p>
+  </div>
+  <div class="rail foot"><span class="eyebrow">Robustness, not optimism</span><span class="pagenum">A2</span></div>
+</div></section>
+
+<section class="slide appendix"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="apx">Appendix C · Hiring benchmarks</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>Where the two reqs come from</h2>
+    <table class="gates">
+      <thead><tr><th>Input</th><th>Benchmark</th><th>What it decides</th></tr></thead>
+      <tbody>
+        <tr><td>Partner manager load</td><td class="scale">5–7 regional partners per manager (1–2 for global SIs)</td><td class="kill">One req covers both integration ecosystems — a second manager is premature</td></tr>
+        <tr><td>Channel viability</td><td class="scale">≥3:1 revenue-to-cost is the standard bar for a channel programme</td><td class="kill">The Q+2 gate threshold on S1</td></tr>
+        <tr><td>FDE prevalence</td><td class="scale">~70% of AI and software companies now run a forward-deployed function</td><td class="kill">The role is standard practice, not an experiment</td></tr>
+        <tr><td>Partner mgr comp, DACH</td><td class="scale">Avg €45.8k; range €32k–€100k; DACH scope carries a 10–15% premium</td><td class="kill">€55–75k base to attract someone who can open ecosystems</td></tr>
+        <tr><td>Engineer comp, Munich</td><td class="scale">€77.5k–€99k typical; €85k–€110k senior</td><td class="kill">€85–100k base for the FDE req</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Sources: Partnership Leaders; Bessemer Venture Partners channel GTM guide; Sloane Staffing FDE hiring playbook 2026; StepStone and TalentUp DACH salary data; Glassdoor and Levels.fyi Munich engineering data.</p>
+  </div>
+  <div class="rail foot"><span class="eyebrow">Two reqs now · second FDE gated on account count</span><span class="pagenum">A3</span></div>
+</div></section>
+
+<section class="slide appendix"><div class="canvas">
+  <div class="rail">
+    <span class="logo"><span class="mark"></span>Zeit AI</span>
+    <span class="apx">Appendix D · Held back</span>
+  </div>
+  <div class="hairline"></div>
+  <div class="body">
+    <h2>Cut from the main deck, ready if asked</h2>
+    <div class="cols c-2">
+      <div class="signal">
+        <h3>Available on request</h3>
+        <div class="cohort">
+          <div class="co"><span class="d">01</span><span class="n">Full 16-vendor competitor grid</span></div>
+          <div class="co"><span class="d">02</span><span class="n">Week-by-week 90-day plan and RACI</span></div>
+          <div class="co"><span class="d">03</span><span class="n">Pricing mechanics <span>· hybrid model, ramp against automation rate, discount floor</span></span></div>
+          <div class="co"><span class="d">04</span><span class="n">Market sizing, both methods, with assumptions</span></div>
+          <div class="co"><span class="d">05</span><span class="n">Event calendar <span>· 3 events, pre-booked meetings</span></span></div>
+        </div>
+      </div>
+      <div class="signal">
+        <h3>Known risks, tracked separately</h3>
+        <div class="cohort">
+          <div class="co"><span class="d">RISK</span><span class="n">cargo.one distribution <span>· 28,000 forwarders reachable through one incumbent — the largest structural risk to S1</span></span></div>
+          <div class="co"><span class="d">RISK</span><span class="n">Pricing-publish race <span>· first mover sets the DACH anchor; the flip side is competitors price against us</span></span></div>
+          <div class="co"><span class="d">FIX</span><span class="n">Compliance before scale <span>· DPA hosting, SOC 2, contract lock-in and data-use clauses — a fix-before-scaling list, not a growth argument</span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rail foot"><span class="eyebrow">Candour beats omission when the room has read the dossier</span><span class="pagenum">A4</span></div>
+</div></section>
+
+</main>
+
+<script>
+// 213 beachhead companies; 64 of them is break-even under today's plan.
+const grid = document.getElementById('dotgrid');
+if (grid) {
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < 213; i++) {
+    const d = document.createElement('i');
+    if (i < 64) d.className = 'on';
+    frag.appendChild(d);
+  }
+  grid.appendChild(frag);
+}
+
+// Arrow / page keys move one slide at a time.
+const deck = document.getElementById('deck');
+const slides = [...document.querySelectorAll('.slide')];
+addEventListener('keydown', e => {
+  const fwd = ['ArrowDown', 'ArrowRight', 'PageDown', ' '].includes(e.key);
+  const back = ['ArrowUp', 'ArrowLeft', 'PageUp'].includes(e.key);
+  if (!fwd && !back) return;
+  e.preventDefault();
+  const mid = deck.scrollTop + deck.clientHeight / 2;
+  const now = slides.findIndex(s => s.offsetTop + s.offsetHeight > mid);
+  const next = Math.min(Math.max(now + (fwd ? 1 : -1), 0), slides.length - 1);
+  slides[next].scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+});
+</script>

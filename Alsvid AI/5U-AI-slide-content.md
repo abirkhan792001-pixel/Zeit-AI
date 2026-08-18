@@ -1,6 +1,6 @@
 # 5U AI — Internal pitch deck: slide-by-slide content
 
-**Status:** draft v1, ready for review. Not yet built as a deck file.
+**Status:** v2 — deck built, content ready for review.
 **Source:** [5U-AI-pitch-deck-brief.md](5U-AI-pitch-deck-brief.md) (handoff summary of the planning
 conversation). The five underlying documents — ICP report, research dossier, MECE strategy,
 90-day roadmap, existing strategy deck HTML, IBM analyst brief — were **not** available when this
@@ -12,24 +12,33 @@ Act 3 = slides 5–7 (the execution).
 
 ---
 
-## 0. Read this before drafting anything into a deck file
+## 0. Decisions taken in v2 — read this first
 
-Three things are unresolved and they change the content, not just the polish.
+The deck is **built**: [alsvid-ai-leadership-deck.html](alsvid-ai-leadership-deck.html). Seven main
+slides, plus cover, close and four appendix slides. What changed from v1:
 
-**Naming.** This work sits in a folder called `Alsvid AI`; the brief and all six source documents
-say `5U AI`. Every headline below uses **5U AI**, because that is what the source says. If Alsvid
-is the real name, a rename is a find-and-replace — but confirm which is which before the deck goes
-in front of leadership, because getting the company's own name wrong on slide 1 costs more than
-every other risk in this document combined.
+**Naming — settled.** The deck is **Zeit AI** branded, with the Zeit AI logo on every slide, and
+**Alsvid AI** named as the product line inside it. **5U AI appears nowhere in the deck**, including
+the funding line that used to sit on slide 4 — that block now cites only other companies' rounds.
 
-**Two competitor counts.** The brief cites a *16-vendor* GTM synthesis (§2, §6) and a *27-vendor*
-pricing scan (§3, "only 2 of 27 vendors publish pricing"). These are probably two different studies
-with two different scopes, which is fine — but if both numbers appear on slides, someone will ask.
-Decide whether to cite one, both-with-scope, or neither.
+**Slide 3 — S0 vs S5 only.** The S1–S4 Year 3 figures live in the MECE strategy model, which has
+not been supplied, so nothing was invented. That turned out to be the better design anyway at this
+length: the takeaway is *one option crosses the line*, and four supporting bars dilute it. The main
+slide carries S0, S5 and the break-even line; the six-scenario table sits in **appendix A1** with
+S1–S4 marked "to fill". Slide 3 states in words that every single-lever scenario fails.
 
-**Currency mix.** Funding is stated in dollars ($3.2M pre-seed); every operating number is euros.
-Keep the deck in euros throughout and put the dollar figure only where the funding round is
-literally being described.
+**Gate thresholds — proposed, one scale and one kill per lever.** No third column, no scoring
+model. Anything landing between the two continues at current spend and re-gates a quarter later,
+which disposes of the ambiguity question without adding a row. These are *proposals* — replace them
+with the model's own thresholds when the MECE doc is available.
+
+**Hiring — two reqs, benchmarked.** Partner/Alliances Manager and one Forward-Deployed Engineer.
+The second FDE is deliberately *gated on live account count* rather than requested now, which is
+what keeps the ask at two. Benchmarks and the reasoning are on appendix C, sources included.
+
+**One thing to confirm before this is presented.** Every financial figure in the deck traces to the
+5U AI research pack. If Alsvid AI's own model differs anywhere, the deck inherits the difference —
+worth a reconciliation pass before leadership sees the numbers, since they will be held to them.
 
 ---
 
@@ -365,30 +374,27 @@ credibility grounds, not space. See slide 4.
 
 ---
 
-## 10. Still needed before this can be built
+## 10. Still open
 
-**Blocking — the deck cannot be finished without these:**
+**Blocking — one item:**
 
-1. **S1–S4 Y3 ARR and EBITDA** (`5U-AI-MECE-Strategy.docx`). Slide 3's chart is the deck's best
-   visual and currently has two of six data points.
-2. **Gate scale/kill thresholds** (`5U-AI-MECE-Strategy.docx`). Slide 7's table is empty without them.
-3. **Hiring req count and roles** (`5U-AI-90-Day-Roadmap.docx`). Ask item 2 on slide 7.
+1. **S1–S4 Year 3 ARR and EBITDA** (`MECE strategy model`). Appendix A1 has the rows waiting. The
+   main deck works without them; the appendix does not.
 
-**Non-blocking — improves specific slides:**
+**Improves the deck:**
 
-4. S0 Y3 cash figure, to complete slide 1's three-row comparison.
-5. Per-workstream budget split, owners, and day-90 outputs (`5U-AI-90-Day-Roadmap.docx`) for slide 6.
-6. `5U-AI-Strategy-Deck.html` — needed to match visual style, type scale and palette at build time.
+2. **Real gate thresholds** to replace the proposals on slide 7, if the model defines its own.
+3. **Per-workstream split of the €66.5k**, plus owners and day-90 outputs, for slide 6.
+4. **S0 Year 3 cash figure** — slide 1 currently says "burning" where the other two rows carry numbers.
+5. **The Zeit AI template.** Figma is blocked by this environment's network egress policy (gateway
+   returns 403 to CONNECT for `figma.com`, `embed.figma.com`, `api.figma.com` and `zeit-ai.com`
+   alike) — it is not an auth problem and not fixable by connecting an account. To match the
+   template exactly, either export it (PDF/PNG/PPTX) into this folder, or supply the logo file plus
+   brand hex values and fonts. The deck isolates all of that in a six-value `BRAND LAYER` block at
+   the top of the stylesheet — swapping it re-skins every slide without touching content.
 
-**Decisions only you can make:**
+**Decisions still yours:**
 
-7. **Alsvid AI or 5U AI** — which name goes on the deck.
-8. **Ambiguous-at-gate default** — does an unclear Q+2 result mean kill, or one more quarter?
-   Pre-agree it; slide 7 invites the question.
-9. **Final ask wording** — the three items above are drafted, not confirmed.
-10. **cargo.one on slide 4, or cut** — the biggest structural risk, but the least actionable in a
-    slide whose job is urgency.
-
-**Output format when content is signed off:** HTML matching `5U-AI-Strategy-Deck.html`, or .pptx.
-HTML is the better choice if the deck will be revised during review; .pptx if it needs to be
-forwarded and edited by others.
+6. **Final ask wording** — the three asks are drafted on slide 7, not confirmed.
+7. **cargo.one** — currently in appendix D as a tracked risk rather than on slide 4. It is the
+   largest structural risk to S1 and the least actionable in a slide whose job is urgency.
