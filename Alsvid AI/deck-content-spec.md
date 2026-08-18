@@ -1,6 +1,6 @@
 # Alsvid AI leadership deck — content spec
 
-**Status:** v3 — rebuilt on the 8-theme structure. Deck: [alsvid-ai-leadership-deck.html](alsvid-ai-leadership-deck.html).
+**Status:** v4 — rebuilt on the 8-theme structure, in the Zeit AI template. Deck: [alsvid-ai-leadership-deck.html](alsvid-ai-leadership-deck.html).
 **Audience:** Zeit AI leadership, internal. They know the company and the product.
 **Branding:** Zeit AI logo on every slide; Alsvid AI is the product line inside it. 5U AI appears nowhere.
 **Source research:** [5U-AI-pitch-deck-brief.md](5U-AI-pitch-deck-brief.md), plus external benchmarks cited on appendix C.
@@ -67,11 +67,18 @@ AI-margin commentary.
    describes the *segment* precisely and the *person* not at all, because the ICP report was not
    supplied. This is the weakest slide as a result.
 
-**The template.** Figma is blocked by this environment's network egress policy — the gateway
-returns 403 to CONNECT for `figma.com`, `embed.figma.com`, `api.figma.com` and `zeit-ai.com`. Not
-an auth problem, not fixable by connecting an account. Either export the template into this folder,
-or supply logo, hex values and fonts. All of it is isolated in the six-value `BRAND LAYER` block at
-the top of the stylesheet.
+**The template — resolved.** Figma itself is still blocked by this environment's egress policy, but
+the PDF export supplied everything needed. Values taken from `Zeit_AI__Logistics.pdf` and applied
+verbatim: sage `#DBDBCD`, block grey `#EFEFED`, ink `#000000`, and the warm/olive body grey
+`#797972` — that last one is what makes the palette cohere, and a neutral grey in its place reads
+wrong immediately. Type is Inter on a 1920×1080 canvas: 120px cover title, 62px slide headline,
+26px section head, 20px body, 13px letterspaced caps. The logo is lifted from page 1 of the PDF,
+keyed to transparency and embedded as a data URI, so the deck stays self-contained.
+
+Template patterns reused rather than invented: sage cover with the eight-arm asterisk, logo
+top-right on content slides, thin full-width rule under the headline, section heads over a 2.5px
+black rule, hairline-separated numbered rows, sage and black chips, the big-numeral band over grey
+blocks along the bottom, and the 2×2 with dot-capped axes and a tinted winning quadrant.
 
 **One thing to confirm before presenting.** Every financial figure traces to the 5U AI research
 pack. If Alsvid AI's own model differs, the deck inherits the difference.
