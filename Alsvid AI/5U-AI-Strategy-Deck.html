@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>5U AI — GTM Strategy & Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --headline: 'Space Grotesk', 'Inter', sans-serif; /* substitute for Whyte — see note slide */
+    --body: 'Inter', sans-serif;
+    --ink:#0a0a0a;
+    --paper:#ffffff;
+    --grey:#6b6b6b;
+    --rule:#d9d9d9;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:#3a3a3a; font-family:var(--body);}
+  .deck{display:flex; flex-direction:column; align-items:center; gap:28px; padding:28px 0;}
+  .slide{
+    width:1280px; height:720px; position:relative; overflow:hidden;
+    background:var(--paper); color:var(--ink); flex-shrink:0;
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+  }
+  .grain{
+    position:absolute; inset:0; opacity:.35; mix-blend-mode:overlay; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .footer{
+    position:absolute; left:60px; right:60px; bottom:32px;
+    display:flex; align-items:center; gap:40px;
+    font-size:11px; letter-spacing:.02em; color:var(--grey);
+  }
+  .footer .swatch{width:14px; height:14px; background:var(--rule); border-radius:2px; flex-shrink:0;}
+  .footer .grow{flex:1;}
+  .footer .page{margin-left:auto; color:var(--ink);}
+  .slide.dark .footer{color:rgba(255,255,255,.75);}
+  .slide.dark .footer .page{color:#fff;}
+  .slide.dark .footer .swatch{background:rgba(255,255,255,.4);}
+
+  h1.display{
+    font-family:var(--headline); font-weight:700; font-size:76px; line-height:1.02;
+    letter-spacing:-.01em; max-width:900px;
+  }
+  h2.section-title{
+    font-family:var(--headline); font-weight:700; font-size:56px; color:#fff;
+  }
+  .kicker{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--grey); margin-bottom:14px; font-weight:600;}
+  .content-head{ position:absolute; top:64px; left:60px; right:60px;}
+  .content-head h1{font-family:var(--headline); font-weight:700; font-size:42px; max-width:760px;}
+  .content-head .lede{position:absolute; top:8px; right:0; width:360px; font-size:14px; line-height:1.5; color:#3a3a3a;}
+  .body-area{position:absolute; top:210px; left:60px; right:60px; bottom:90px;}
+
+  /* Title slide — pastel mesh + black wedge */
+  .title-slide{
+    background:
+      linear-gradient(135deg, #cbb896 0%, #b9a3ad 22%, #9aa7c4 42%, #7fa0c9 58%, #6fa3d8 75%, #4f8fce 100%);
+  }
+  .title-slide::before{
+    content:""; position:absolute; top:-40px; left:-40px; width:520px; height:420px;
+    background:#050505; clip-path:polygon(0 0, 100% 0, 0 100%);
+  }
+  .title-slide::after{
+    content:""; position:absolute; top:-40px; left:-40px; width:560px; height:460px;
+    border-right:2px solid #3aa0ff; clip-path:polygon(99.6% 0, 100% 0, 0.4% 100%, 0 100%);
+    opacity:.9;
+  }
+  .title-slide .tstack{position:absolute; left:60px; top:70px; z-index:2; right:60px;}
+  .title-slide h1{font-family:var(--headline); font-weight:700; font-size:80px; line-height:1.0; color:#fff; text-shadow:0 2px 30px rgba(0,0,0,.15);}
+  .title-slide .sub{position:absolute; top:410px; left:0; font-size:18px; color:rgba(20,20,20,.7); max-width:520px; text-shadow:0 1px 12px rgba(255,255,255,.25);}
+  .title-slide .brand{position:absolute; right:60px; top:56px; font-family:var(--headline); font-weight:700; font-size:18px; color:#111; display:flex; align-items:center; gap:8px;}
+  .title-slide .brand .dot{width:10px; height:10px; border-radius:50%; background:#111;}
+
+  /* Section divider — black -> teal -> accent diagonal */
+  .section-slide{color:#fff;}
+  .section-slide .content{position:absolute; left:60px; top:64px;}
+  .grad-goals{ background:linear-gradient(135deg, #050505 0%, #06231f 24%, #0d4a44 46%, #2f7a52 66%, #8fae3d 84%, #dede6a 100%);}
+  .grad-strategy{ background:linear-gradient(135deg, #050505 0%, #0a1f2a 24%, #0f3a44 46%, #12706b 68%, #1fae8f 86%, #35d9a8 100%);}
+  .grad-plan{ background:linear-gradient(135deg, #050505 0%, #22102b 24%, #452154 46%, #7a3a72 66%, #c4636b 84%, #f0a25c 100%);}
+
+  table{width:100%; border-collapse:collapse; font-size:14px;}
+  th{background:var(--ink); color:#fff; text-align:left; font-weight:600; font-size:11px; text-transform:uppercase; letter-spacing:.04em; padding:10px 14px;}
+  td{padding:10px 14px; border-bottom:1px solid var(--rule); vertical-align:top; font-size:13.5px; line-height:1.4;}
+  tr:nth-child(even) td{background:#fafafa;}
+  .num{font-family:var(--headline); font-weight:700;}
+
+  .stat-row{display:flex; gap:20px; margin-top:10px;}
+  .stat{flex:1; background:#f2f2f2; padding:22px 24px;}
+  .stat .big{font-family:var(--headline); font-weight:700; font-size:34px;}
+  .stat .lbl{font-size:11.5px; color:var(--grey); margin-top:4px;}
+  .stat.dark{background:var(--ink); color:#fff;}
+  .stat.dark .lbl{color:rgba(255,255,255,.6);}
+
+  ul.clean{list-style:none;}
+  ul.clean li{padding:8px 0; border-bottom:1px solid var(--rule); font-size:14px; display:flex; gap:14px;}
+  ul.clean li b{font-family:var(--headline); min-width:26px;}
+
+  .agenda-list{display:flex; flex-direction:column; gap:0;}
+  .agenda-part{display:flex; justify-content:space-between; align-items:baseline; padding:16px 0 6px; font-family:var(--headline); font-weight:700; font-size:20px; border-top:1px solid var(--rule); margin-top:14px;}
+  .agenda-item{display:flex; justify-content:space-between; padding:8px 0; font-size:14px; color:#333;}
+  .badge{font-size:11px; color:var(--grey);}
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- 1. TITLE -->
+  <div class="slide title-slide">
+    <div class="grain"></div>
+    <div class="brand"><span class="dot"></span>5U AI</div>
+    <div class="tstack">
+      <h1>GTM Strategy<br>&amp; Roadmap</h1>
+      <div class="sub">MECE strategy scenarios, stress tests, and the 90-day execution plan — prepared 31 July 2026.</div>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>Strategy / GTM</div><div>5U AI — Jul 2026</div><div class="grow"></div><div class="page">1</div></div>
+  </div>
+
+  <!-- 2. AGENDA -->
+  <div class="slide">
+    <div class="content-head"><h1>Agenda</h1></div>
+    <div class="body-area" style="top:160px;">
+      <div class="agenda-list">
+        <div class="agenda-part">The ICP <span class="badge">Part 1</span></div>
+        <div class="agenda-item"><span>Definition &amp; buyer personas</span><span>03</span></div>
+        <div class="agenda-item"><span>Market sizing — beachhead to SOM</span><span>04</span></div>
+        <div class="agenda-item"><span>Channels, ranked by leverage</span><span>05</span></div>
+        <div class="agenda-part">The Strategy <span class="badge">Part 2</span></div>
+        <div class="agenda-item"><span>MECE decomposition of growth</span><span>07</span></div>
+        <div class="agenda-item"><span>Scenario results, S0–S5</span><span>08</span></div>
+        <div class="agenda-part">Stress Tests <span class="badge">Part 3</span></div>
+        <div class="agenda-item"><span>Environment shocks vs. every scenario</span><span>10</span></div>
+        <div class="agenda-part">The 90-Day Plan <span class="badge">Part 4</span></div>
+        <div class="agenda-item"><span>Roadmap, gates, and the events calendar</span><span>12</span></div>
+      </div>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>Strategy / GTM</div><div>5U AI — Jul 2026</div><div>Agenda</div><div class="grow"></div><div class="page">2</div></div>
+  </div>
+
+  <!-- 3. SECTION: THE ICP -->
+  <div class="slide section-slide grad-goals">
+    <div class="grain"></div>
+    <div class="content"><h2 class="section-title">The ICP</h2></div>
+    <div class="footer"><div class="swatch"></div><div>Strategy / GTM</div><div>5U AI — Jul 2026</div><div>The ICP</div><div class="grow"></div><div class="page">3</div></div>
+  </div>
+
+  <!-- 4. ICP DEFINITION -->
+  <div class="slide">
+    <div class="content-head">
+      <h1>Mid-sized EU forwarders. A narrow, named-account market.</h1>
+      <div class="lede">100–500 employees, air &amp; ocean forwarding, running CargoWise/Timocom. The narrowest ICP band of any funded player in the category.</div>
+    </div>
+    <div class="body-area">
+      <table>
+        <tr><th style="width:26%">Attribute</th><th>Profile</th></tr>
+        <tr><td>Segment</td><td>Freight forwarders (air &amp; ocean); secondary: carriers, 3PLs</td></tr>
+        <tr><td>Company size</td><td>100–500 employees</td></tr>
+        <tr><td>Geography — beachhead</td><td>DACH + Benelux (~28% of the EU forwarding base)</td></tr>
+        <tr><td>Buying trigger</td><td>Many-touch, per-shipment work — rate management &amp; track-and-trace</td></tr>
+        <tr><td>Economic anchor</td><td>German ops FTE ≈ €62k/yr — anchor price on labour released, not software</td></tr>
+        <tr><td>Buyer</td><td>MD/owner (economic buyer) · Head of Ops (champion) · CFO (approver) · IT (blocker)</td></tr>
+      </table>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>The ICP</div><div>5U AI — Jul 2026</div><div>Definition</div><div class="grow"></div><div class="page">4</div></div>
+  </div>
+
+  <!-- 5. MARKET SIZING -->
+  <div class="slide">
+    <div class="content-head"><h1>~213 companies is the whole beachhead.</h1></div>
+    <div class="body-area">
+      <div class="stat-row">
+        <div class="stat dark"><div class="big">213</div><div class="lbl">Beachhead pool — DACH + Benelux</div></div>
+        <div class="stat"><div class="big">1,479</div><div class="lbl">Full ICP — EU+UK+US</div></div>
+        <div class="stat"><div class="big">€1.5m</div><div class="lbl">Year-3 SOM at 12% penetration</div></div>
+        <div class="stat"><div class="big">30%</div><div class="lbl">Of beachhead needed to break even</div></div>
+      </div>
+      <div style="margin-top:28px; font-size:15px; line-height:1.6; max-width:900px; color:#222;">
+        <b>The core finding:</b> three independent models — market sizing, unit economics, whitespace — converge on the same conclusion. The beachhead alone cannot carry the company to profitability. Widen the ICP or raise ACV.
+      </div>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>The ICP</div><div>5U AI — Jul 2026</div><div>Market sizing</div><div class="grow"></div><div class="page">5</div></div>
+  </div>
+
+  <!-- 6. CHANNELS -->
+  <div class="slide">
+    <div class="content-head"><h1>Channels, ranked by leverage.</h1></div>
+    <div class="body-area">
+      <ul class="clean">
+        <li><b>1</b> Certified CargoWise/WiseTech partner channel — already built, unmarketed</li>
+        <li><b>2</b> Timocom marketplace — door into EU road freight</li>
+        <li><b>3</b> Founder-led outbound with paid, priced pilots</li>
+        <li><b>4</b> Named reference logos — this market buys on peer proof</li>
+        <li><b>5</b> Comparison pages + published pricing — set the anchor before Nexcade</li>
+      </ul>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>The ICP</div><div>5U AI — Jul 2026</div><div>Channels</div><div class="grow"></div><div class="page">6</div></div>
+  </div>
+
+  <!-- 7. SECTION: THE STRATEGY -->
+  <div class="slide section-slide grad-strategy">
+    <div class="grain"></div>
+    <div class="content"><h2 class="section-title">The Strategy</h2></div>
+    <div class="footer"><div class="swatch"></div><div>Strategy / GTM</div><div>5U AI — Jul 2026</div><div>The Strategy</div><div class="grow"></div><div class="page">7</div></div>
+  </div>
+
+  <!-- 8. MECE DECOMPOSITION -->
+  <div class="slide">
+    <div class="content-head"><h1>Growth decomposes into three levers. No overlap, no gap.</h1></div>
+    <div class="body-area">
+      <table>
+        <tr><th style="width:24%">Lever branch</th><th>Option</th><th style="width:14%">Scenario</th></tr>
+        <tr><td>Volume — same pool</td><td>Lift beachhead penetration via partner channel</td><td class="num">S1</td></tr>
+        <tr><td>Volume — new pools</td><td>Sub-100-employee tail via self-serve product</td><td class="num">S3</td></tr>
+        <tr><td>Volume — new pools</td><td>EU road forwarders via Timocom</td><td class="num">S4</td></tr>
+        <tr><td>Price — higher ACV</td><td>Customs + voice + per-Worker deployment fee</td><td class="num">S2</td></tr>
+        <tr><td>All levers together</td><td>Partner-lifted penetration + ACV + both new pools</td><td class="num">S5</td></tr>
+      </table>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>The Strategy</div><div>5U AI — Jul 2026</div><div>MECE decomposition</div><div class="grow"></div><div class="page">8</div></div>
+  </div>
+
+  <!-- 9. SCENARIO RESULTS -->
+  <div class="slide">
+    <div class="content-head"><h1>Only the combined strategy breaks even.</h1></div>
+    <div class="body-area">
+      <table>
+        <tr><th>Scenario</th><th>Y3 ARR</th><th>Y3 EBITDA</th><th>Verdict</th></tr>
+        <tr><td>S0 — Beachhead only</td><td>€1.56m</td><td>−€0.89m</td><td>Runs out of cash</td></tr>
+        <tr><td>S1 — + Partner channel</td><td>€2.58m</td><td>−€0.22m</td><td>Survives, underwater</td></tr>
+        <tr><td>S2 — + ACV expansion</td><td>€2.21m</td><td>−€0.46m</td><td>Survives, underwater</td></tr>
+        <tr><td>S3 — + Self-serve tail</td><td>€2.04m</td><td>−€0.57m</td><td>Survives, underwater</td></tr>
+        <tr><td>S4 — + Road (Timocom)</td><td>€2.68m</td><td>−€0.16m</td><td>Survives, underwater</td></tr>
+        <tr style="font-weight:700;"><td>S5 — Combined</td><td>€5.26m</td><td>+€1.52m</td><td>Only scenario that breaks even</td></tr>
+      </table>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>The Strategy</div><div>5U AI — Jul 2026</div><div>Scenario results</div><div class="grow"></div><div class="page">9</div></div>
+  </div>
+
+  <!-- 10. SECTION: STRESS TESTS -->
+  <div class="slide section-slide grad-goals">
+    <div class="grain"></div>
+    <div class="content"><h2 class="section-title">Stress Tests</h2></div>
+    <div class="footer"><div class="swatch"></div><div>Strategy / GTM</div><div>5U AI — Jul 2026</div><div>Stress Tests</div><div class="grow"></div><div class="page">10</div></div>
+  </div>
+
+  <!-- 11. STRESS RESULTS -->
+  <div class="slide">
+    <div class="content-head">
+      <h1>S5 survives every single shock.</h1>
+      <div class="lede">Y3 EBITDA (€000s) under five environment shocks, across all six strategies.</div>
+    </div>
+    <div class="body-area">
+      <table>
+        <tr><th>Shock</th><th>S0</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th><th>S5</th></tr>
+        <tr><td>Base (no shock)</td><td>−903</td><td>−239</td><td>−488</td><td>−591</td><td>−175</td><td class="num">+1,494</td></tr>
+        <tr><td>Price −20%</td><td>−1,103</td><td>−571</td><td>−770</td><td>−853</td><td>−520</td><td class="num">+815</td></tr>
+        <tr><td>Demand −33%</td><td>−1,232</td><td>−787</td><td>−954</td><td>−1,023</td><td>−744</td><td class="num">+374</td></tr>
+        <tr><td>Churn −15%</td><td>−1,053</td><td>−488</td><td>−700</td><td>−741</td><td>−325</td><td class="num">+1,141</td></tr>
+        <tr><td>FDE hiring −50%</td><td>−903</td><td>−730</td><td>−488</td><td>−591</td><td>−175</td><td class="num">+798</td></tr>
+        <tr style="font-weight:700;"><td>Combined downside</td><td>−1,446</td><td>−1,143</td><td>−1,257</td><td>−1,279</td><td>−1,056</td><td class="num">−270</td></tr>
+      </table>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>Stress Tests</div><div>5U AI — Jul 2026</div><div>Results</div><div class="grow"></div><div class="page">11</div></div>
+  </div>
+
+  <!-- 12. SECTION: 90-DAY PLAN -->
+  <div class="slide section-slide grad-plan">
+    <div class="grain"></div>
+    <div class="content"><h2 class="section-title">The 90-Day Plan</h2></div>
+    <div class="footer"><div class="swatch"></div><div>Strategy / GTM</div><div>5U AI — Jul 2026</div><div>The 90-Day Plan</div><div class="grow"></div><div class="page">12</div></div>
+  </div>
+
+  <!-- 13. ROADMAP AT A GLANCE -->
+  <div class="slide">
+    <div class="content-head"><h1>Start cheap and fast. Gate everything else.</h1></div>
+    <div class="body-area">
+      <table>
+        <tr><th style="width:20%">Workstream</th><th>Month 1</th><th>Month 2</th><th>Month 3</th></tr>
+        <tr><td>Pricing (S2)</td><td>Publish rate card + deployment fee</td><td>Monitor win rate</td><td>Lock in or revise</td></tr>
+        <tr><td>Partner channel (S1)</td><td>CargoWise + Timocom outreach</td><td>Certification + listing live</td><td>First partner-sourced leads</td></tr>
+        <tr><td>Road pilot (S4)</td><td>Identify 5–10 prospects</td><td>Run 2–3 paid pilots</td><td>Gate: fund or park</td></tr>
+        <tr><td>Events</td><td>Book Ghent + Milan + Berlin</td><td>Attend T&amp;L Ghent (22–23 Sep)</td><td>FIATA Milan (6–9 Oct), BVL Berlin (21–22 Oct)</td></tr>
+      </table>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>The 90-Day Plan</div><div>5U AI — Jul 2026</div><div>Roadmap</div><div class="grow"></div><div class="page">13</div></div>
+  </div>
+
+  <!-- 14. GATES -->
+  <div class="slide">
+    <div class="content-head"><h1>Day-90 gate review — scale, adjust, or kill.</h1></div>
+    <div class="body-area">
+      <table>
+        <tr><th style="width:20%">Workstream</th><th>Metric</th><th>Scale if…</th><th>Kill/hold if…</th></tr>
+        <tr><td>Partner channel</td><td>Partner-sourced leads</td><td>≥3 qualified by Wk 13</td><td>&lt;3 — revisit terms, don't abandon</td></tr>
+        <tr><td>Pricing</td><td>Win rate vs. baseline</td><td>Stable ±5pts</td><td>Drops &gt;5pts — test 10% lower</td></tr>
+        <tr><td>Road pilot</td><td>Signed paid pilots</td><td>≥2 by Wk 13</td><td>0–1 — park until customs Worker ships</td></tr>
+        <tr><td>Capacity</td><td>FDE utilisation</td><td>&lt;85%, FDE #3 ramped</td><td>≥85% — throttle new logos immediately</td></tr>
+      </table>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>The 90-Day Plan</div><div>5U AI — Jul 2026</div><div>Gates</div><div class="grow"></div><div class="page">14</div></div>
+  </div>
+
+  <!-- 15. EVENTS -->
+  <div class="slide">
+    <div class="content-head"><h1>Where the ICP concentrates.</h1></div>
+    <div class="body-area">
+      <ul class="clean">
+        <li><b>1</b> Transport &amp; Logistics Ghent — 22–23 Sep 2026 — the Benelux beachhead's own fair</li>
+        <li><b>2</b> FIATA World Congress, Milan — 6–9 Oct 2026 — centenary edition, peak MD turnout</li>
+        <li><b>3</b> BVL Supply Chain CX, Berlin — 21–22 Oct 2026 — reputation, not lead-gen</li>
+        <li><b>4</b> transport logistic Munich — 26–29 Apr 2027 — the anchor event, home turf</li>
+      </ul>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>The 90-Day Plan</div><div>5U AI — Jul 2026</div><div>Events</div><div class="grow"></div><div class="page">15</div></div>
+  </div>
+
+  <!-- 16. CLOSE -->
+  <div class="slide title-slide">
+    <div class="grain"></div>
+    <div class="brand"><span class="dot"></span>5U AI</div>
+    <div class="tstack">
+      <h1 style="font-size:64px;">Questions?</h1>
+      <div class="sub">Prepared by Scaile · 31 July 2026<br>Companion files: ICP Report · MECE Strategy · Scenario Model · 90-Day Roadmap</div>
+    </div>
+    <div class="footer"><div class="swatch"></div><div>Strategy / GTM</div><div>5U AI — Jul 2026</div><div class="grow"></div><div class="page">16</div></div>
+  </div>
+
+</div>
+</body>
+</html>
