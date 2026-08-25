@@ -1,0 +1,396 @@
+<title>Abir Khan Signature</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" />
+
+<style>
+/* ---- tokens: light is the base, both dark paths only re-declare colour ---- */
+:root{
+  --paper:#F4F6F8; --surface:#FFFFFF; --sunken:#EAEEF3;
+  --ink:#101720;   --ink-2:#2F3845;   --muted:#5A6472;
+  --rule:#D7DDE6;  --rule-strong:#BDC7D4;
+  --accent:#17405F; --accent-ink:#17405F; --accent-soft:#E3EBF3; --on-accent:#FFFFFF;
+  --brass:#8A6620;
+  --shadow:0 1px 2px rgba(16,23,32,.05), 0 8px 24px -12px rgba(16,23,32,.18);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C1117; --surface:#141B24; --sunken:#1A222D;
+    --ink:#E9ECF1;   --ink-2:#C3CBD6;   --muted:#94A0AF;
+    --rule:#26313D;  --rule-strong:#394756;
+    --accent:#8CBBE0; --accent-ink:#8CBBE0; --accent-soft:#1A2836; --on-accent:#0C1117;
+    --brass:#D6AC5E;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C1117; --surface:#141B24; --sunken:#1A222D;
+  --ink:#E9ECF1;   --ink-2:#C3CBD6;   --muted:#94A0AF;
+  --rule:#26313D;  --rule-strong:#394756;
+  --accent:#8CBBE0; --accent-ink:#8CBBE0; --accent-soft:#1A2836; --on-accent:#0C1117;
+  --brass:#D6AC5E;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink-2);
+  font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:15px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:880px; margin-inline:auto; padding:64px 24px 104px;}
+
+/* ---- typography ---- */
+h1,h2,h3{margin:0; color:var(--ink); text-wrap:balance;}
+h1{font-family:"Source Serif 4",Georgia,serif; font-weight:700; font-size:clamp(38px,6.4vw,54px); line-height:1.04; letter-spacing:-.015em;}
+h2{font-family:"Source Serif 4",Georgia,serif; font-weight:600; font-size:23px; line-height:1.25;}
+h3{font-size:14px; font-weight:600; letter-spacing:.005em;}
+p{margin:0}
+.eyebrow{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; font-weight:500;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+}
+.lede{max-width:62ch; font-size:16.5px; color:var(--muted); margin-top:18px;}
+.lede strong{color:var(--ink-2); font-weight:500;}
+
+/* ---- page rhythm: gaps, never stacked margins ---- */
+header.masthead{display:flex; flex-direction:column; gap:12px;}
+main{display:flex; flex-direction:column; gap:64px; margin-top:56px;}
+section{display:flex; flex-direction:column; gap:20px;}
+.sec-head{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:12px;
+  padding-bottom:14px; border-bottom:1px solid var(--rule);}
+.sec-head .note{font-size:13px; color:var(--muted);}
+
+/* ---- variant switch ---- */
+.tabs{display:flex; gap:4px; padding:3px; background:var(--sunken);
+  border:1px solid var(--rule); border-radius:9px;}
+.tab{
+  appearance:none; border:0; background:transparent; cursor:pointer;
+  font:inherit; font-size:12.5px; font-weight:500; color:var(--muted);
+  padding:6px 13px; border-radius:6px; transition:background .15s, color .15s;
+}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--surface); color:var(--ink); box-shadow:0 1px 2px rgba(16,23,32,.10);}
+.tab:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+/* ---- the specimen: a stand-in for the recipient's message body ---- */
+.canvas{
+  background:var(--surface); border:1px solid var(--rule); border-radius:12px;
+  box-shadow:var(--shadow); overflow:hidden;
+}
+.canvas-bar{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:10px 16px; border-bottom:1px solid var(--rule); background:var(--sunken);
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px;
+  letter-spacing:.11em; text-transform:uppercase; color:var(--muted);
+}
+.canvas-bar .dims{font-variant-numeric:tabular-nums; letter-spacing:.06em;}
+/* Signatures are authored for the white ground of a mail client, so the stage
+   stays white in both themes -- this is what the recipient actually sees. */
+.stage{background:#ffffff; padding:34px 30px; overflow-x:auto;}
+.panel[hidden]{display:none}
+pre.plain{
+  margin:0; font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12.5px;
+  line-height:1.75; color:#2F3845; white-space:pre;
+}
+
+/* ---- actions ---- */
+.actions{display:flex; flex-wrap:wrap; align-items:center; gap:12px;}
+.btn{
+  appearance:none; cursor:pointer; font:inherit; font-size:14px; font-weight:500;
+  display:inline-flex; align-items:center; gap:9px; padding:10px 18px; border-radius:9px;
+  border:1px solid transparent; background:var(--accent); color:var(--on-accent);
+  transition:opacity .15s, transform .05s;
+}
+.btn:hover{opacity:.88}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+.btn .tick{display:none}
+.btn.done .tick{display:inline}
+.btn.done .lbl-default{display:none}
+.hint{font-size:13px; color:var(--muted);}
+
+/* ---- install steps: numbered because the order genuinely matters ---- */
+.clients{display:grid; grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); gap:16px;}
+.client{
+  display:flex; flex-direction:column; gap:12px; padding:22px 20px;
+  background:var(--surface); border:1px solid var(--rule); border-radius:12px;
+}
+.client h3{display:flex; align-items:center; gap:9px;}
+.client h3 .k{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10px; font-weight:500;
+  letter-spacing:.08em; color:var(--brass); border:1px solid var(--rule-strong);
+  border-radius:4px; padding:1px 5px;
+}
+ol.steps{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px; counter-reset:s;}
+ol.steps li{
+  counter-increment:s; position:relative; padding-left:26px;
+  font-size:13.5px; line-height:1.55; color:var(--muted);
+}
+ol.steps li::before{
+  content:counter(s); position:absolute; left:0; top:.15em;
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px; font-weight:500;
+  color:var(--accent-ink); background:var(--accent-soft);
+  width:17px; height:17px; border-radius:5px; display:grid; place-items:center;
+}
+ol.steps b{color:var(--ink-2); font-weight:600;}
+
+/* ---- notes ---- */
+.notes{display:flex; flex-direction:column; gap:14px;}
+.note-row{display:grid; grid-template-columns:150px 1fr; gap:8px 22px; align-items:start;
+  padding-bottom:14px; border-bottom:1px dashed var(--rule);}
+.note-row:last-child{border-bottom:0; padding-bottom:0;}
+.note-row dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px; font-weight:500;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--ink); padding-top:3px;
+}
+.note-row dd{margin:0; font-size:14px; color:var(--muted);}
+.note-row dd code, code.inline{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12.5px;
+  background:var(--sunken); border:1px solid var(--rule); border-radius:5px; padding:1px 5px;
+  color:var(--ink-2);
+}
+@media (max-width:560px){ .note-row{grid-template-columns:1fr; gap:4px;} }
+
+/* ---- manifest ---- */
+.tablewrap{overflow-x:auto; border:1px solid var(--rule); border-radius:12px; background:var(--surface);}
+table.files{border-collapse:collapse; width:100%; min-width:520px; font-size:13px;}
+table.files th, table.files td{text-align:left; padding:11px 18px; border-bottom:1px solid var(--rule);}
+table.files th{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:10.5px; font-weight:500;
+  letter-spacing:.11em; text-transform:uppercase; color:var(--muted); background:var(--sunken);
+}
+table.files tr:last-child td{border-bottom:0}
+table.files td:first-child{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:12.5px; color:var(--ink);}
+table.files td.size{text-align:right; font-variant-numeric:tabular-nums; color:var(--muted); white-space:nowrap;}
+
+footer{margin-top:72px; padding-top:22px; border-top:1px solid var(--rule);
+  font-size:12.5px; color:var(--muted);}
+
+.sr{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0 0 0 0); white-space:nowrap; border:0;}
+
+@media (prefers-reduced-motion:reduce){ *{transition:none !important; animation:none !important;} }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="eyebrow">Email signature &middot; built <!--BUILD_DATE--></p>
+    <h1>Abir Khan</h1>
+    <p class="lede">A table-based HTML signature that survives <strong>Gmail, Outlook and Apple Mail</strong> intact. Logo marks and contact icons are embedded as base64 PNGs, so it renders with <strong>no external requests</strong> and nothing to load or block.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="preview-h">
+      <div class="sec-head">
+        <h2 id="preview-h">Preview</h2>
+        <div class="tabs" role="tablist" aria-label="Signature variant">
+          <button class="tab" role="tab" id="tab-full" aria-controls="panel-full" aria-selected="true">Full</button>
+          <button class="tab" role="tab" id="tab-min"  aria-controls="panel-min"  aria-selected="false">No images</button>
+          <button class="tab" role="tab" id="tab-txt"  aria-controls="panel-txt"  aria-selected="false">Plain text</button>
+        </div>
+      </div>
+
+      <div class="canvas">
+        <div class="canvas-bar">
+          <span>As the recipient sees it</span>
+          <span class="dims" id="dims">391 &times; 216 px</span>
+        </div>
+        <div class="stage">
+          <div class="panel" id="panel-full" role="tabpanel" aria-labelledby="tab-full">
+            <div class="sig"><!--SIG_FULL--></div>
+          </div>
+          <div class="panel" id="panel-min" role="tabpanel" aria-labelledby="tab-min" hidden>
+            <div class="sig"><!--SIG_MIN--></div>
+          </div>
+          <div class="panel" id="panel-txt" role="tabpanel" aria-labelledby="tab-txt" hidden>
+            <pre class="plain"><!--SIG_TXT--></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="copy" type="button">
+          <span class="lbl-default">Copy signature</span>
+          <span class="tick">Copied &mdash; now paste it into your mail client</span>
+        </button>
+        <span class="hint" id="hint">Copies with formatting intact.</span>
+      </div>
+      <p class="sr" role="status" aria-live="polite" id="live"></p>
+      <p class="hint">The preview uses the same Georgia and Helvetica stack the signature ships with, not this page&rsquo;s webfonts &mdash; so what you see is what sends.</p>
+    </section>
+
+    <section aria-labelledby="install-h">
+      <div class="sec-head">
+        <h2 id="install-h">Install</h2>
+        <p class="note">Paste, don&rsquo;t import &mdash; every client rewrites the markup it stores.</p>
+      </div>
+      <div class="clients">
+        <div class="client">
+          <h3>Gmail <span class="k">web</span></h3>
+          <ol class="steps">
+            <li>Hit <b>Copy signature</b> above.</li>
+            <li>Open <b>Settings &rarr; See all settings &rarr; General</b>.</li>
+            <li>Scroll to <b>Signature</b>, create one, and paste into the box.</li>
+            <li><b>Save Changes</b> at the bottom. Gmail rehosts the images on paste.</li>
+          </ol>
+        </div>
+        <div class="client">
+          <h3>Outlook <span class="k">desktop</span></h3>
+          <ol class="steps">
+            <li>Hit <b>Copy signature</b> above.</li>
+            <li>Go to <b>File &rarr; Options &rarr; Mail &rarr; Signatures</b>.</li>
+            <li><b>New</b>, name it, then paste into the edit box.</li>
+            <li>Set it as default for new mail and replies, then <b>OK</b>.</li>
+          </ol>
+        </div>
+        <div class="client">
+          <h3>Apple Mail <span class="k">macOS</span></h3>
+          <ol class="steps">
+            <li>Hit <b>Copy signature</b> above.</li>
+            <li><b>Mail &rarr; Settings &rarr; Signatures</b>, pick the account, press <b>+</b>.</li>
+            <li>Clear the draft signature, then paste.</li>
+            <li>Untick <b>Always match my default message font</b>, or Mail flattens it.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="notes-h">
+      <div class="sec-head"><h2 id="notes-h">Notes</h2></div>
+      <dl class="notes">
+        <div class="note-row">
+          <dt>Logo marks</dt>
+          <dd>The three coloured tiles are <strong>typographic stand-ins</strong>, not the official trademarks &mdash; this environment&rsquo;s network policy blocked the university and company sites. Drop real artwork in with <code>python3 embed_logo.py novasbe nova.png</code>, then re-run <code>build_signature.py</code>. Check each organisation&rsquo;s brand policy before using its actual logo in personal mail.</dd>
+        </div>
+        <div class="note-row">
+          <dt>Image blocking</dt>
+          <dd>Plenty of recipients block images by default. The <strong>No images</strong> variant carries the same content and typography with nothing to block &mdash; a safe default if you mail a lot of cold contacts.</dd>
+        </div>
+        <div class="note-row">
+          <dt>Dark mode</dt>
+          <dd>Outlook and Gmail recolour dark-mode messages on their own terms. The contact icons use a mid-tone blue that stays legible either way, and the logo tiles carry their own backgrounds, so nothing disappears.</dd>
+        </div>
+        <div class="note-row">
+          <dt>Editing</dt>
+          <dd>Titles, phone and links live at the top of <code>build_signature.py</code>, with the palette right above them. Change a value there and rebuild rather than editing the generated HTML.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="files-h">
+      <div class="sec-head"><h2 id="files-h">Files</h2></div>
+      <div class="tablewrap">
+        <table class="files">
+          <thead><tr><th>Path</th><th>What it is</th><th class="size">Size</th></tr></thead>
+          <tbody><!--MANIFEST--></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>Generated from <code class="inline">signature/build_signature.py</code>. Rebuild with <code class="inline">python3 build_assets.py &amp;&amp; python3 build_signature.py</code>.</footer>
+</div>
+
+<script>
+(function(){
+  var TABS = ["full","min","txt"];
+  var live = document.getElementById("live");
+  var hint = document.getElementById("hint");
+  var dims = document.getElementById("dims");
+  var btn  = document.getElementById("copy");
+  var active = "full";
+  var DIMS = {full:"391 &times; 216 px", min:"364 &times; 216 px", txt:"8 lines &middot; plain"};
+  var HINTS = {
+    full:"Copies with formatting intact.",
+    min:"No images at all — nothing for a client to block.",
+    txt:"For plain-text mail and forms that reject HTML."
+  };
+
+  function select(key){
+    active = key;
+    TABS.forEach(function(k){
+      var t = document.getElementById("tab-"+k), p = document.getElementById("panel-"+k);
+      var on = k === key;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      p.hidden = !on;
+    });
+    dims.innerHTML = DIMS[key];
+    hint.textContent = HINTS[key];
+    reset();
+  }
+
+  TABS.forEach(function(k){
+    var t = document.getElementById("tab-"+k);
+    t.tabIndex = k === active ? 0 : -1;
+    t.addEventListener("click", function(){ select(k); });
+    t.addEventListener("keydown", function(e){
+      var i = TABS.indexOf(k), n = null;
+      if(e.key === "ArrowRight") n = TABS[(i+1) % TABS.length];
+      if(e.key === "ArrowLeft")  n = TABS[(i-1+TABS.length) % TABS.length];
+      if(n){ e.preventDefault(); select(n); document.getElementById("tab-"+n).focus(); }
+    });
+  });
+
+  var timer = null;
+  function reset(){ btn.classList.remove("done"); if(timer){ clearTimeout(timer); timer = null; } }
+  function flash(msg){
+    btn.classList.add("done");
+    live.textContent = msg;
+    if(timer) clearTimeout(timer);
+    timer = setTimeout(reset, 3200);
+  }
+
+  // Last resort: select the markup and let the user press the shortcut.
+  function legacy(node, text){
+    var range = document.createRange(); range.selectNodeContents(node);
+    var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch(e){ ok = false; }
+    if(ok){
+      sel.removeAllRanges();
+      flash("Signature copied.");
+      return;
+    }
+    var mac = /Mac|iP(hone|ad|od)/.test(navigator.platform || "");
+    var key = mac ? "⌘C" : "Ctrl+C";
+    hint.textContent = "Selected for you — press " + key + " to copy.";
+    live.textContent = "Signature selected. Press " + key + " to copy.";
+  }
+
+  btn.addEventListener("click", function(){
+    var node = document.getElementById("panel-"+active).firstElementChild;
+    var text = active === "txt" ? node.textContent : (node.innerText || node.textContent);
+    var settled = false;
+    function win(msg){ if(!settled){ settled = true; flash(msg); } }
+    function lose(){ if(!settled){ settled = true; legacy(node, text); } }
+
+    var write = null;
+    try{
+      if(active === "txt"){
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          write = navigator.clipboard.writeText(text);
+        }
+      } else if(navigator.clipboard && window.ClipboardItem){
+        // text/html is the only payload that carries the table markup across.
+        write = navigator.clipboard.write([new ClipboardItem({
+          "text/html":  new Blob([node.innerHTML], {type:"text/html"}),
+          "text/plain": new Blob([text], {type:"text/plain"})
+        })]);
+      }
+    } catch(e){ write = null; }
+
+    if(!write){ lose(); return; }
+
+    // Inside a sandboxed frame this promise can hang rather than reject, which
+    // would leave the button silently dead -- so race it against a deadline.
+    var deadline = setTimeout(lose, 1200);
+    write.then(
+      function(){ clearTimeout(deadline); win(active === "txt" ? "Plain-text signature copied." : "Signature copied with formatting."); },
+      function(){ clearTimeout(deadline); lose(); }
+    );
+  });
+})();
+</script>
