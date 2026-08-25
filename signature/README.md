@@ -6,17 +6,8 @@ survive Gmail, Outlook and Apple Mail without external requests.
 Open **`dist/preview.html`** in a browser to see it, copy it, and read the
 per-client install steps.
 
-```
-Abir Khan
-──────
- N  MSc. Finance Candidate · Nova SBE
-    FT RANK #8 WORLDWIDE
- s  ex-Founders Associate · scaile Technologies GmbH
- &  prev. Alvarez & Marsal · ex-VC
+![The signature rendered in a mail client](signature-preview.png)
 
- ⌖ Munich / Lisbon  |  ✆ +91 75969 47806
- in linkedin.com/in/khan-abir
-```
 
 ## Which file to use
 

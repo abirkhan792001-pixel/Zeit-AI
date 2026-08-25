@@ -222,6 +222,7 @@ MANIFEST = [
     ("build_signature.py", "Builds the three variants and this page"),
     ("build_assets.py", "Rasterises the icons and monogram marks"),
     ("embed_logo.py", "Swaps a real logo file into a mark"),
+    ("signature-preview.png", "Rendered preview used by the README"),
 ]
 
 
