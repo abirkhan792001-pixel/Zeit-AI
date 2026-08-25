@@ -2,8 +2,8 @@
 """
 Replace a stylised monogram mark with a real logo file.
 
-Nova SBE ships as the official wordmark; scaile and A&M are their names set in
-type. Drop in official artwork with, for example:
+All three marks ship as the official artwork (sources in src/logos/). Use this
+to swap in updated files later, for example:
 
     python3 embed_logo.py novasbe ~/Downloads/nova-sbe.png
     python3 embed_logo.py am ~/Downloads/am-logo.svg --bg "#C8102E" --pad 3

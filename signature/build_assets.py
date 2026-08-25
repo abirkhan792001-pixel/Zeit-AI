@@ -13,35 +13,24 @@ import os
 import re
 
 import cairosvg
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
+LOGOS = os.path.join(SRC, "logos")
 OUT = os.path.join(ROOT, "assets")
-FONTS = "/mnt/skills/examples/canvas-design/canvas-fonts"
 
 SCALE = 3          # 3x for retina
-SS = 4             # extra supersampling for the vector-drawn marks
 ALPHA_LEVELS = 16  # these are flat-colour shapes; smooth alpha just costs bytes
 
 ICON_COLOR = "#3E6485"   # mid-tone: legible on white AND on dark-mode grounds
 ICON_CSS_PX = 15
 TILE_CSS_PX = 18
 
-# Stylised monogram marks. These are typographic stand-ins, not the official
-# trademarks -- swap in real artwork with embed_logo.py.
-# Set at the same cap height and baseline as the NOVA letters, so the three
-# marks line up as a logo row rather than a grab-bag of shapes.
-WORDMARKS = [
-    ("scaile", "scaile", "#1F2328"),
-    ("am",     "A&M",    "#C8102E"),
-]
-
-# The official Nova SBE logo, supplied as src/logos/nova-sbe-source.png. The
-# lockup's descriptor ("NOVA SCHOOL OF BUSINESS & ECONOMICS") is two 23px lines
-# in a 630px image -- it would be under 2px tall in the signature -- so only the
-# wordmark is used, which is how the mark is meant to be set at small sizes.
-NOVA_SRC = os.path.join(ROOT, "src", "logos", "nova-sbe-source.png")
+# Official logo marks, from the artwork in src/logos/. scaile and A&M are
+# full-bleed square tiles used as supplied; the Nova SBE file is the full
+# lockup, so only its wordmark band is used (see render_nova).
+TILE_LOGOS = ["scaile", "am"]
 
 
 def ink_bbox(img):
@@ -54,17 +43,31 @@ def ink_bbox(img):
     return xs[0], ys[0], xs[-1] + 1, ys[-1] + 1
 
 
-def render_nova():
-    """Crop the wordmark out of the official logo and set it to the line height."""
-    src = Image.open(NOVA_SRC).convert("RGBA")
-    # Rows 152-361 hold the wordmark; everything below is the descriptor.
-    band = src.crop((0, 0, src.width, 380))
-    x0, y0, x1, y1 = ink_bbox(band)
-    mark = src.crop((x0, y0, x1, y1))
-
+def scale_to_line(mark, name):
+    """Resize a mark to the signature's line height, keeping its aspect ratio."""
     h = TILE_CSS_PX * SCALE
     w = max(1, round(h * mark.width / mark.height))
-    return save(mark.resize((w, h), Image.LANCZOS), "novasbe.png")
+    return save(mark.resize((w, h), Image.LANCZOS), name)
+
+
+def render_nova():
+    """Crop the wordmark out of the official logo and set it to the line height.
+
+    The source is the full lockup; its descriptor line ("NOVA SCHOOL OF
+    BUSINESS & ECONOMICS") is two 23px lines in a 630px image -- under 2px
+    tall at signature size -- so the wordmark stands alone, which is how the
+    mark is meant to be set when small.
+    """
+    src = Image.open(os.path.join(LOGOS, "nova-sbe-source.png")).convert("RGBA")
+    # Rows 152-361 hold the wordmark; everything below is the descriptor.
+    band = src.crop((0, 0, src.width, 380))
+    return scale_to_line(src.crop(ink_bbox(band)), "novasbe.png")
+
+
+def render_tile(slug):
+    """An official square mark, trimmed of any padding and set to line height."""
+    src = Image.open(os.path.join(LOGOS, f"{slug}-source.png")).convert("RGBA")
+    return scale_to_line(src.crop(ink_bbox(src)), f"{slug}.png")
 
 
 def save(img, name):
@@ -89,28 +92,6 @@ def render_icon(name, out_name):
     return save(Image.open(io.BytesIO(data)).convert("RGBA"), out_name)
 
 
-def render_wordmark(slug, word, colour):
-    """Set a word at the NOVA letters' cap height, baseline-aligned."""
-    box_h = TILE_CSS_PX * SCALE                  # 54px, same box as NOVA
-    cap_h = round(box_h * 0.71)  # matches the N/V/A cap height in the Nova mark
-    ss = 4
-    path = os.path.join(FONTS, "InstrumentSans-Bold.ttf")
-
-    # Solve for the point size whose cap height matches NOVA's letters.
-    probe = ImageFont.truetype(path, 100)
-    l, t, r, b = probe.getbbox("H")
-    size = max(1, round(100 * (cap_h * ss) / (b - t)))
-    font = ImageFont.truetype(path, size)
-
-    im = Image.new("RGBA", (box_h * ss * 6, box_h * ss), (0, 0, 0, 0))
-    d = ImageDraw.Draw(im)
-    d.text((10, box_h * ss), word, font=font, fill=colour, anchor="ls")  # ls = left/baseline
-
-    bb = im.getbbox()
-    im = im.crop((bb[0], 0, bb[2], box_h * ss))
-    return save(im.resize((max(1, round(im.width / ss)), box_h), Image.LANCZOS), f"{slug}.png")
-
-
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     built = [
@@ -119,7 +100,7 @@ if __name__ == "__main__":
         render_icon("phone", "icon-phone.png"),
         render_icon("linkedin", "icon-linkedin.png"),
     ]
-    built += [render_wordmark(*w) for w in WORDMARKS]
+    built += [render_tile(slug) for slug in TILE_LOGOS]
     for name, size in built:
         print(f"  {name:22} {size[0]}x{size[1]}")
     print(f"{len(built)} assets -> {OUT}")

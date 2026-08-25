@@ -262,7 +262,7 @@ footer{margin-top:72px; padding-top:22px; border-top:1px solid var(--rule);
       <dl class="notes">
         <div class="note-row">
           <dt>Logo marks</dt>
-          <dd>The <strong>Nova SBE</strong> mark is the official wordmark, cropped from the supplied logo file (the lockup&rsquo;s descriptor line would be under 2px tall at this size, so the wordmark stands alone &mdash; the standard small-size treatment). <strong>scaile</strong> and <strong>A&amp;M</strong> are still placeholders: their names set in Instrument Sans, because this environment&rsquo;s network policy blocked both company sites. Swap in real files with <code>python3 embed_logo.py scaile scaile.svg</code> and re-run <code>build_signature.py</code> &mdash; marks scale to the line height keeping their own aspect ratio, and the gutter widens to fit the widest one. With images on, the marks carry the organisation names and the text lines carry only the roles; the no-images variant keeps the names in text.</dd>
+          <dd>All three marks are the official artwork. <strong>Nova SBE</strong> is the wordmark cropped from the full lockup &mdash; its descriptor line would be under 2px tall at this size, so the wordmark stands alone, the standard small-size treatment. <strong>scaile</strong> and <strong>A&amp;M</strong> are their square tiles as supplied. The marks carry the organisation names (with matching <code>alt</code> text), so the text lines carry only the roles; the no-images variant keeps the names in text. To swap updated artwork later: <code>python3 embed_logo.py scaile new.svg</code>, then re-run <code>build_signature.py</code>.</dd>
         </div>
         <div class="note-row">
           <dt>Image blocking</dt>

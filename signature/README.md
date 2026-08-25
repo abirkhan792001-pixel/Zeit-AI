@@ -13,7 +13,7 @@ per-client install steps.
 
 | File | Use it when |
 | --- | --- |
-| `dist/signature.html` | Default. Logo marks and contact icons, 25.6 KB. |
+| `dist/signature.html` | Default. Logo marks and contact icons, 18.3 KB. |
 | `dist/signature-minimal.html` | Recipients block images, or you want a 3.4 KB signature. Same content and typography, zero images. |
 | `dist/signature.txt` | Plain-text mail, ATS forms, anywhere HTML is rejected. |
 
@@ -21,27 +21,28 @@ Install by **pasting**, not importing — every mail client rewrites the markup 
 stores, and pasting is the path each one supports. `dist/preview.html` has a
 copy button and the exact steps for Gmail, Outlook and Apple Mail.
 
-## Swapping in real logos
+## The logos
 
-The **Nova SBE** mark is the official wordmark, cropped from the supplied logo
-file (`src/logos/nova-sbe-source.png`). The lockup's descriptor line would be
-under 2px tall at signature size, so the wordmark stands alone — the standard
-small-size treatment. **scaile** and **A&M** are placeholders: their names set
-in Instrument Sans at the same cap height, because the network policy in the
-environment this was built in blocked both company sites.
+All three marks are the official artwork, from the source files in
+`src/logos/`:
 
-With images on, the marks carry the organisation names and the text lines carry
-only the roles. The no-images variant keeps the names in text, so nothing is
-lost when there are no logos to lean on. Marks are scaled to the signature's
-18px line height and keep their own aspect ratio; the left gutter sizes itself
-to the widest mark.
+- **Nova SBE** — the wordmark, cropped out of the full lockup
+  (`nova-sbe-source.png`). The lockup's descriptor line would be under 2px
+  tall at signature size, so the wordmark stands alone — the standard
+  small-size treatment.
+- **scaile** and **A&M** — their square tiles, used as supplied.
 
-To drop in real files:
+With images on, the marks carry the organisation names and the text lines
+carry only the roles (the `alt` text still names each organisation for
+recipients who block images). The no-images variant keeps the names in text,
+so nothing is lost when there are no logos to lean on. Marks are scaled to
+the signature's 18px line height and keep their own aspect ratio; the left
+gutter sizes itself to the widest mark.
+
+To swap updated artwork into a mark later:
 
 ```bash
-python3 embed_logo.py novasbe ~/Downloads/nova-sbe.png
-python3 embed_logo.py scaile  ~/Downloads/scaile.svg
-python3 embed_logo.py am      ~/Downloads/am.png
+python3 embed_logo.py scaile ~/Downloads/new-scaile.svg
 python3 build_signature.py            # re-embed and rebuild dist/
 ```
 
@@ -49,7 +50,7 @@ python3 build_signature.py            # re-embed and rebuild dist/
 ratio. Pass `--bg` to sit it on a rounded tile, `--pad` to inset it. PNG, JPG,
 WEBP and SVG are all accepted.
 
-Check each organisation's brand guidelines before putting its actual logo in
+Check each organisation's brand guidelines before putting its logo in
 personal correspondence — some permit it for affiliates, some don't.
 
 ## Rebuilding
@@ -90,10 +91,10 @@ signature/
 ├─ embed_logo.py         swaps a real logo file into a mark
 ├─ src/
 │  ├─ page.html          template for the preview page
+│  ├─ logos/             official logo source files
 │  └─ *.svg              Lucide source icons (MIT)
 ├─ assets/               generated PNGs, 54×54 marks and 45×45 icons
 └─ dist/                 generated — the files you actually use
 ```
 
-Contact icons are [Lucide](https://lucide.dev) (MIT). Monogram marks are set in
-[Instrument Sans](https://fonts.google.com/specimen/Instrument+Sans) (OFL).
+Contact icons are [Lucide](https://lucide.dev) (MIT).
