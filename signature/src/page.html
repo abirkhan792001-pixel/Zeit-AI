@@ -195,7 +195,7 @@ footer{margin-top:72px; padding-top:22px; border-top:1px solid var(--rule);
       <div class="canvas">
         <div class="canvas-bar">
           <span>As the recipient sees it</span>
-          <span class="dims" id="dims">391 &times; 216 px</span>
+          <span class="dims" id="dims"><!--DIMS_INIT--></span>
         </div>
         <div class="stage">
           <div class="panel" id="panel-full" role="tabpanel" aria-labelledby="tab-full">
@@ -262,7 +262,7 @@ footer{margin-top:72px; padding-top:22px; border-top:1px solid var(--rule);
       <dl class="notes">
         <div class="note-row">
           <dt>Logo marks</dt>
-          <dd>The three coloured tiles are <strong>typographic stand-ins</strong>, not the official trademarks &mdash; this environment&rsquo;s network policy blocked the university and company sites. Drop real artwork in with <code>python3 embed_logo.py novasbe nova.png</code>, then re-run <code>build_signature.py</code>. Check each organisation&rsquo;s brand policy before using its actual logo in personal mail.</dd>
+          <dd>The <strong>Nova SBE</strong> mark is the official wordmark redrawn from the logo &mdash; the ringed O, its bar, and the angular N/V/A. <strong>scaile</strong> and <strong>A&amp;M</strong> are placeholders: their names set in Instrument Sans at the same cap height, because this environment&rsquo;s network policy blocked both company sites. Drop real files in with <code>python3 embed_logo.py scaile scaile.svg</code>, then re-run <code>build_signature.py</code> &mdash; marks are scaled to the line height and keep their own aspect ratio, and the gutter widens to fit the widest one. Check each organisation&rsquo;s brand policy before using its logo in personal mail.</dd>
         </div>
         <div class="note-row">
           <dt>Image blocking</dt>
@@ -301,7 +301,7 @@ footer{margin-top:72px; padding-top:22px; border-top:1px solid var(--rule);
   var dims = document.getElementById("dims");
   var btn  = document.getElementById("copy");
   var active = "full";
-  var DIMS = {full:"391 &times; 216 px", min:"364 &times; 216 px", txt:"8 lines &middot; plain"};
+  var DIMS = <!--DIMS-->;
   var HINTS = {
     full:"Copies with formatting intact.",
     min:"No images at all — nothing for a client to block.",

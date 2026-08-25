@@ -13,8 +13,8 @@ per-client install steps.
 
 | File | Use it when |
 | --- | --- |
-| `dist/signature.html` | Default. Logo marks and contact icons, 19.7 KB. |
-| `dist/signature-minimal.html` | Recipients block images, or you want a 3.5 KB signature. Same content and typography, zero images. |
+| `dist/signature.html` | Default. Logo marks and contact icons, 26.0 KB. |
+| `dist/signature-minimal.html` | Recipients block images, or you want a 3.4 KB signature. Same content and typography, zero images. |
 | `dist/signature.txt` | Plain-text mail, ATS forms, anywhere HTML is rejected. |
 
 Install by **pasting**, not importing — every mail client rewrites the markup it
@@ -23,23 +23,28 @@ copy button and the exact steps for Gmail, Outlook and Apple Mail.
 
 ## Swapping in real logos
 
-The three coloured tiles are **typographic stand-ins**, not the official
-trademarks. The network policy in the environment this was built in blocked the
-university and company sites, so the marks are monograms set in Instrument Sans
-rather than downloaded artwork.
+The **Nova SBE** mark is the official wordmark redrawn from the logo — the
+ringed O with its bar, and the angular N/V/A. **scaile** and **A&M** are
+placeholders: their names set in Instrument Sans at the same cap height and
+baseline, because the network policy in the environment this was built in
+blocked both company sites.
+
+Marks are scaled to the signature's 18px line height and keep their own aspect
+ratio, so wide wordmarks work as well as square icons. The left gutter sizes
+itself to the widest mark.
 
 To drop in real files:
 
 ```bash
 python3 embed_logo.py novasbe ~/Downloads/nova-sbe.png
 python3 embed_logo.py scaile  ~/Downloads/scaile.svg
-python3 embed_logo.py am      ~/Downloads/am.png --bg "#C8102E" --pad 3
+python3 embed_logo.py am      ~/Downloads/am.png
 python3 build_signature.py            # re-embed and rebuild dist/
 ```
 
-`embed_logo.py` fits the image into the 54×54 mark preserving aspect ratio.
-Pass `--bg` to sit it on a rounded tile, `--pad` to inset it. PNG, JPG, WEBP and
-SVG are all accepted.
+`embed_logo.py` scales the image to the 18px line height preserving aspect
+ratio. Pass `--bg` to sit it on a rounded tile, `--pad` to inset it. PNG, JPG,
+WEBP and SVG are all accepted.
 
 Check each organisation's brand guidelines before putting its actual logo in
 personal correspondence — some permit it for affiliates, some don't.

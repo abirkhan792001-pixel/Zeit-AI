@@ -2,16 +2,17 @@
 """
 Replace a stylised monogram mark with a real logo file.
 
-The marks shipped in assets/ are typographic stand-ins. Drop in official
-artwork with, for example:
+scaile and A&M ship as their names set in type; Nova SBE is a reconstruction of
+the real wordmark. Drop in official artwork with, for example:
 
     python3 embed_logo.py novasbe ~/Downloads/nova-sbe.png
     python3 embed_logo.py am ~/Downloads/am-logo.svg --bg "#C8102E" --pad 3
     python3 build_signature.py          # re-embed and rebuild dist/
 
 Slugs: novasbe | scaile | am
-Accepts PNG, JPG, WEBP or SVG. Transparent background by default; pass --bg to
-sit the logo on a rounded tile like the stand-ins do.
+Accepts PNG, JPG, WEBP or SVG. The logo is scaled to the signature's 18px line
+height and keeps its own aspect ratio, so wide wordmarks work as well as square
+marks. Transparent background by default; pass --bg to sit it on a rounded tile.
 """
 import argparse
 import io
@@ -23,14 +24,14 @@ from PIL import Image, ImageDraw
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.join(ROOT, "assets")
 SLUGS = ("novasbe", "scaile", "am")
-SIZE = 54  # 18px display at 3x
-SS = 4     # supersample the tile so the corner radius stays smooth
+HEIGHT = 54  # 18px display at 3x; width follows the logo's own aspect ratio
+SS = 4       # supersample so a tile's corner radius stays smooth
 
 
 def load(path):
     if path.lower().endswith(".svg"):
         import cairosvg  # only needed for SVG input
-        png = cairosvg.svg2png(url=path, output_width=SIZE * SS, output_height=SIZE * SS)
+        png = cairosvg.svg2png(url=path, output_height=HEIGHT * SS)
         return Image.open(io.BytesIO(png)).convert("RGBA")
     return Image.open(path).convert("RGBA")
 
@@ -47,21 +48,25 @@ def main():
     if not os.path.isfile(a.image):
         sys.exit(f"no such file: {a.image}")
 
-    big = SIZE * SS
-    canvas = Image.new("RGBA", (big, big), (0, 0, 0, 0))
+    logo = load(a.image)
+    pad = a.pad * SS
+    inner_h = HEIGHT * SS - pad * 2
+    scale = inner_h / logo.height
+    logo = logo.resize((max(1, round(logo.width * scale)), inner_h), Image.LANCZOS)
+
+    big_w, big_h = logo.width + pad * 2, HEIGHT * SS
+    canvas = Image.new("RGBA", (big_w, big_h), (0, 0, 0, 0))
     if a.bg.lower() != "none":
         ImageDraw.Draw(canvas).rounded_rectangle(
-            [0, 0, big - 1, big - 1], radius=int(big * a.radius), fill=a.bg
+            [0, 0, big_w - 1, big_h - 1], radius=int(big_h * a.radius), fill=a.bg
         )
-
-    logo = load(a.image)
-    inner = big - (a.pad * SS * 2)
-    logo.thumbnail((inner, inner), Image.LANCZOS)  # preserves aspect ratio
-    canvas.alpha_composite(logo, ((big - logo.width) // 2, (big - logo.height) // 2))
+    canvas.alpha_composite(logo, (pad, pad))
 
     out = os.path.join(ASSETS, f"{a.slug}.png")
-    canvas.resize((SIZE, SIZE), Image.LANCZOS).save(out, optimize=True)
-    print(f"wrote {os.path.relpath(out, ROOT)}  ({SIZE}x{SIZE})")
+    final = canvas.resize((max(1, round(big_w / SS)), HEIGHT), Image.LANCZOS)
+    final.save(out, optimize=True)
+    print(f"wrote {os.path.relpath(out, ROOT)}  ({final.width}x{final.height}"
+          f" -> {round(final.width/3)}x{round(final.height/3)} in the signature)")
     print("now run: python3 build_signature.py")
 
 

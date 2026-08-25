@@ -14,6 +14,7 @@ Outputs -> signature/dist/
 """
 import base64
 import html
+import json
 import os
 from datetime import date
 
@@ -27,6 +28,8 @@ ROLE = "#2F3845"  # role lines
 MUTED = "#5E6875"  # captions, secondary contact text
 FAINT = "#9AA4B2"  # separators
 ACCENT = "#17405F"  # rail, org names, links
+
+MARK_H = 18  # every logo mark is set to this height
 
 SERIF = "Georgia,'Times New Roman',Times,serif"
 SANS = "'Helvetica Neue',Helvetica,Arial,sans-serif"
@@ -43,7 +46,7 @@ LINKEDIN_HREF = "https://www.linkedin.com/in/khan-abir"
 # lead_is_label renders the lead as a quiet prefix ("prev.") rather than a role.
 ROLES = [
     ("novasbe", "Nova SBE", "MSc. Finance Candidate",
-     ["Nova SBE"], "FT RANK #8 WORLDWIDE", False),
+     ["Nova SBE"], "FT #8 WORLDWIDE", False),
     ("scaile", "scaile Technologies", "ex-Founders Associate",
      ["scaile Technologies GmbH"], None, False),
     ("am", "Alvarez &amp; Marsal", "prev.",
@@ -56,13 +59,33 @@ def b64(name):
         return "data:image/png;base64," + base64.b64encode(fh.read()).decode()
 
 
-def img(asset, alt, px):
+def png_size(name):
+    """Width and height straight out of the PNG IHDR -- no image library needed."""
+    with open(os.path.join(ASSETS, name), "rb") as fh:
+        head = fh.read(24)
+    return int.from_bytes(head[16:20], "big"), int.from_bytes(head[20:24], "big")
+
+
+def img(asset, alt, px, height=None):
     """An <img> that holds its box in every client: attrs *and* inline style."""
+    h = height or px
     return (
-        f'<img src="{b64(asset)}" width="{px}" height="{px}" alt="{alt}" '
+        f'<img src="{b64(asset)}" width="{px}" height="{h}" alt="{alt}" '
         f'style="display:block;border:0;outline:none;text-decoration:none;'
-        f'width:{px}px;height:{px}px;" />'
+        f'width:{px}px;height:{h}px;" />'
     )
+
+
+def mark_col():
+    """Gutter width = the widest mark, so a swapped-in logo can't break the row."""
+    return max(round(MARK_H * png_size(f"{slug}.png")[0] / png_size(f"{slug}.png")[1])
+               for slug, *_ in ROLES) + 4
+
+
+def mark(asset, alt, h=MARK_H):
+    """A logo mark scaled to the line height, keeping its own aspect ratio."""
+    pw, ph = png_size(asset)
+    return img(asset, alt, round(h * pw / ph), h)
 
 
 def table(inner, extra=""):
@@ -89,23 +112,26 @@ def role_row(slug, alt, lead, orgs, note, lead_is_label, images=True):
     else:
         text = f'<span style="font-weight:600;color:{INK};">{lead}</span>{dot}{orgs_html}'
 
+    if note:
+        # Trails the org on the same line, sized down so it reads as a footnote.
+        text += (
+            f'<span style="font-size:10px;letter-spacing:0.7px;color:{MUTED};">'
+            f'&nbsp;&nbsp;{note}</span>'
+        )
     body = (
         f'<div style="font-family:{SANS};font-size:13px;line-height:19px;color:{ROLE};">{text}</div>'
     )
-    if note:
-        body += (
-            f'<div style="font-family:{SANS};font-size:10px;line-height:16px;'
-            f'letter-spacing:0.7px;color:{MUTED};">{note}</div>'
-        )
 
     if not images:
         # No marks to align to, so the roles sit flush with the contact lines.
         return f'<tr><td style="padding-bottom:6px;">{body}</td></tr>'
 
+    col = mark_col()
     cells = (
         f'<tr>'
-        f'<td width="18" valign="top" style="width:18px;padding-top:1px;">{img(slug + ".png", alt, 18)}</td>'
-        f'<td width="9" style="width:9px;font-size:0;line-height:0;">&nbsp;</td>'
+        f'<td width="{col}" valign="top" align="left" '
+        f'style="width:{col}px;padding-top:1px;">{mark(slug + ".png", alt)}</td>'
+        f'<td width="10" style="width:10px;font-size:0;line-height:0;">&nbsp;</td>'
         f'<td valign="top">{body}</td>'
         f'</tr>'
     )
@@ -214,6 +240,13 @@ PAGE = """<!DOCTYPE html>
 """
 
 # ------------------------------------------------------------ preview page --
+# Measured from a real browser render of dist/*.html; update if the copy changes.
+RENDERED = {
+    "full": "430 &times; 177 px",
+    "min": "353 &times; 177 px",
+    "txt": "8 lines &middot; plain",
+}
+
 MANIFEST = [
     ("dist/signature.html", "Full signature &mdash; logo marks and contact icons"),
     ("dist/signature-minimal.html", "Same content, no images at all"),
@@ -244,6 +277,8 @@ def preview_page():
         ("<!--SIG_MIN-->", build(images=False)),
         ("<!--SIG_TXT-->", html.escape(plain_text())),
         ("<!--MANIFEST-->", "".join(rows)),
+        ("<!--DIMS-->", json.dumps(RENDERED)),
+        ("<!--DIMS_INIT-->", RENDERED["full"]),
         ("<!--BUILD_DATE-->", date.today().strftime("%d %B %Y")),
     ]:
         tpl = tpl.replace(token, value)
