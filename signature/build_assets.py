@@ -37,35 +37,34 @@ WORDMARKS = [
     ("am",     "A&M",    "#C8102E"),
 ]
 
-# The Nova SBE wordmark, reconstructed from the official logo: an 720x205 box
-# with the ringed O riding above the N/V/A line and a bar beneath it.
-NOVA_W, NOVA_H = 720, 205
+# The official Nova SBE logo, supplied as src/logos/nova-sbe-source.png. The
+# lockup's descriptor ("NOVA SCHOOL OF BUSINESS & ECONOMICS") is two 23px lines
+# in a 630px image -- it would be under 2px tall in the signature -- so only the
+# wordmark is used, which is how the mark is meant to be set at small sizes.
+NOVA_SRC = os.path.join(ROOT, "src", "logos", "nova-sbe-source.png")
+
+
+def ink_bbox(img):
+    """Bounding box of the visible ink, whatever the source's background is."""
+    flat = Image.alpha_composite(Image.new("RGBA", img.size, (255,) * 4), img).convert("L")
+    w, h = flat.size
+    px = flat.load()
+    xs = [x for x in range(w) if any(px[x, y] < 128 for y in range(h))]
+    ys = [y for y in range(h) if any(px[x, y] < 128 for x in range(w))]
+    return xs[0], ys[0], xs[-1] + 1, ys[-1] + 1
 
 
 def render_nova():
-    """Draw the NOVA wordmark and save it at the signature's 18px line height."""
-    ss = 3
-    im = Image.new("RGBA", (NOVA_W * ss, NOVA_H * ss), (0, 0, 0, 0))
-    d = ImageDraw.Draw(im)
-    poly = lambda pts: d.polygon([(x * ss, y * ss) for x, y in pts], fill="#000000")
-    rect = lambda a, b, c, e: d.rectangle([a * ss, b * ss, c * ss, e * ss], fill="#000000")
-
-    # N -- two stems joined by a diagonal band
-    rect(0, 60, 46, 205)
-    rect(104, 60, 150, 205)
-    poly([(0, 60), (46, 60), (150, 205), (104, 205)])
-    # O -- a ring sitting above the other letters
-    d.ellipse([233 * ss, 0, 397 * ss, 164 * ss], fill="#000000")
-    d.ellipse([275 * ss, 42 * ss, 355 * ss, 122 * ss], fill=(0, 0, 0, 0))
-    rect(185, 172, 430, 205)  # the bar beneath the O
-    # V
-    poly([(450, 60), (496, 60), (515, 155), (534, 60), (580, 60), (525, 205), (505, 205)])
-    # A -- no crossbar
-    poly([(585, 205), (631, 205), (652, 110), (674, 205), (720, 205), (663, 60), (642, 60)])
+    """Crop the wordmark out of the official logo and set it to the line height."""
+    src = Image.open(NOVA_SRC).convert("RGBA")
+    # Rows 152-361 hold the wordmark; everything below is the descriptor.
+    band = src.crop((0, 0, src.width, 380))
+    x0, y0, x1, y1 = ink_bbox(band)
+    mark = src.crop((x0, y0, x1, y1))
 
     h = TILE_CSS_PX * SCALE
-    w = round(h * NOVA_W / NOVA_H)
-    return save(im.resize((w, h), Image.LANCZOS), "novasbe.png")
+    w = max(1, round(h * mark.width / mark.height))
+    return save(mark.resize((w, h), Image.LANCZOS), "novasbe.png")
 
 
 def save(img, name):
@@ -93,7 +92,7 @@ def render_icon(name, out_name):
 def render_wordmark(slug, word, colour):
     """Set a word at the NOVA letters' cap height, baseline-aligned."""
     box_h = TILE_CSS_PX * SCALE                  # 54px, same box as NOVA
-    cap_h = round(box_h * 145 / NOVA_H)          # NOVA's N/V/A occupy 145 of 205
+    cap_h = round(box_h * 0.71)  # matches the N/V/A cap height in the Nova mark
     ss = 4
     path = os.path.join(FONTS, "InstrumentSans-Bold.ttf")
 

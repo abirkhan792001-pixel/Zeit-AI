@@ -13,7 +13,7 @@ per-client install steps.
 
 | File | Use it when |
 | --- | --- |
-| `dist/signature.html` | Default. Logo marks and contact icons, 26.0 KB. |
+| `dist/signature.html` | Default. Logo marks and contact icons, 25.6 KB. |
 | `dist/signature-minimal.html` | Recipients block images, or you want a 3.4 KB signature. Same content and typography, zero images. |
 | `dist/signature.txt` | Plain-text mail, ATS forms, anywhere HTML is rejected. |
 
@@ -23,15 +23,18 @@ copy button and the exact steps for Gmail, Outlook and Apple Mail.
 
 ## Swapping in real logos
 
-The **Nova SBE** mark is the official wordmark redrawn from the logo — the
-ringed O with its bar, and the angular N/V/A. **scaile** and **A&M** are
-placeholders: their names set in Instrument Sans at the same cap height and
-baseline, because the network policy in the environment this was built in
-blocked both company sites.
+The **Nova SBE** mark is the official wordmark, cropped from the supplied logo
+file (`src/logos/nova-sbe-source.png`). The lockup's descriptor line would be
+under 2px tall at signature size, so the wordmark stands alone — the standard
+small-size treatment. **scaile** and **A&M** are placeholders: their names set
+in Instrument Sans at the same cap height, because the network policy in the
+environment this was built in blocked both company sites.
 
-Marks are scaled to the signature's 18px line height and keep their own aspect
-ratio, so wide wordmarks work as well as square icons. The left gutter sizes
-itself to the widest mark.
+With images on, the marks carry the organisation names and the text lines carry
+only the roles. The no-images variant keeps the names in text, so nothing is
+lost when there are no logos to lean on. Marks are scaled to the signature's
+18px line height and keep their own aspect ratio; the left gutter sizes itself
+to the widest mark.
 
 To drop in real files:
 

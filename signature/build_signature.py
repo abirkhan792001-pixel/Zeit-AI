@@ -101,19 +101,32 @@ def spacer(px):
 
 # ------------------------------------------------------------------ rows ----
 def role_row(slug, alt, lead, orgs, note, lead_is_label, images=True):
-    """One credential line: mark, role, org(s), optional small-caps footnote."""
+    """One credential line: mark, role, org(s), optional small-caps footnote.
+
+    With images, the mark names the organisation, so orgs[0] is dropped from
+    the text (the <img> alt still carries it). Without images there is no mark,
+    so the full text keeps every name.
+    """
     dot = f'<span style="color:{FAINT};"> &middot; </span>'
+    shown = orgs[1:] if images else orgs
     orgs_html = dot.join(
-        f'<span style="font-weight:600;color:{ACCENT};">{o}</span>' for o in orgs
+        f'<span style="font-weight:600;color:{ACCENT};">{o}</span>' for o in shown
     )
     if lead_is_label:
-        # "prev. Alvarez & Marsal · ex-VC" -- no separator after the label.
-        text = f'<span style="color:{MUTED};">{lead}</span> {orgs_html}'
+        # "prev." qualifies the mark (or, without images, the first org name).
+        lead_html = f'<span style="color:{MUTED};">{lead}</span>'
+        if not orgs_html:
+            text = lead_html
+        elif images:
+            text = lead_html + dot + orgs_html
+        else:
+            text = f"{lead_html} {orgs_html}"
     else:
-        text = f'<span style="font-weight:600;color:{INK};">{lead}</span>{dot}{orgs_html}'
-
+        text = f'<span style="font-weight:600;color:{INK};">{lead}</span>'
+        if orgs_html:
+            text += dot + orgs_html
     if note:
-        # Trails the org on the same line, sized down so it reads as a footnote.
+        # Trails the line, sized down so it reads as a footnote.
         text += (
             f'<span style="font-size:10px;letter-spacing:0.7px;color:{MUTED};">'
             f'&nbsp;&nbsp;{note}</span>'
@@ -121,7 +134,6 @@ def role_row(slug, alt, lead, orgs, note, lead_is_label, images=True):
     body = (
         f'<div style="font-family:{SANS};font-size:13px;line-height:19px;color:{ROLE};">{text}</div>'
     )
-
     if not images:
         # No marks to align to, so the roles sit flush with the contact lines.
         return f'<tr><td style="padding-bottom:6px;">{body}</td></tr>'
@@ -242,7 +254,7 @@ PAGE = """<!DOCTYPE html>
 # ------------------------------------------------------------ preview page --
 # Measured from a real browser render of dist/*.html; update if the copy changes.
 RENDERED = {
-    "full": "430 &times; 177 px",
+    "full": "355 &times; 177 px",
     "min": "353 &times; 177 px",
     "txt": "8 lines &middot; plain",
 }
